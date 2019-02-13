@@ -54,6 +54,7 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 
 .group .group-list {float: left; position: relative; box-sizing: border-box; width: 320px; margin-left: 35px;}
 .group .group-list:first-child {margin-left: 0;}
+.group .group-list:nth-child(4n), .group .group-list.namwon {margin-left: 0; clear: both;}
 .group .group-list .link-area {cursor: pointer;}
 .group .group-list .tit-area {position: relative; box-sizing: border-box; width: 100%;}
 .group .group-list .tit-area .type-box {position: relative; box-sizing: border-box; width: 100%; height: 34px;}
@@ -90,26 +91,20 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 
 .group .group-list .btn-detail {
     display: block; position: relative; overflow: hidden; box-sizing: border-box; width: 100%; margin-bottom: 26px; text-align: center; border-radius: 7px; 
-    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
-    background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
-    background: -o-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#54000000', GradientType=0);*/
+	background: #aab0ba;
 }
 .group .group-list .btn-detail span {position: relative; display: inline-block; padding-right: 10px; font-size: 18px; font-weight: 700; line-height: 50px; color: #fff;}
 .group .group-list .btn-detail span:before {content: ''; display: inline-block; position: absolute; width: 7px; height: 7px; top: 50%; right: -7px; margin-top: -4px; border: 1px solid #fff; border-top: 0; border-left: 0; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
+.group .group-list .btn-detail.yet {
+	border: 2px solid #aab0ba;background: #fff;
+}
+.group .group-list .btn-detail.yet span {color: #aab0ba;}
+.group .group-list .btn-detail.yet span:before {border-color: #aab0ba;}
 .ie8 .group .group-list .btn-detail span:before {content: '>'; width: auto; height: 100%; top: 0; right: -12px; margin-top: 0; vertical-align: middle; border: 0;}
-.group .group-list.hotel .btn-detail {background-color: #e9699f;}
-.group .group-list.resort .btn-detail {background-color: #7a8ee6;}
-.ie9 .group .group-list .btn-detail:before, .ie8 .group .group-list .btn-detail:before {content: ''; display: block; position: absolute; width: 100%; height: 50px; top: 0; left: 0;}
-.ie9 .group .group-list.hotel .btn-detail, .ie8 .group .group-list.hotel .btn-detail {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 0;}
-.ie9 .group .group-list.hotel .btn-detail:before, .ie8 .group .group-list.hotel .btn-detail:before {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% 0;}
-.ie9 .group .group-list.resort .btn-detail, .ie8 .group .group-list.resort .btn-detail {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 -60px;}
-.ie9 .group .group-list.resort .btn-detail:before, .ie8 .group .group-list.resort .btn-detail:before {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% -60px;}
 
 /*단체이벤트*/
 .contents .facil-sec {margin-bottom: 70px;}
-.sec-tit {font-size: 24px; font-weight: 700; font-family: "Noto Sans KR", sans-serif;}
+.sec-tit {font-size: 26px; font-weight: 700; font-family: "Noto Sans KR", sans-serif; text-align: center;}
 .facil-sec .ul-list-2 {margin-top: -5px;}
 .facil-sec .ul-list-2 .li-item {position: relative; float: left; display: block; margin-left: 20px; margin-top: 23px; width: 505px; /*height: 200px;*/}
 .facil-sec .ul-list-2 .li-item:nth-child(2n+1) {margin-left: 0;}

@@ -135,15 +135,25 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 /* 자세히보기 버튼 */
 .group .group-list .btn-detail {
     display: block; position: relative; overflow: hidden; box-sizing: border-box; width: 100%; margin-bottom: 23px; text-align: center; border-radius: 10px; 
+	background: #aab0ba;
+/*
     background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
     background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
     background: -o-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
+*/
 }
 .group .group-list .btn-detail span {position: relative; display: inline-block; padding-right: 10px; font-size: 18px; font-weight: 700; line-height: 50px; color: #fff;}
 .group .group-list .btn-detail span:before {content: ''; display: inline-block; position: absolute; width: 7px; height: 7px; top: 50%; right: -7px; margin-top: -4px; border: 1px solid #fff; border-top: 0; border-left: 0; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
+.group .group-list .btn-detail.yet {
+	border: 2px solid #aab0ba;background: #fff;
+}
+.group .group-list .btn-detail.yet span {color: #aab0ba;}
+.group .group-list .btn-detail.yet span:before {border-color: #aab0ba;}
+/*
 .group .group-list.hotel .btn-detail {background-color: #e9699f;}
 .group .group-list.resort .btn-detail {background-color: #7a8ee6;}
+*/
 /* 호텔, 리조트 컬러 */
 .group .group-list.hotel .tit-area .type-box {background: #e9699f;}
 .group .group-list.hotel .tit-area .type-box .type-stay {color: #ffafd1;}
@@ -154,6 +164,7 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 
 /* 단체이벤트 */
 .contents .facil-sec {margin-bottom: 10px;}
+.facil-sec .sec-tit {font-size: 16px; font-weight: 700; text-align: center; margin-bottom: 5px;}
 .facil-sec .ul-list-2 .li-item {position: relative; display: inline-block; margin-top: 8px; width: 100%; background: #000; background: rgba(0,0,0, .7);}
 .facil-sec .ul-list-2 .li-item figure {position: relative;}
 .facil-sec .ul-list-2 .li-item figure img {width: 100%;}
