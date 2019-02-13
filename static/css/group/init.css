@@ -1,0 +1,196 @@
+@charset "utf-8";
+@import url(https://nurifunding.co.kr/static/fonts/nanumgothic/nanumgothic.css);
+@import url(https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', sans-serif; color: #434343; letter-spacing: -0.5px;}
+
+/* common */
+.container {position: relative; box-sizing: border-box; width: 1030px; margin: 0 auto;}
+
+/* style */
+.tell-txt {display: inline-block;}
+.tell-txt:before {content: '☎'; position: relative; display: inline-block; vertical-align: middle;}
+.mail-txt {position: relative; display: inline-block; margin-left: 7px; padding-left: 27px;}
+.mail-txt:before {content: ''; position: absolute; display: inline-block; width: 20px; height: 15px; top:50%; left: 0; margin-top: -7px; vertical-align: middle; background: url(http://img.hyutour.co.kr/group/ico_mail.png) no-repeat center center;}
+
+/* font */
+.c-red {color: #d40000;}
+
+.show-xs {display: none !important;}
+@media (max-width: 768px) {
+	.show-xs {display: block !important;}
+	.hidden-xs {display: none !important;}
+}
+
+/* header */
+.header {z-index: 1; position: relative; width: 1030px; margin: 0 auto;}
+.header .logo {position: absolute; width: 90px; top: 21px; left: 7px;}
+.header .logo img {position: relative; width: 100%;}
+/* 190109 입점문 추가 */
+.header .cust-txt {position: absolute; width: 115px; top: 25px; right: 2px;}
+
+/* contents */
+.contents {}
+.contents section {position: relative; box-sizing: border-box; width: 100%; margin: 0 auto;}
+.contents .container {}
+/* visual */
+.visual {height: 480px; padding: 42px 0 50px; text-align: center; background: url(http://img.hyutour.co.kr/group/bg_visual.jpg) no-repeat center center; background-size: cover;}
+.visual .tit {}
+.visual p {position: relative;}
+.visual .p-0 {padding: 17px 0 15px; font-size: 26px; font-weight: 700; line-height: 34px; letter-spacing: -1px; color: #9a2bab;}
+.visual .p-1 {padding: 17px 0 21px; font-size: 22px; line-height: 32px;}
+.visual .p-1:before {content: ''; position: absolute; display: block; width: 99px; height: 1px; top:0; left: 50%; margin-left: -50px; background: #9a2bab;}
+.visual .cust-txt {position: relative; display: inline-block; box-sizing: border-box; height: 52px; padding: 0 29px 0 33px; border-radius: 30px; background: #fff;}
+.visual .cust-txt span {display: inline-block; font-size: 24px; font-weight: 700; line-height: 52px; letter-spacing: -0.7px; vertical-align: middle;}
+.visual .cust-txt .tell-txt {padding-left: 10px;}
+.visual .cust-txt .tell-txt:before {margin-top: -4px; padding-right: 7px;}
+.ie8 .visual .cust-txt {padding-left: 0; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% -120px;}
+.ie8 .visual .cust-txt span:first-child {padding-left: 33px; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 -120px;}
+/* group */
+.group {padding: 45px 0 45px; background: #fff;}
+.group figure {position: relative; box-sizing: border-box;}
+.group figure img, .group .img-list img {width: 100%; border: 1px solid #cbcbcb;}
+
+.group .group-list {float: left; position: relative; box-sizing: border-box; width: 320px; margin-left: 35px;}
+.group .group-list:first-child {margin-left: 0;}
+.group .group-list .link-area {cursor: pointer;}
+.group .group-list .tit-area {position: relative; box-sizing: border-box; width: 100%;}
+.group .group-list .tit-area .type-box {position: relative; box-sizing: border-box; width: 100%; height: 34px;}
+.group .group-list .tit-area .type-box span {position: relative; display: block; box-sizing: border-box; line-height: 34px;}
+.group .group-list .tit-area .type-box .type-adr {padding-left: 10px; font-size: 20px; font-weight: 700; color: #fff;}
+.group .group-list .tit-area .type-box .type-stay {position: absolute; width: 39.5%; /*min-width: 126px;*/ top: 0; right: 0; padding-right: 10px; font-size: 16px; text-align: right; background: #000;}
+.group .group-list .tit-area .type-box .type-stay:before {content: ''; display: block; position: absolute; width: 0px; height: 0px; top: 0; margin-left: -34px; border-left: 34px solid transparent; border-bottom: 34px solid #000;}
+.group .group-list.hotel .tit-area .type-box {background: #e9699f;}
+.group .group-list.hotel .tit-area .type-box .type-stay {color: #ffafd1;}
+.group .group-list.resort .tit-area .type-box {background: #677ee1;}
+.group .group-list.resort .tit-area .type-box .type-stay {color: #aebdff;}
+.group .group-list .tit-area .tit-box {text-align: center;}
+.group .group-list .tit-area .tit-box .tit {padding: 13px 0 3px; display: block; font-size: 34px; font-weight: 700; line-height: 34px; letter-spacing: -1px;}
+.group .group-list .tit-area .tit-box .sub-tit {display: block; font-size: 20px; line-height: 30px; letter-spacing: -1px;}
+.group .group-list.hotel .tit-area .tit-box .sub-tit {color: #e7488b;}
+.group .group-list.resort .tit-area .tit-box .sub-tit {color: #1440ff;}
+.group .group-list .txt-area {}
+.group .group-list .txt-area .img-type {padding: 10px 0 18px;}
+.group .group-list .txt-area .img-type img {border-color: #aeaeae;}
+.group .group-list .txt-area .img-map {margin-bottom: 25px;} 
+.group .group-list .txt-area p {font-size: 18px; line-height: 25px; text-align: center;}
+.group .group-list .txt-area .p-0 {}
+.group .group-list .txt-area .p-1 {padding: 23px 0 18px;}
+.group .group-list .txt-area .p-2 {padding: 10px 0 10px;}
+.group .group-list .txt-area .img-list {position: relative;}
+.group .group-list .txt-area .img-list li {position: relative; box-sizing: border-box; margin-top: 10px;}
+.group .group-list .txt-area .img-list li:first-child {margin-top: 0;}
+.group .group-list .txt-area .txt-list-area {position: relative; box-sizing: border-box; margin-top: 15px;}
+.group .group-list .txt-area .txt-list-box {float: right; width: 49.5%;}
+.group .group-list .txt-area .txt-list-box:first-child {float: left;}
+.group .group-list .txt-area .txt-list-box .txt-list-tit {padding: 14px 0 13px; font-size: 20px; line-height: 26px; font-weight: 700; text-align: center; background: #dedede;}
+.group .group-list .txt-area .txt-list-box .txt-list {position: relative; box-sizing: border-box; height: 100%; margin-block-start: 0; margin-block-end: 0; padding-inline-start: 0; padding: 17px 10px 25px 20px; background: #f2f2f2;} 
+.group .group-list .txt-area .txt-list-box .txt-list li {font-size: 18px; line-height: 26px;}
+
+.group .group-list .btn-detail {
+    display: block; position: relative; overflow: hidden; box-sizing: border-box; width: 100%; margin-bottom: 26px; text-align: center; border-radius: 7px; 
+    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
+    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#54000000', GradientType=0);*/
+}
+.group .group-list .btn-detail span {position: relative; display: inline-block; padding-right: 10px; font-size: 18px; font-weight: 700; line-height: 50px; color: #fff;}
+.group .group-list .btn-detail span:before {content: ''; display: inline-block; position: absolute; width: 7px; height: 7px; top: 50%; right: -7px; margin-top: -4px; border: 1px solid #fff; border-top: 0; border-left: 0; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
+.ie8 .group .group-list .btn-detail span:before {content: '>'; width: auto; height: 100%; top: 0; right: -12px; margin-top: 0; vertical-align: middle; border: 0;}
+.group .group-list.hotel .btn-detail {background-color: #e9699f;}
+.group .group-list.resort .btn-detail {background-color: #7a8ee6;}
+.ie9 .group .group-list .btn-detail:before, .ie8 .group .group-list .btn-detail:before {content: ''; display: block; position: absolute; width: 100%; height: 50px; top: 0; left: 0;}
+.ie9 .group .group-list.hotel .btn-detail, .ie8 .group .group-list.hotel .btn-detail {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 0;}
+.ie9 .group .group-list.hotel .btn-detail:before, .ie8 .group .group-list.hotel .btn-detail:before {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% 0;}
+.ie9 .group .group-list.resort .btn-detail, .ie8 .group .group-list.resort .btn-detail {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 -60px;}
+.ie9 .group .group-list.resort .btn-detail:before, .ie8 .group .group-list.resort .btn-detail:before {background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% -60px;}
+
+/*단체이벤트*/
+.contents .facil-sec {margin-bottom: 70px;}
+.sec-tit {font-size: 24px; font-weight: 700; font-family: "Noto Sans KR", sans-serif;}
+.facil-sec .ul-list-2 {margin-top: -5px;}
+.facil-sec .ul-list-2 .li-item {position: relative; float: left; display: block; margin-left: 20px; margin-top: 23px; width: 505px; /*height: 200px;*/}
+.facil-sec .ul-list-2 .li-item:nth-child(2n+1) {margin-left: 0;}
+.facil-sec .ul-list-2 .li-item figure {position: relative;}
+.facil-sec .ul-list-2 .li-item figure img {width: 100%;}
+.facil-sec .ul-list-2 .li-item figure figcaption, .facil-sec .ul-list-2 .li-item .li-txt {box-sizing: border-box; width: 100%; padding: 8px 8px 7px 8px; text-align: center; letter-spacing: -0.7px; color: #fff; background: #000; background: rgba(0,0,0, .7);}
+.facil-sec .ul-list-2 .li-item figure figcaption {display: block; position: absolute; bottom: 0; left: 0; font-size: 16px; line-height: 1.3;}
+.facil-sec .ul-list-2 .li-item .li-txt {display: table; font-size: 13px; line-height: 20px; word-break: keep-all;}
+.facil-sec .ul-list-2 .li-item .li-txt span {display: table-cell; vertical-align: middle; color: #fff;}
+.facil-sec .ul-list-2 .li-item .li-txt.ht-1 {height: 75px;}
+
+/* 단체예약 */
+.etc {padding: 43px 0 56px; color: #545454; background: #fcfbea;}
+.etc .show-xs { display: none; }
+.etc input { -webkit-appearance: none; -moz-appearance: none; appearance: none; -ms-appearance: none; -o-appearance: none; border-radius: 0; box-sizing: border-box; height: 30px; vertical-align: middle; border: 1px solid #787878; font-size: 14px; }
+.etc select { -webkit-appearance: none; -moz-appearance: none; appearance: none; -ms-appearance: none; -o-appearance: none; border-radius: 0; box-sizing: border-box; height: 30px; vertical-align: middle; border: 1px solid #787878; font-size: 14px; outline: none; overflow: hidden; text-indent: 5px; text-overflow: ''; background: #fff url(http://img.ramadapt.co.kr/group/i_dArr.png) no-repeat 174px 10px; }
+.etc select::-ms-expand { display: none; }
+.etc .wd-8 { -webkit-appearance: none; -moz-appearance: none; appearance: none; -ms-appearance: none; -o-appearance: none; border-radius: 0; }
+.etc .d-cm { position: relative; text-align: center; line-height: 1.3; }
+.etc .d-cm .p-0 { font-size: 32px; color: #004885; }
+.etc .d-cm .p-1 { font-size: 18px; margin-top: 13px; line-height: 1.5; color: #005eae; }
+.etc .d-cm .p-2 { font-size: 18px; margin-top: 5px; line-height: 1.5; color: #cc4e87; }
+.etc .d-cm .row-btn { font-size: 20px; margin-top: 30px; }
+.etc .d-cm .row-btn .a-btn {position: relative; display: inline-block; font-size: 18px; line-height: 3.2; padding: 0 120px; color: #fff; background: #e773a8; }
+.etc .d-cm .row-btn .a-btn:after { content: ""; display: inline-block; height: 105%; vertical-align: middle; }
+.etc .d-cm .row-btn .a-btn .ic-rArrow:after { border-color: #fff; width: 10px; height: 10px; top: -1px; left: 2px; margin-right: -15px; }
+.etc .contact-pop { position: relative; width: 685px; top: 0; left: auto; margin: 0 auto; text-align: left; }
+.etc .d-top { position: relative; width: 100%; margin: 20px auto 5px; color: #676767; height: auto; line-height: 31px; font-size: 14px; text-align: right; letter-spacing: -1px; }
+.etc .i-chk-bef:before { content: "*"; display: inline-block; color: #f00; position: relative; top: -1px; font-weight: 700; margin-right: 2px; vertical-align: middle; }
+.etc .ul-tb { position: relative; margin: 0 auto; }
+.etc .ul-tb .li-tr { position: relative; padding: 10px 20px; font-size: 0; border-bottom: 1px solid #dadada; letter-spacing: -0.5px; }
+.etc .ul-tb .li-tr .p-1 { color: #e773a8; }
+.etc .ul-tb .li-tr span { position: relative; display: inline-block; font-size: 16px; font-weight: 400; vertical-align: middle; }
+.etc .ul-tb .li-tr .s-lbl { width: 74px; margin-left: 20px; }
+.etc .ul-tb .li-tr .s-lbl:first-child { margin-left: 0; }
+.etc .ul-tb .li-tr .ml-1 { margin-left: 40px; }
+.etc .ul-tb .li-tr .i-chk-aft:before { font-size: 14px; }
+.etc .ul-tb .li-tr .mg- { width: 10px; height: 1px; background: #787878; margin: 0 6px; }
+.etc .ul-tb .li-tr .mg-l { width: 1px; height: 26px; background: #a0a0a0; margin: 0 18px 0 2px; top: 1px; }
+.etc .ul-tb .li-tr .p-1 { font-size: 16px; margin-left: 70px; word-break: keep-all; }
+.etc .ul-tb .li-tr .wd-1 { text-indent: 5px; width: 200px; }
+.etc .ul-tb .li-tr .wd-3 { text-indent: 5px; width: 200px; }
+.etc .ul-tb .li-tr .wd-4 { text-indent: 5px; width: 200px; }
+.etc .ul-tb .li-tr .wd-4 + select { top: 0px; position: relative; margin-left: 14px; }
+.etc .ul-tb .li-tr .wd-7 { text-indent: 5px; width: 204px; margin-right: 8px; }
+.etc .ul-tb .li-tr .wd-2 { text-align: center; width: 70px; }
+.etc .ul-tb .li-tr .wd-5 { text-align: center; margin-left: 12px; width: 58px; }
+.etc .ul-tb .li-tr .wd-5 + span { margin-left: 8px; margin-right: 20px; }
+.etc .ul-tb .li-tr .wd-6 { text-align: center; margin-left: 12px; width: 64px; }
+.etc .ul-tb .li-tr .wd-6 + span { margin-left: 8px; margin-right: 20px; }
+.etc .ul-tb .li-tr .wd-8 { box-sizing: border-box; width: 564px; height: 50px; padding: 3px; font-size: 12px; vertical-align: middle; resize: none; border: 1px solid #787878; }
+.etc .ul-tb.nece { border-top: 1px solid #dadada; }
+.etc .i-chk-aft:before { content: "*"; display: inline-block; color: #f00; position: relative; top: -1px; font-weight: 700; margin-right: 2px; vertical-align: middle; }
+
+.ie8 .etc select { background: none; background-color: #fff; }
+
+
+/* footer */
+.footer {position: relative; width: 100%; padding: 32px 0 65px; background: #e7e7e7;}
+.footer .container {}
+.footer .logo {}
+.footer .logo img {}
+.footer .logo + .adr-box {margin-top: 13px;}
+.footer .adr-box {}
+.footer .adr-box + p {margin-top: 20px;}
+.footer .adr-box address {font-size: 14px; line-height: 22px; color: #6e6e6e;}
+.footer .adr-box .mgl {display: inline-block; width: 12px;}
+.footer .adr-box .btn-bi {display: inline-block; box-sizing: border-box; height: 26px; margin-left: 10px; padding: 0 6px; line-height: 26px; color: #6e6e6e; border: 1px solid #a1a1a1;}
+.footer .cust-box {position: absolute; top: 0px; right: 0;}
+.footer .cust-box .cust-txt {position: relative; display: block; box-sizing: border-box; height: 42px; padding: 0 22px 0 25px; border-radius: 20px; background: #fff;}
+.footer .cust-box .cust-txt + .cust-txt {margin-top: 6px;}
+.footer .cust-box .cust-txt.type-2, .ie8 .footer .cust-box .cust-txt.type-2 {border-right: 0; background: none;}
+.footer .cust-box .cust-txt span {display: inline-block; font-size: 18px; font-weight: 700; line-height: 42px; letter-spacing: -0.7px; vertical-align: middle;}
+.footer .cust-box .cust-txt .tell-txt {padding-left: 7px;}
+.footer .cust-box .cust-txt .tell-txt:before {margin-top: -2px; padding-right: 3px;}
+.ie8 .footer .cust-box .cust-txt {padding-left: 0; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% -182px;}
+.ie8 .footer .cust-box .cust-txt span:first-child {padding-left: 25px; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 -182px;}
+.ie8 .footer .cust-box .cust-txt.type-2 span:first-child {background: none;}
+.footer .link-box {position: absolute; bottom: 5px; right: 9px;}
+.footer .link-list {position: relative;}
+.footer .link-list li {float: left; margin-left: 13px;}
+.footer .link-list li.li-mg {margin-left: 17px;}
+.footer .link-list li a {display: block;}
+.footer .link-list li img {}
