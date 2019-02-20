@@ -1,6 +1,26 @@
 $(function(){
     //함수 실행
     tListFn();
+    
+    //rwing버튼 위치
+    $(window).scroll(function(){
+        var st = $(window).scrollTop();
+        var rWing = $('.r-wing'), bnTime = 300;
+        if( st < $('section.group').offset().top ){
+            rWing.stop().animate({'top' : 510+'px'}, bnTime);
+        }else {
+            rWing.stop().animate({'top' : 100+'px'}, bnTime);
+        }
+    });
+    
+    //버튼 클릭시 단체문의로 이동.
+    $('.move-group').on('click', function(){
+        $('html, body').stop().animate({
+            //scrollTop: $($_anchor.attr('href')).offset().top - 150
+            scrollTop: ($("#etc").offset().top)
+        }, 800);
+        event.preventDefault();
+    });
 });
 
 

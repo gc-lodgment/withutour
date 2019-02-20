@@ -93,7 +93,7 @@ function conFn(){
         var target = $(this).attr('href');
 
         $("html, body").stop().animate({
-            scrollTop : $(target).offset().top
+            scrollTop : ($(target).offset().top - navH)
         }, time);
 
         return false;

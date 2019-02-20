@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import url(https://nurifunding.co.kr/static/fonts/nanumgothic/nanumgothic.css);
-@import url(https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+@import url(http://nurifunding.co.kr/static/fonts/nanumgothic/nanumgothic.css);
+@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
 
 body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', sans-serif; color: #434343; letter-spacing: -0.5px;}
 

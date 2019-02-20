@@ -1,6 +1,6 @@
 @charset "utf-8";
-@import url(https://nurifunding.co.kr/static/fonts/nanumgothic/nanumgothic.css);
-@import url(https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+@import url(http://nurifunding.co.kr/static/fonts/nanumgothic/nanumgothic.css);
+@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', sans-serif; color: #434343; letter-spacing: -0.5px;}
@@ -29,6 +29,11 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .header .logo img {position: relative; width: 100%;}
 /* 190109 입점문 추가 */
 .header .cust-txt {position: absolute; width: 115px; top: 25px; right: 2px;}
+
+/* banner */
+.r-wing {z-index: 50; position: fixed; top: 510px; right: 70px;}
+.r-wing a {position: relative; display: block;}
+.r-wing .move-group {}
 
 /* contents */
 .contents {}
