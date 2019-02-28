@@ -59,7 +59,8 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 
 .group .group-list {float: left; position: relative; box-sizing: border-box; width: 320px; margin-left: 35px;}
 .group .group-list:first-child {margin-left: 0;}
-.group .group-list:nth-child(4n), .group .group-list.namwon {margin-left: 0; clear: both;}
+/*.group .group-list:nth-child(4n), .group .group-list.namwon {margin-left: 0; clear: both;}*/
+.group .group-list.namwon {margin-left: 0;}
 .group .group-list .link-area {cursor: pointer;}
 .group .group-list .tit-area {position: relative; box-sizing: border-box; width: 100%;}
 .group .group-list .tit-area .type-box {position: relative; box-sizing: border-box; width: 100%; height: 34px;}
@@ -72,7 +73,7 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .group .group-list.resort .tit-area .type-box {background: #677ee1;}
 .group .group-list.resort .tit-area .type-box .type-stay {color: #aebdff;}
 .group .group-list .tit-area .tit-box {text-align: center;}
-.group .group-list .tit-area .tit-box .tit {padding: 13px 0 3px; display: block; font-size: 34px; font-weight: 700; line-height: 34px; letter-spacing: -1px;}
+.group .group-list .tit-area .tit-box .tit {padding: 13px 0 3px; display: block; font-size: 34px; font-weight: 700; line-height: 34px; letter-spacing: -2px;}
 .group .group-list .tit-area .tit-box .sub-tit {display: block; font-size: 20px; line-height: 30px; letter-spacing: -1px;}
 .group .group-list.hotel .tit-area .tit-box .sub-tit {color: #e7488b;}
 .group .group-list.resort .tit-area .tit-box .sub-tit {color: #1440ff;}
