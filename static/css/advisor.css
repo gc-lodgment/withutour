@@ -1,0 +1,210 @@
+/*리뷰 리스트*/
+#goco_visor{float:left; width:100%; min-width:832px; height:1078px; border-top:2px solid #444645; background-color:#ffffff; color:#464545}
+#gv_leftcontents{float:left; width:50%; height:1078px; border-right:1px solid #e6e6e6; box-sizing:border-box;}
+#gv_leftcontents h2{float:left; font-size:28px; margin-left:10px; margin-top:13px; font-weight:bold; color:#474747; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+#gv_leftcontents .list_num{float:left; color:#642d91; margin-top:27px; margin-left:5px}
+#gv_leftcontents #sort_tab{clear:both; float:left; width:100%; margin-top:5px}
+#gv_leftcontents #sort_tab > li{float:left; width:20%; height:35px;}
+#gv_leftcontents #sort_tab li.first a{border-left:0}
+#gv_leftcontents #sort_tab li a{display:block; height:35px; text-align:center; line-height:2.5; background-color:#fff; color:#787878; border:1px solid #e6e6e6; border-right:0; box-sizing:border-box}
+#gv_leftcontents #sort_tab li a:hover{background-color:#f0f0f0}
+#gv_leftcontents #sort_tab li.on a{background-color:#33c799; color:#fff; border:0; line-height:2.6;}
+#gv_leftcontents #sort_tab li ul{display:none; margin:0; position:relative; z-index:2}
+#gv_leftcontents #sort_tab li ul li a{width:100%; border-top:0; box-sizing:border-box}
+#gv_leftcontents #sort_tab li ul li a.last{border-right:1px solid #e6e6e6;}
+
+#gocovisor_list{clear:both; float:left; width:100%;}
+#gocovisor_list dl{float:left; width:100%; padding:25px 0 25px 0; border-bottom:1px solid #e6e6e6}
+#gocovisor_list dl dt{float:left; margin-left:15px; width:140px; height:135px; background-color:#33c799}
+#gocovisor_list dl dd{float:left; height:135px; text-align:left; position:relative}
+#gocovisor_list dl dd h3{width:230px; font-size:16px; color:#474747; margin-left:15px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+#gocovisor_list dl dd .add{margin-left:15px; color:#939393}
+#gocovisor_list dl dd .rating{margin-top:10px; margin-left:15px; color:#ff252c}
+#gocovisor_list dl dd .gv_btn{position:absolute; bottom:0; left:15px}
+#gocovisor_list dl dd .gv_btn a{margin-right:1px}
+#gocovisor_list #no_result{text-align:left; float:left;width:100%; height:135px; padding:25px 0 25px 0; border-bottom:1px solid #e6e6e6}
+#gocovisor_list #no_result h3{margin-left:15px; font-size:16px; text-align:center}
+#gocovisor_list #no_result p{margin-left:15px; margin-top:15px;}
+
+/*페이지넘버*/
+.page_num{float:left; width:100%; height:52px}
+.page_num p{margin-top:13px; text-align:center}
+.page_num a{display:inline-block; width:24px; height:24px; color:#787878; font-size:12px; margin-right:1px; line-height:1.9; text-align:center}
+.page_num a.btn_first{background:url(http://img.go.co.kr/gv_btn_first.jpg) 0 0 no-repeat; text-indent:-99999px;}
+.page_num a.btn_prev{background:url(http://img.go.co.kr/gv_btn_prev.jpg) 0 0 no-repeat; text-indent:-99999px;}
+.page_num a.btn_next{background:url(http://img.go.co.kr/gv_btn_next.jpg) 0 0 no-repeat; text-indent:-99999px;}
+.page_num a.btn_end{background:url(http://img.go.co.kr/gv_btn_end.jpg) 0 0 no-repeat; text-indent:-99999px;}
+.page_num a:hover{background-color:#f0deff; background-position:0 -24px; color:#642d91}
+.page_num a.on{background-color:#642d91; color:#fff}
+
+/*추천리뷰*/
+#gv_rightcontents{float:left; width:50%;}
+#gv_rightcontents h2{width:100%; height:95px; background-color:#f4edf5; font-size:22px; text-align:center;}
+#gv_rightcontents h2 img{margin-top:35px}
+
+#recommend_review{float:left; width:100%; height:744px; overflow-y:scroll}
+#recommend_review dl{float:left; width:100%; padding:25px 0 25px 0; border-bottom:1px dashed #e6e6e6}
+#recommend_review dl dt{float:left; margin-left:15px; width:120px; height:120px; border-radius:100px; background-color:#33c799; overflow:hidden}
+#recommend_review dl dt a{display:block; width:120px; height:120px; border-radius:100px;}
+#recommend_review dl dd{float:left; width:58%; height:135px; margin-left:15px; text-align:left; position:relative;}
+#recommend_review dl dd h3{width:230px; font-size:16px; color:#474747; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+#recommend_review dl dd .add{color:#939393}
+#recommend_review dl dd .rating{width:228px; margin-top:5px; color:#000000; }
+#recommend_review dl dd .review{margin-top:3px; height:55px; width:100%; height:60px; text-align:justify}
+#recommend_review dl dd .review a{display:block;}
+
+/*하단배너*/
+#rv_banner{clear:both; float:left; width:100%; position:relative}
+#rv_banner .gv_banner_img{position:absolute; width:100%; height:239px; overflow:hidden; background-color:#642d92}
+#rv_banner #banner_control{float:left; width:100%; height:239px}
+#rv_banner #banner_control a.left{position:absolute; top:50%; left:10px; margin-top:-32px; display:block; width:33px; height:65px; background:url(http://img.go.co.kr/banner_btn_left.png) 0 0 no-repeat; text-indent:-99999px;}
+#rv_banner #banner_control a.right{position:absolute; top:50%; right:10px; margin-top:-32px; display:block; width:33px; height:65px; background:url(http://img.go.co.kr/banner_btn_right.png) 0 0 no-repeat; text-indent:-99999px;}
+#rv_banner #banner_control a:hover{background-position:0 -65px;}
+
+
+#gv_view_top{width:100%; height:359px; background-color:#fff; margin-top:24px; color:#464545; border:1px solid #e6e6e6}
+#gv_view_top #gv_big_img{float:left; width:385px; height:359px; background-color:#642d92}
+#gv_view_top #gv_thumbnail{float:left; margin-left:1px;}
+#gv_view_top #gv_thumbnail .gv_thumbnail_img{margin-bottom:1px; width:120px; height:119px; background-color:#ff5a5e}
+#gv_view_top #gv_thumbnail .gv_thumbnail_img a{display:block; width:120px; height:119px; transition:all 0.5s}
+#gv_view_top #gv_thumbnail .gv_thumbnail_img a:hover{opacity:0.5;}
+#gv_view_top #gv_thumbnail .gv_thumbnail_img a.on img{border:5px solid #ff5a5e; box-sizing:border-box}
+#gv_view_top #img_control{float:left; margin-left:8px; width:17px; height:359px; position:relative}
+#gv_view_top #img_control a.control_top{display:block; position:absolute; top:8px; width:17px; height:17px; background:url(http://img.go.co.kr/gv_btn_top.jpg) 0 0 no-repeat; text-indent:-99999px}
+#gv_view_top #img_control a.control_down{display:block; position:absolute; bottom:8px; width:17px; height:17px; background:url(http://img.go.co.kr/gv_btn_bottom.jpg) 0 0 no-repeat; text-indent:-99999px}
+#gv_view_top #img_control a:hover{background-position:0 -17px}
+#gv_view_top #gv_info{float:left; margin-left:25px; margin-top:25px}
+#gv_view_top #gv_info h2{width:415px; font-size:32px; font-weight:bold; color:#474747; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+#gv_view_top #gv_info .information{margin-top:10px; line-height:1.8}
+#gv_view_top #gv_info .information .f_gray{color:#939393}
+#gv_view_top #gv_info .information a{color:#0086e4}
+#gv_view_top #gv_info .rating{width:228px; margin-top:10px; color:#ff252c;}
+#gv_view_top #gv_info .no_matching{width:400px; margin-top:10px; padding:10px; font-size:12px; letter-spacing:-1px; display:block; background:#fef501; font-weight:600}
+#gv_view_top #gv_info .gv_btn{margin-top:23px;}
+#gv_view_top #gv_info .gv_btn a{margin-right:1px}
+#gv_view_top #gv_info .btn_sns{margin-top:15px}
+#gv_view_top #gv_info .btn_sns a{margin-right:5px}
+
+/*이지역 다른시설*/
+#gv_other{float:left; width:385px; background-color:#fff; color:#464545; border-right:1px solid #e6e6e6}
+#gv_other h2{width:385px; height:96px; text-align:center; background-color:#f4edf5}
+#gv_other h2 img{margin-top:24px;}
+#other_list{clear:both; float:left; width:100%; height:1115px; overflow-y:scroll}
+#other_list dl{float:left; width:100%; padding:25px 0 25px 0; border-bottom:1px dashed #e6e6e6}
+#other_list dl dt{float:left; margin-left:15px; width:120px; height:120px; border-radius:100px; background-color:#33c799; overflow:hidden}
+#other_list dl dt a{display:block; width:120px; height:120px;}
+#other_list dl dd{float:left; height:135px; text-align:left; position:relative}
+#other_list dl dd h3{width:200px; font-size:16px; color:#474747; margin-left:15px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+#other_list dl dd .add{margin-left:15px; color:#939393}
+#other_list dl dd .rating{margin-top:8px; margin-left:15px; color:#ff252c}
+#other_list dl dd .gv_btn{margin-top:10px; margin-left:15px;}
+#other_list dl dd .gv_btn a{margin-right:1px}
+
+/*리뷰*/
+#gv_review{float:left; width:616px; color:#464545; background-color:#fff}
+#gv_review #review_top{float:left; width:100%; border-bottom:1px solid #bebebe}
+#gv_review #review_top h2{float:left; margin-left:15px; margin-top:30px;}
+#gv_review #review_top .rivew_num{float:right; margin-top:55px; margin-right:15px;}
+#gv_review #review_top .rivew_num img{margin-left:5px; margin-right:5px;}
+#gv_review #review_top .rivew_num span{color:#ff252c}
+#gv_review #review_top .notice{float:left; padding:10px 25px 10px 25px; width:566px; font-size:15px; background:#e1e0e0}
+#gv_review #review_top .notice span {font-size:23px; font-weight:600; line-height:2; color:#ff252c}
+#gv_review #review_top .notice .btn_more a {float:right; display:block; cursor:pointer; margin-top:10px; width:230px; height:45px; line-height:3; color:#fff; font-size:15px; font-weight:600; text-align:center; border-radius:5px; background:#34c79a}
+#gv_review #review_top .notice .btn_more a:hover {float:right; display:block; cursor:pointer; margin-top:10px; width:230px; height:45px; line-height:3; color:#fff; font-size:15px; font-weight:600; text-align:center; border-radius:5px; background:#38d7a6}
+
+
+#review_write{clear:both; float:left; width:616px; height:185px; position:relative; border-bottom:1px solid #bebebe}
+#review_write .writer{float:left; width:134px; height:25px; margin-top:15px; margin-left:15px; border:1px solid #e6e6e6; font-size:13px; padding:5px;}
+#review_write #star{float:left; margin-top:14px; margin-left:10px;}
+#review_write #star_rating{float:left; margin-top:10px; font-size:20px; font-weight:600; color:#ff252c}
+#review_write #star_text{position:absolute; top:35px; left:172px; color:#939393 }
+#review_write .review_title{clear:both; float:left; width:573px; height:25px; margin-top:5px; margin-left:15px; border:1px solid #e6e6e6; font-size:13px; padding:5px;}
+#review_write .rv_textbox{clear:both; float:left; width:485px; height:60px; margin-top:5px; margin-left:15px; border:1px solid #e6e6e6; font-size:13px; padding:5px;}
+#review_write .btn_register{float:left; display:block; width:88px; height:72px; background-color:#5c5c5c; font-size:16px; color:#fff; margin-top:5px; text-align:center; line-height:4.5}
+#review_write #text_limit{position:absolute; top:35px; right:15px;}
+
+#review_list{float:left; width:100%;  overflow:hidden;}
+#review_list .list_box{float:left; width:100%; min-height:170px; padding-bottom:15px; border-bottom:1px solid #e6e6e6;}
+#review_list .best{background-color:#fff5ef; border-bottom:1px solid #bebebe;}
+#review_list dl{float:left; margin-left:15px; margin-top:15px;}
+#review_list dt{float:left; margin-right:7px;}
+#review_list dd{float:left;  text-transform: uppercase;}
+#review_list dd h3{float:left; width:430px; font-size:16px; font-weight:600; text-overflow:ellipsis; overflow:hidden; white-space: nowrap;}
+#review_list dd p.user_name{clear:both; float:left; margin-top:2px;}
+#review_list dd .rv_star{float:left; margin-top:2px; margin-left:5px;}
+#review_list .recommend_num{float:right; margin-right:15px; margin-top:15px;}
+#review_list .recommend_num .date{color:#939393; font-size:12px; }
+#review_list .recommend_num a{float:left; margin-top:5px; margin-left:5px;}
+#review_list .recommend_num .number{float:right; border:1px solid #d2d2d2; border-radius:5px; padding:5px; margin-top:2px; margin-left:5px; text-align:center; background-color:#fff}
+/*#review_list .review_text{clear:both; float:left; width:585px; height:60px; margin-top:10px; margin-left:15px; text-align:justify;}*/
+#review_list .review_text{clear:both; width:585px; height:60px; margin-top:10px; margin-left:15px; text-align:justify;}
+#review_list .readmore{clear:both; float:left; color:#0086e4; text-decoration:underline}
+#review_list .re_de{float:right; margin-top:7px; margin-right:15px;}
+#review_list .re_de a{margin-left:1px;}
+#review_list .list_box #no_review{text-align:center; margin-top:78px}
+
+/*리뷰(상세페이지)*/
+#gv_review2{float:left; width:800px; color:#464545}
+#gv_review2 .title {float:left; width:800px; height:44px; border-bottom:2px solid #c8c8c8; margin-bottom:10px}
+#gv_review2 .blue {color:#fe5b0e; font-weight:bold}
+
+#gv_review2 #review_write2{float:left; margin-left:102px; margin-top:30px; padding:10px; width:780px; height:165px; position:relative; background:#f4f3f3}
+#gv_review2 #review_write2 .writer{float:left; width:385px; height:25px; margin-top:25px; border:1px solid #e6e6e6; font-size:13px; padding:5px;}
+#gv_review2 #review_write2 #star{float:left; margin-top:24px; margin-left:10px;}
+#gv_review2 #review_write2 #star_rating{float:left; margin-top:20px; font-size:20px; font-weight:600; color:#ff252c}
+#gv_review2 #review_write2 #star_text{position:absolute; top:55px; left:420px; color:#939393 }
+#gv_review2 #review_write2 .rv_textbox{clear:both; float:left; width:680px; height:76px; margin-top:12px; border:1px solid #e6e6e6; font-size:13px; padding:5px;}
+#gv_review2 #review_write2 #text_limit{position:absolute; top:57px; right:10px; letter-spacing:-0.3px}
+#gv_review2 #review_write2 #text_name{position:absolute; top:8px; left:12px}
+#gv_review2 #review_write2 #text_name span{color:#fe5b0e; font-size:14px; font-weight:600}
+#gv_review2 #review_write2 .btn_register{float:left; display:block; width:88px; height:86px; background-color:#5c5c5c; font-size:16px; color:#fff; margin-top:13px; text-align:center; line-height:5}
+
+#gv_review2 #review_write3{float:left; margin-left:102px; margin-top:30px; padding:20px 10px; width:780px; position:relative; border:1px solid #bebebe; background:url(http://img.go.co.kr/review_writeBG.jpg) no-repeat}
+#gv_review2 #review_write3 .b_login span {color:#fe5b0e; font-weight:600}
+#gv_review2 #review_write3 .btn_login2 a {margin:auto; margin-top:20px; display:block; cursor:pointer; width:280px; height:30px; border-radius:5px; background:#5c5c5c; font-size:14px; letter-spacing:-0.3px; text-align:center; color:#fff; font-weight:600; line-height:2}
+#gv_review2 #review_write3 .btn_login2 a:hover {color:#fffc00}
+
+#gv_review2 #review_top2 {position:relative; float:left; margin-left:102px; margin-top:30px; width:800px; height: 34px; border-bottom:1px solid #bebebe}
+#gv_review2 #review_top2 .rivew_num2{position:absolute; top:0; left:0; width:200px; height:34px; text-align:left}
+#gv_review2 #review_top2 .rivew_num2 span{color:#ff252c}
+#gv_review2 #review_top2 .rivew_num2 a:hover {text-decoration:underline}
+#gv_review2 #review_top2 .search2 {position:absolute; top:0; right:0; width:600px; height:34px; text-align:right}
+
+#gv_review2 #review_list2 {float:left; margin-left:102px; width:800px;  overflow:hidden;}
+#gv_review2 #review_list2 .list_box{float:left; width:800px; min-height:170px; padding-bottom:15px; text-align:left; border-bottom:1px solid #e6e6e6;}
+#gv_review2 #review_list2 dl{float:left; margin-left:15px; margin-top:15px;}
+#gv_review2 #review_list2 dt{float:left; margin-right:7px;}
+#gv_review2 #review_list2 dd{float:left;  text-transform: uppercase;}
+#gv_review2 #review_list2 dd .rv_star{margin-top:2px}
+#gv_review2 #review_list2 .recommend_num{float:right; margin-right:15px; margin-top:15px;}
+#gv_review2 #review_list2 .recommend_num .date{color:#939393; font-size:12px; }
+#gv_review2 #review_list2 .recommend_num a{float:left; margin-top:5px; margin-left:5px;}
+#gv_review2 #review_list2 .recommend_num .number{float:right; border:1px solid #d2d2d2; border-radius:5px; padding:5px; margin-top:2px; margin-left:5px; text-align:center}
+#gv_review2 #review_list2 .recommend_num .rv_star{margin-top:2px}
+#gv_review2 #review_list2 .review_text{clear:both; float:left; width:800px; min-height:60px; margin-top:10px; margin-left:15px; text-align:justify;}
+#gv_review2 #review_list2 .re_de{float:right; margin-top:7px; margin-right:30px;}
+#gv_review2 #review_list2 .re_de a{margin-left:1px;}
+#gv_review2 #review_list2 .list_box #no_review{text-align:center; margin-top:78px}
+
+#wrapper_main #contents #info_box8 #review_box #gv_review2 .page_num a.on{background-color:#642d91; color:#fff}
+#review_list2 .list_box .readmore a {clear:both; float:left; margin-top:7px; color:#0086e4; text-decoration:underline}
+#wrapper_main #contents #info_box8 #review_box #gv_review2 #review_write2 .btn_register{float:left; display:block; width:88px; height:88px; background-color:#5c5c5c; font-size:16px; color:#fff; margin-top:12px; text-align:center; line-height:5.5}
+
+#gv_review2 .page_num2{float:left; margin-left:102px; width:800px; height:52px}
+#gv_review2 .page_num2 p{margin-top:13px; text-align:center}
+#gv_review2 .page_num2 a{display:inline-block; width:24px; height:24px; color:#787878; font-size:12px; margin-right:1px; line-height:1.9; text-align:center}
+#gv_review2 .page_num2 a.btn_first{background:url(http://img.go.co.kr/gv_btn_first.jpg) 0 0 no-repeat; text-indent:-99999px;}
+#gv_review2 .page_num2 a.btn_prev{background:url(http://img.go.co.kr/gv_btn_prev.jpg) 0 0 no-repeat; text-indent:-99999px;}
+#gv_review2 .page_num2 a.btn_next{background:url(http://img.go.co.kr/gv_btn_next.jpg) 0 0 no-repeat; text-indent:-99999px;}
+#gv_review2 .page_num2 a.btn_end{background:url(http://img.go.co.kr/gv_btn_end.jpg) 0 0 no-repeat; text-indent:-99999px;}
+#gv_review2 .page_num2 a:hover{background-color:#f0deff; background-position:0 -24px; color:#642d91}
+#gv_review2 .page_num2 a.on{background-color:#642d91; color:#fff}
+
+
+/*하단 상품정보*/
+#accommodation_info{clear:both; float:left; width:384px; height:360px; color:#464545; background-color:#fff; border:1px solid #e6e6e6; border-top:1px solid #bebebe; overflow:auto;}
+#accommodation_info #text{float:left; margin-top:25px; margin-left:25px}
+#accommodation_info #text h3{font-size:24px; font-weight:600; line-height:1; margin-bottom:5px;}
+#accommodation_info #text h4{font-size:16px; font-weight:600; margin-top:23px;}
+
+#gv_map{float:left; width:616px; height:360px; color:#464545; background-color:#642d92; border-top:1px solid #bebebe; border-bottom:1px solid #e6e6e6; overflow:hidden; }

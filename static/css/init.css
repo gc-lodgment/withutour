@@ -60,7 +60,9 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .group .group-list {float: left; position: relative; box-sizing: border-box; width: 320px; margin-left: 35px;}
 .group .group-list:first-child {margin-left: 0;}
 /*.group .group-list:nth-child(4n), .group .group-list.namwon {margin-left: 0; clear: both;}*/
-.group .group-list.namwon {margin-left: 0;}
+/*.group .group-list.namwon {margin-left: 0;}*/
+.group .group-list:nth-child(4n) {margin-left: 0;}
+.ie8 .group .group-list.chiak {margin-left: 0;}
 .group .group-list .link-area {cursor: pointer;}
 .group .group-list .tit-area {position: relative; box-sizing: border-box; width: 100%;}
 .group .group-list .tit-area .type-box {position: relative; box-sizing: border-box; width: 100%; height: 34px;}

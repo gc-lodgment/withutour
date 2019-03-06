@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+
+/* 헤더 */
+.m_wrapper {width:100%; margin:0 auto; position:relative;}
+.m_header {width:100%; height:52px; }
+.m_header .logo {width:73px; height:15px; margin:0 auto; padding-top:15px;} 
+.m_header .logo img {width:100%;} 
+
+.m_header .a-myArea {position: absolute; top: 17px; right: 10px;}
+.m_header .a-myArea img {width: 18px;}
+
+.m_header .all_menu {width:40px; height:30px; position:absolute; top:10px; left:10px; border:none; background: none;}
+.m_header .all_menu span {display: block; height:4px; width: 28px; background: #fff; margin:4px auto 0; cursor: pointer;}
+.m_header .all_menu span:first-child {margin-top: 0;}
+
+.m_main .schtxt, .m_main .select_bx {width: 90%; background: #fff; height: 38px;}
+
+/* 메인bg 검색부분 */
+.m_main {width:100%; height:215px; background: url(http://img.hyutour.co.kr/renew/m/main_bg.jpg) no-repeat center; background-size: cover;  display: inline-block; padding-top: 32px; box-sizing: border-box;}
+.m_main .m_tit {color:#fff; font-size:17px; font-family: "Noto Sans KR", sans-serif; font-weight:400; padding:0px 20px; letter-spacing: 0px;}
+.m_main .m_tit .f-bd {font-weight: 500;}
+.m_main .sch_wrap { width:100%; text-align: center; display: inline-block; margin-top: 8px;}
+.m_main .schtxt {width: 90%; padding-left:15px; color: #595858;}
+
+/* 숙박유형 검색 인풋부분 */
+.m_main .select_bx  {width:90%; text-align: center; font-size:0; background: #fff; margin: 0 auto; margin-top: 8px;}
+.m_main .select_bx .date {position: relative; top: 9px; width:50%; padding-left: 42px; vertical-align: middle; font-size:14px; color: #333; height: auto;}
+.m_main .select_bx .date.in {background: url(http://img.hyutour.co.kr/renew/m/i_chkDate_in.jpg) no-repeat 15px 1px; background-size: 20px; border-right: 1px solid #d9d9d9;}
+.m_main .select_bx:after {content: "아아아"; display: inline-block;}
+/*.m_main .select_bx .date.in:after {display: block; content: ""; position: absolute; right: 0; top: 0; width: 100px; height: 100px; background: #e8e8e8;}*/
+.m_main .select_bx .date.out {background: url(http://img.hyutour.co.kr/renew/m/i_chkDate_out.jpg) no-repeat 15px 1px; background-size: 20px;}
+
+.sch_wrap .sch_bt {color: #fff; width:90%; height:40px; background: #008cd5; text-align: center; line-height: 40px; cursor: pointer; font-weight: 600; margin:8px auto 0; font-size:14px;}
+.sch_wrap .sch_bt .i-mag {position: relative; display: inline-block; width: 8px; height: 8px; border: 2px solid #fff; border-radius: 50%; left: -4px; top: 0px;}
+.sch_wrap .sch_bt .i-mag:after {position: absolute; content: ""; display: inline-block; bottom: -3px; right: -5px; width: 6px; height: 2px; background: #fff; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+
+
+.container-sec {position: relative; width: 100%; background: #f6f6f6;}
+.container-sec a {color: inherit !important;}
+
+/* 지역별 인기숙소 */
+.sec-themeRoom {width:100%; background: #fff; border-top:1px solid #f1f1f1; border-bottom:1px solid #e8e8e8; margin-top:0px; padding: 10px 5% 10px; box-sizing: border-box;}
+.sec-themeRoom .theme-tit {font-size:14px; color:#000000; font-weight: 600;}
+.sec-themeRoom .theme-area {margin-top: 5px;}
+.sec-themeRoom .theme-area > a {display: block; float: left; position: relative; width: 49%; height: 150px; text-align: center;}
+/*
+.sec-themeRoom .theme-area > a {overflow: hidden;}
+.sec-themeRoom .theme-area > a .bg-img {width: 100%;}
+*/
+.sec-themeRoom .theme-area > a .inTxt {position: absolute; width: 100%; font-size: 13px; color: #fff; width: 185px; height: 77px; left: 50%; margin-left: -92.5px; top: 50%; margin-top: -33.5px;}
+.sec-themeRoom .theme-area > a .inTxt span {display: block; font-family: "Noto Sans KR", sans-serif; letter-spacing: -0.5px;}
+.sec-themeRoom .theme-area > a .inTxt .s-tit {font-size: 12.5px; line-height: 1.2;}
+.sec-themeRoom .theme-area > a .inTxt .s-txt {font-size: 12px; margin-top: 8px; font-weight: 300;}
+.sec-themeRoom .theme-area > a.a-2,
+.sec-themeRoom .theme-area > a.a-4 {margin-left: 2%;}
+.sec-themeRoom .theme-area > a.a-3,
+.sec-themeRoom .theme-area > a.a-4 {margin-top: 2%;}
+.sec-themeRoom .theme-area > a.a-1 {background: url(http://img.hyutour.co.kr/renew/m/themeRoom/themeRoom_01.jpg) no-repeat center;}
+.sec-themeRoom .theme-area > a.a-2 {background: url(http://img.hyutour.co.kr/renew/m/themeRoom/themeRoom_02.jpg) no-repeat center;}
+.sec-themeRoom .theme-area > a.a-3 {background: url(http://img.hyutour.co.kr/renew/m/themeRoom/themeRoom_03.jpg) no-repeat center;}
+.sec-themeRoom .theme-area > a.a-4 {background: url(http://img.hyutour.co.kr/renew/m/themeRoom/themeRoom_04.jpg) no-repeat center;}
+
+/*자주묻는질문*/
+.sec-quation {position: relative; width: 100%; margin: 10px auto 0; border-top: 1px solid #e8e8e8; background: #fff;}
+.sec-quation .sec-container {position: relative; width: 90%; margin: 0 auto;}
+.sec-quation .sec-container .link-q {position: relative; margin-top: 20px;}
+.sec-quation .sec-container .link-q > li {float: left; width: 33.33%; text-align: center;}
+.sec-quation .sec-container .link-q > li figure {position: relative; width: 45px; height: 45px; background: #848290; color: #fff; font-family: "Malgun Gothic", sans-serif; border-radius: 50%; text-align: center; margin: 0 auto;}
+.sec-quation .sec-container .link-q > li figure:after {content: ""; display: inline-block; height: 106%; vertical-align: middle;}
+.sec-quation .sec-container .link-q > li i {font-size: 12px; font-style: normal; font-weight: 500; margin-top: 5px; display: block; letter-spacing: -1.5px;}
+.sec-quation .sec-container .link-q > li.li-1 figure {font-size: 14px; letter-spacing: -1px;}
+.sec-quation .sec-container .link-q > li.li-2 figure img {position: relative; top:11px; left: 1px; width: 23px;}
+.sec-quation .sec-container .link-q > li.li-3 figure {font-size: 19px; font-weight: 400; letter-spacing: 0.5px; line-height: 2.5; font-family: "Noto Sans Kr", sans-serif;}
+
+.sec-quation .sec-container .link-evt,
+.sec-quation .sec-container .link-evt * {font-family: "Noto Sans KR", sans-serif;}
+.sec-quation .sec-container .link-evt {padding: 9px 8px; background: #e9e9f1; margin: 20px auto;}
+.sec-quation .sec-container .link-evt > a {font-size: 12px;}
+.sec-quation .sec-container .link-evt .a-post {}
+.sec-quation .sec-container .link-evt .a-post > span {display: inline-block;}
+.sec-quation .sec-container .link-evt .a-post .s-1 {margin-right: 10px;}
+.sec-quation .sec-container .link-evt .a-post .s-2 {}
+.sec-quation .sec-container .link-evt .a-more {float: right; color: #777;}
+.sec-quation .sec-container .link-evt .a-more .rArrow:after {width: 5px; height: 5px; top: -2px; margin-left: 5px; border-color: #777;}
+
+
+/* 푸터 */
+.footer, .footer * {font-family: "Noto Sans KR", sans-serif; font-weight: 300;}
+.footer {width:100%; background: #54585b; font-size: 12px; padding-bottom: 50px;}
+.footer .logo {position: relative; text-align: center; width: 80px; margin: 8px auto 2px;}
+.footer .logo img {width: 100%;}
+.footerin .f-top { width:94%; text-align: center; margin: 0 auto; border-bottom:1px solid #a3a3a3;}
+.footerin .f-top .mgl {position: relative; top: -1px; display: inline-block; font-family: "Nanum Gothic", sans-serif; margin: 0px 10px; color: #cdcdcd;}
+.footerin .f-top a {color:#cdcdcd; display: inline-block; line-height: 2.5;}
+
+.foot {width:100%;}
+.foot .footer_add {text-align: center; color:#cdcdcd; width:90%; margin:0 auto;}
+.foot .copy {color: #cdcdcd; text-align: center; padding-top:10px; padding-bottom:20px; word-break: keep-all;}
+
+
+
+/* 상세페이지 */
+
+
+
+/* 캘린더 수정 */
+#calender_number_w {padding: 10px 0 1px;}
+
+/*
+#info_product_btn_w .info_product_btn {background: #008cd5;}
+#calender_number_w { height:80px; border-top:none;}
+.calender_ch_w {border:none; width:100%;}
+.calender_ch_w .calender_ch_checkin {border-right:none;}
+.calender_ch_w .date {color: #008cd5; padding-left:20px;}
+.calender_ch_day_o {border:none; background: #f4f4f6; width:50px; height:30px; line-height: 30px; text-align: center;}
+*/
+
+/* 상단이미지 로고 삭제 */
+.thumbnail_logo img {display: none;}
+
+/* 상단상품이미지 텍스트 정렬 */
+#info_img_wrpa .img_txt {bottom:20px;}
+/*  상단 이미지 아이콘 */
+#info_img_wrpa .de_share_icon {margin-right:0; vertical-align: middle;}
+#info_img_wrpa .de_ch_icon {width:6%;}
+#info_img_wrpa .de_share_icon {width:11%;}
+#info_img_wrpa .pay_back_icon {margin-left:22px;}
+#info_img_wrpa .pay_back_icon {width}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev,.swiper-button-prev, .swiper-container-rtl .swiper-button-next {display: none;}
+
+/* 상단타이틀 */
+.top_title_wrap {width:100%;position:relative; top:10px; left:20px;}
+.top_title_wrap .star {display: block; line-height: 1;}
+.top_title_wrap .top_title_txt {padding-bottom:15px;}
+.top_title_wrap .top_title_txt span {font-size:15px; color:#000; font-weight: 700;}
+.top_title_wrap .top_title_txt p {font-size:16px; margin-top:5px; font-weight: normal; color:#000; letter-spacing: -2;}
+.top_title_wrap .top_title_txt .row-prc {}
+.top_title_wrap .top_title_txt .row-prc > * {display: inline-block;}
+.top_title_wrap .top_title_txt .row-prc .per {color: #fff; background: #f23838; padding: 2px 4px; font-weight: 400; line-height: 1;}
+.top_title_wrap .top_title_txt .row-prc .price {font-size: 16px; color: #f23838;}
+.top_title_wrap .top_title_txt .row-prc s {font-size: 12px;}
+
+/*정보탭*/
+.info-tab {position: relative; width: 100%; display: table; border-bottom: 1px solid #e8e8e8;}
+.info-tab > li {display: table-cell; width: 25%;}
+.info-tab > li > a {padding: 8px 0; display: block; font-size: 13px; text-align: center;}
+.info-tab > li.on > a {border-bottom: 2px solid #008cd5; color: #008cd5;}
+
+/* 상단 타이틀탭 */
+.top_main {width:100%; height:50px; position:relative;}
+.top_main .main_title {text-align: center;}
+.top_main .main_title span {font-size:18px; font-weight: 700; color: #000; line-height:50px;}
+
+.top_main .main_title .top_pr {float:left; margin-left:20px; margin-top:10px; }
+.top_main .main_title .top_lv {float:right; margin-right:20px; margin-top:15px; }
+.top_main .main_title .top_lv img {width: 25px;}
+
+/* 배너이미지 추가 */
+
+#room_w .room_tx_w .room_tx_in2 {margin-top:20px;}
+
+#room_w .room_tx_w .room_tx_in {border: none; border-top:10px solid #f6f6f6}
+#location_w {border-top: 10px solid #f6f6f6;}
+
+/* 부대시설 아이콘 */
+
+#room_w .room_tx_w .room_tx_in .establishment_wrap .establishment_list > li > div { padding:0 20px 0 20px; vertical-align: middle;}
+#room_w .room_tx_w .room_tx_in .establishment_wrap .establishment_list > li > div img {vertical-align: middle;}
+
+/* 배너추가*/
+
+.bn_wr {width:100%; background: #f6f6f6; }
+.bn_bg span {color:#fff; line-height:40px;}
+.bn_bg .right {padding-right:10px; position:absolute; right:10px;}
+.bn_bg .cp {font-style:italic;}
+.bn_bg {width:95%; position:relative; height:40px; background: url(http://img.borogogo.co.kr/mobile/171019_renew/r_banner.png) no-repeat; margin:0 auto; text-indent: 10px; font-size:13px;}
+
+
+#info_product_btn_w .info_product_btn {background: #008cd5;}
