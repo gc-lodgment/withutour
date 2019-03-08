@@ -12,7 +12,7 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .tell-txt {display: inline-block;}
 .tell-txt:before {content: '☎'; position: relative; display: inline-block; vertical-align: middle;}
 .mail-txt {position: relative; display: inline-block; margin-left: 7px; padding-left: 27px;}
-.mail-txt:before {content: ''; position: absolute; display: inline-block; width: 20px; height: 15px; top:50%; left: 0; margin-top: -7px; vertical-align: middle; background: url(http://img.hyutour.co.kr/group/ico_mail.png) no-repeat center center;}
+.mail-txt:before {content: ''; position: absolute; display: inline-block; width: 20px; height: 15px; top:50%; left: 0; margin-top: -7px; vertical-align: middle; background: url(http://img.withutour.co.kr/ico_mail.png) no-repeat center center;}
 
 /* font */
 .c-red {color: #d40000;}
@@ -50,30 +50,31 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .visual .cust-txt span {display: inline-block; font-size: 24px; font-weight: 700; line-height: 52px; letter-spacing: -0.7px; vertical-align: middle;}
 .visual .cust-txt .tell-txt {padding-left: 10px;}
 .visual .cust-txt .tell-txt:before {margin-top: -4px; padding-right: 7px;}
-.ie8 .visual .cust-txt {padding-left: 0; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% -120px;}
-.ie8 .visual .cust-txt span:first-child {padding-left: 33px; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 -120px;}
-/* group */
-.group {padding: 45px 0 45px; background: #fff;}
+.ie8 .visual .cust-txt {padding-left: 0; background: url(http://img.withutour.co.kr/btn_map.png) no-repeat 100% -120px;}
+.ie8 .visual .cust-txt span:first-child {padding-left: 33px; background: url(http://img.withutour.co.kr/btn_map.png) no-repeat 0 -120px;}
+
+/* popup + group 공통 타이틀 */
+.type-box {position: relative; box-sizing: border-box; width: 100%; height: 34px;}
+.type-box span {position: relative; display: block; box-sizing: border-box; line-height: 34px;}
+.type-box .type-adr {padding-left: 10px; font-size: 20px; font-weight: 700; color: #fff;}
+.type-box .type-stay {position: absolute; width: 39.5%; /*min-width: 126px;*/ top: 0; right: 0; padding-right: 10px; font-size: 16px; text-align: right; background: #000;}
+.type-box .type-stay:before {content: ''; display: block; position: absolute; width: 0px; height: 0px; top: 0; margin-left: -34px; border-left: 34px solid transparent; border-bottom: 34px solid #000;}
+.hotel .type-box {background: #e9699f;}
+.hotel .type-box .type-stay {color: #ffafd1;}
+.resort .type-box {background: #677ee1;}
+.resort .type-box .type-stay {color: #aebdff;}
+
+/* group com */
+.group {padding: 45px 0 5px;}
 .group figure {position: relative; box-sizing: border-box;}
 .group figure img, .group .img-list img {width: 100%; border: 1px solid #cbcbcb;}
 
+/* group */
 .group .group-list {float: left; position: relative; box-sizing: border-box; width: 320px; margin-left: 35px;}
-.group .group-list:first-child {margin-left: 0;}
+.group .group-list:first-child, .group .group-list:nth-child(3n+1) {margin-left: 0;}
 /*.group .group-list:nth-child(4n), .group .group-list.namwon {margin-left: 0; clear: both;}*/
-/*.group .group-list.namwon {margin-left: 0;}*/
-.group .group-list:nth-child(4n) {margin-left: 0;}
-.ie8 .group .group-list.chiak {margin-left: 0;}
-.group .group-list .link-area {cursor: pointer;}
+.group .group-list .link-area {/*cursor: pointer;*/}
 .group .group-list .tit-area {position: relative; box-sizing: border-box; width: 100%;}
-.group .group-list .tit-area .type-box {position: relative; box-sizing: border-box; width: 100%; height: 34px;}
-.group .group-list .tit-area .type-box span {position: relative; display: block; box-sizing: border-box; line-height: 34px;}
-.group .group-list .tit-area .type-box .type-adr {padding-left: 10px; font-size: 20px; font-weight: 700; color: #fff;}
-.group .group-list .tit-area .type-box .type-stay {position: absolute; width: 39.5%; /*min-width: 126px;*/ top: 0; right: 0; padding-right: 10px; font-size: 16px; text-align: right; background: #000;}
-.group .group-list .tit-area .type-box .type-stay:before {content: ''; display: block; position: absolute; width: 0px; height: 0px; top: 0; margin-left: -34px; border-left: 34px solid transparent; border-bottom: 34px solid #000;}
-.group .group-list.hotel .tit-area .type-box {background: #e9699f;}
-.group .group-list.hotel .tit-area .type-box .type-stay {color: #ffafd1;}
-.group .group-list.resort .tit-area .type-box {background: #677ee1;}
-.group .group-list.resort .tit-area .type-box .type-stay {color: #aebdff;}
 .group .group-list .tit-area .tit-box {text-align: center;}
 .group .group-list .tit-area .tit-box .tit {padding: 13px 0 3px; display: block; font-size: 34px; font-weight: 700; line-height: 34px; letter-spacing: -2px;}
 .group .group-list .tit-area .tit-box .sub-tit {display: block; font-size: 20px; line-height: 30px; letter-spacing: -1px;}
@@ -103,18 +104,20 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 }
 .group .group-list .btn-detail span {position: relative; display: inline-block; padding-right: 10px; font-size: 18px; font-weight: 700; line-height: 50px; color: #fff;}
 .group .group-list .btn-detail span:before {content: ''; display: inline-block; position: absolute; width: 7px; height: 7px; top: 50%; right: -7px; margin-top: -4px; border: 1px solid #fff; border-top: 0; border-left: 0; -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
-.group .group-list .btn-detail.yet {
-	border: 2px solid #aab0ba;background: #fff;
-}
-.group .group-list .btn-detail.yet span {color: #aab0ba;}
-.group .group-list .btn-detail.yet span:before {border-color: #aab0ba;}
+.group .group-list .btn-detail.yet {cursor: default; border: 2px solid #aab0ba; background: #fff;}
+.group .group-list .btn-detail.yet span { line-height: 46px; color: #aab0ba;}
+.group .group-list .btn-detail.yet span:before {content: none; /*border-color: #aab0ba;*/}
+
+.ie8 .group .group-list.chiak {margin-left: 0;}
+.ie8 .group .group-list .tit-area .tit-box .tit {font-size: 33px; line-height: 33px;}
 .ie8 .group .group-list .btn-detail span:before {content: '>'; width: auto; height: 100%; top: 0; right: -12px; margin-top: 0; vertical-align: middle; border: 0;}
 
 /*단체이벤트*/
-.contents .facil-sec {margin-bottom: 70px;}
-.sec-tit {font-size: 26px; font-weight: 700; font-family: "Noto Sans KR", sans-serif; text-align: center;}
+.sec-tit {font-size: 32px; font-weight: bold; text-align: center; color: #a840b8;}
+.sec-sub-tit {margin-top: 7px; font-size: 20px; font-weight: 500; line-height: 28px; text-align: center; color: #cc4e87;}
+.facil-sec .container {padding-top: 15px}
 .facil-sec .ul-list-2 {margin-top: -5px;}
-.facil-sec .ul-list-2 .li-item {position: relative; float: left; display: block; margin-left: 20px; margin-top: 23px; width: 505px; /*height: 200px;*/}
+.facil-sec .ul-list-2 .li-item {position: relative; box-sizing: border-box; float: left; display: block; margin-left: 20px; margin-top: 23px; width: 505px; /*height: 200px;*/}
 .facil-sec .ul-list-2 .li-item:nth-child(2n+1) {margin-left: 0;}
 .facil-sec .ul-list-2 .li-item figure {position: relative;}
 .facil-sec .ul-list-2 .li-item figure img {width: 100%;}
@@ -124,8 +127,30 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .facil-sec .ul-list-2 .li-item .li-txt span {display: table-cell; vertical-align: middle; color: #fff;}
 .facil-sec .ul-list-2 .li-item .li-txt.ht-1 {height: 75px;}
 
+.ie8 .facil-sec .ul-list-2 .li-item.item-1, .ie8 .facil-sec .ul-list-2 .li-item.item-3 {margin-left: 0;}
+
+
+/* 190307 고객사 */
+.cust-sec {}
+.cust-sec .container {padding: 45px 0 65px;}
+.cust-sec .container figure {}
+.cust-sec .container figure img {width: auto; max-width: 100%; border: 0;}
+.cust-sec .cust-list {margin-top: 22px; border-top: 1px solid #c2c2c2;}
+.cust-sec .cust-list li {float: left; width: 14%; border-bottom: 1px solid #c2c2c2; border-left: 1px solid #c2c2c2;}
+.cust-sec .cust-list li:first-child, .cust-sec .cust-list li:nth-child(7n+1) {border-left: 0;}
+.cust-sec .cust-list .list-area {position: relative; box-sizing: border-box; display: table; width: 100%; height: 150px; padding: 20px 0 0; text-align: center;}
+.cust-sec .cust-list .list-area .list-box {position: relative; box-sizing: border-box; display: table-cell; text-align: center; vertical-align: bottom;}
+.cust-sec .cust-list .list-area .list-img {position: relative; box-sizing: border-box; display: table; width: 100%; min-height: 50px;}
+.cust-sec .cust-list .list-area .list-img figure {display: table-cell; text-align: center; vertical-align: middle;}
+.cust-sec .cust-list .list-area .list-txt {position: relative; box-sizing: border-box; display: table; width: 100%; height: 60px; font-size: 15px; text-align: center; line-height: 15px;}
+.cust-sec .cust-list .list-area .list-txt span {display: table-cell; vertical-align: middle;}
+
+.ie8 .cust-sec .cust-list li.list-1, .ie8 .cust-sec .cust-list li.list-8, .ie8 .cust-sec .cust-list li.list-15, .ie8 .cust-sec .cust-list li.list-22 {border-left: 0;}
+
+
 /* 단체예약 */
-.etc {padding: 43px 0 56px; color: #545454; background: #fcfbea;}
+.etc {color: #545454; background: #fcfbea;}
+.etc .container {padding: 43px 0 56px; }
 .etc .show-xs { display: none; }
 .etc input { -webkit-appearance: none; -moz-appearance: none; appearance: none; -ms-appearance: none; -o-appearance: none; border-radius: 0; box-sizing: border-box; height: 30px; vertical-align: middle; border: 1px solid #787878; font-size: 14px; }
 .etc select { -webkit-appearance: none; -moz-appearance: none; appearance: none; -ms-appearance: none; -o-appearance: none; border-radius: 0; box-sizing: border-box; height: 30px; vertical-align: middle; border: 1px solid #787878; font-size: 14px; outline: none; overflow: hidden; text-indent: 5px; text-overflow: ''; background: #fff url(http://img.ramadapt.co.kr/group/i_dArr.png) no-repeat 174px 10px; }
@@ -167,12 +192,23 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .etc .ul-tb.nece { border-top: 1px solid #dadada; }
 .etc .i-chk-aft:before { content: "*"; display: inline-block; color: #f00; position: relative; top: -1px; font-weight: 700; margin-right: 2px; vertical-align: middle; }
 
+.ie8 .etc .d-cm .row-btn .a-btn .ic-rArrow:after {color: #fff;}
 .ie8 .etc select { background: none; background-color: #fff; }
+
+/* 190307 파트너 */
+.pt-sec {background: #f6ecff; text-align: center;}
+.pt-sec .container {padding: 45px 0 50px;}
+.pt-sec .cust-txt {position: relative; display: inline-block; box-sizing: border-box; height: 60px; margin-top: 22px; padding: 0 27px 0 28px; border-radius: 40px; background: #fff;}
+.pt-sec .cust-txt span {display: inline-block; font-size: 23px; font-weight: 700; line-height: 60px; letter-spacing: -0.7px; vertical-align: middle;}
+.pt-sec .cust-txt .tell-txt:before {margin-top: -2px; padding: 0 2px 0 5px;}
+
+.ie8 .pt-sec .cust-txt {padding-left: 0; background: url(http://img.withutour.co.kr/btn_map.png) no-repeat 100% -118px;}
+.ie8 .pt-sec .cust-txt span:first-child {padding-left: 25px; background: url(http://img.withutour.co.kr/btn_map.png) no-repeat 0 -118px;}
 
 
 /* footer */
 .footer {position: relative; width: 100%; padding: 32px 0 65px; background: #e7e7e7;}
-.footer .container {}
+.footer .container {padding: 0;}
 .footer .logo {}
 .footer .logo img {}
 .footer .logo + .adr-box {margin-top: 13px;}
@@ -188,8 +224,8 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .footer .cust-box .cust-txt span {display: inline-block; font-size: 18px; font-weight: 700; line-height: 42px; letter-spacing: -0.7px; vertical-align: middle;}
 .footer .cust-box .cust-txt .tell-txt {padding-left: 7px;}
 .footer .cust-box .cust-txt .tell-txt:before {margin-top: -2px; padding-right: 3px;}
-.ie8 .footer .cust-box .cust-txt {padding-left: 0; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 100% -182px;}
-.ie8 .footer .cust-box .cust-txt span:first-child {padding-left: 25px; background: url(http://img.hyutour.co.kr/group/btn_map.png) no-repeat 0 -182px;}
+.ie8 .footer .cust-box .cust-txt {padding-left: 0; background: url(http://img.withutour.co.kr/btn_map.png) no-repeat 100% -182px;}
+.ie8 .footer .cust-box .cust-txt span:first-child {padding-left: 25px; background: url(http://img.withutour.co.kr/btn_map.png) no-repeat 0 -182px;}
 .ie8 .footer .cust-box .cust-txt.type-2 span:first-child {background: none;}
 .footer .link-box {position: absolute; bottom: 5px; right: 9px;}
 .footer .link-list {position: relative;}
@@ -197,3 +233,65 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .footer .link-list li.li-mg {margin-left: 17px;}
 .footer .link-list li a {display: block;}
 .footer .link-list li img {}
+
+
+
+/* 190307 그룹 팝업 */
+.group-pop {z-index: 99; position: fixed; width: 100%; height: 100%; top: 0; left: 0; text-align: center; background: rgba(0, 0, 0, 0.6);}
+.group-pop .pop-list {position: relative; box-sizing: border-box; display: block;/*display: inline-block;*/ width: 1030px; /*height: 480px;*/ top: 50%; left: 50%; margin-top: -240px; margin-left: -515px; padding: 20px; background: #fff;}
+.group-pop .pop-list .pop-area {position: relative; box-sizing: border-box; background: #eee;}
+/* 팝업 상단 */
+.group-pop .pop-list .pop-area .pop-box {}
+/* 팝업 이미지영역 */
+.group-pop .pop-list .pop-area .pop-box .img-box {position: relative; box-sizing: border-box; float: left; width: 40.7%; /*width: 403px;*/}
+.group-pop .pop-list .pop-area .pop-box .img-box .type-box {height: 45px;}
+.group-pop .pop-list .pop-area .pop-box .img-box .type-box span {font-size: 18px; line-height: 45px;}
+.group-pop .pop-list .pop-area .pop-box .img-box .type-box .type-adr {text-align: left;}
+.group-pop .pop-list .pop-area .pop-box .img-box .type-box .type-stay {width: 45.5%;}
+.group-pop .pop-list .pop-area .pop-box .img-box .type-box .type-stay:before {margin-left: -32px; border-left-width: 32px; border-bottom-width: 45px;}
+.group-pop .pop-list .pop-area .pop-box .img-box .group-img {}
+.group-pop .pop-list .pop-area .pop-box .img-box .group-img img {width: 100%;}
+/* 팝업 텍스트영역 */    
+.group-pop .pop-list .pop-area .pop-box .info-box {position: relative; box-sizing: border-box; float: left; width: 59.3%; padding: 20px 15px 0 23px; text-align: left;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-tit {font-size: 26px; font-weight: bold; line-height: 26px; color: #333;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list {margin-top: 24px; padding-left: 2px;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list li {position: relative; box-sizing: border-box; display: table; width: 100%;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list li.lst {margin-top: 9px;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list p {position: relative; display: table-cell; font-size: 16px; line-height: 27px; letter-spacing: -0.8px; color: #333;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list .p-1 {width: 14%;/*width: 75px;*/ font-weight: bold;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list .p-2 {width: 86%; padding-left: 15px; word-break: keep-all;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list .p-2:before {content: ''; display: block; position: absolute; width: 1px; height: 100%; top: 0; left: -1px; background: #b2b2b2;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list li.lst .p-2:before {height: 23px; top: 2px;}
+.group-pop .pop-list .pop-area .pop-box .info-box .info-list .t-mark {display: block; margin-top: -2px; font-size: 16px; line-height: 27px; letter-spacing: -0.8px;}
+/* 팝업 버튼영역 */
+.group-pop .pop-list .pop-area .group-btn-box {position: relative; box-sizing: border-box; padding: 32px 0 27px;}
+.group-pop .pop-list .pop-area .group-btn-box .group-btn {position: relative; display: inline-block;}
+.group-pop .pop-list .pop-area .group-btn-box .group-btn a {float: left; display: inline-block; box-sizing: border-box; width: 177px; height: 47px; margin-left: 30px; font-size: 18px; line-height: 47px; color: #fff; background: #fff;}
+.group-pop .pop-list .pop-area .group-btn-box .group-btn a:first-child {margin-left: 0;}
+.group-pop .pop-list .pop-area .group-btn-box .group-btn .btn-close {color: #333; border: 1px solid #979495;}
+
+
+
+/* 팝업 타입별 */
+.group-pop .pop-list.hotel {}
+.group-pop .pop-list.resort {}
+.group-pop .pop-list.hotel .pop-area .group-btn-box .group-btn .btn-com {background: #e873a8;}
+.group-pop .pop-list.resort .pop-area .group-btn-box .group-btn .btn-com {background: #677ee1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

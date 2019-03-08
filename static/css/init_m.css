@@ -17,7 +17,7 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .tell-txt {display: inline-block; margin-left: 8px;}
 .tell-txt:before {content: '☎'; position: relative; display: inline-block; padding-right: 3px; vertical-align: middle;}
 .mail-txt {position: relative; display: inline-block; margin-left: 7px; padding-left: 25px;}
-.mail-txt:before {content: ''; position: absolute; display: inline-block; width: 20px; height: 18px; top:50%; left: 0; margin-top: -9px; vertical-align: middle; background: url(http://img.hyutour.co.kr/group//ico_mail.png) no-repeat center center; background-size: 20px auto}
+.mail-txt:before {content: ''; position: absolute; display: inline-block; width: 20px; height: 18px; top:50%; left: 0; margin-top: -9px; vertical-align: middle; background: url(http://img.withutour.co.kr/ico_mail.png) no-repeat center center; background-size: 20px auto}
 
 /* font */
 .c-red {color: #d40000;}
@@ -85,7 +85,7 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 .contents section {position: relative; box-sizing: border-box; width: 100%;;}
 .contents .container {}
 /* visual */
-.visual {margin: 0 auto; padding: 16% 34px 32px; text-align: center; background: url(http://img.hyutour.co.kr/group//m/bg_visual.jpg) no-repeat center bottom; background-size: cover;}
+.visual {margin: 0 auto; padding: 16% 34px 32px; text-align: center; background: url(http://img.withutour.co.kr/m/bg_visual.jpg) no-repeat center bottom; background-size: cover;}
 .visual p {position: relative;}
 .visual .p-0 {padding: 12px 0 14px; font-size: 17px; font-weight: 700; line-height: 24px; letter-spacing: -1px; word-break: keep-all; color: #9a2bab;}
 .visual .cust-txt {position: relative; display: block; box-sizing: border-box; max-width: 295px; height: 35px; margin: 0 auto; padding: 0 20px; border-radius: 20px; background: #fff;}
@@ -134,7 +134,7 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 .group .group-list .txt-area .txt-list-box .txt-list li {font-size: 18px; line-height: 26px;}
 /* 자세히보기 버튼 */
 .group .group-list .btn-detail {
-    display: block; position: relative; overflow: hidden; box-sizing: border-box; width: 100%; margin-bottom: 23px; text-align: center; border-radius: 10px; 
+    display: block; position: relative; overflow: hidden; box-sizing: border-box; width: 100%; /*margin-bottom: 23px;*/ text-align: center; border-radius: 10px; 
 	background: #aab0ba;
 /*
     background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.18) 19%, rgba(255, 255, 255, 0) 100%);
@@ -163,8 +163,10 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 .group .group-list.resort .tit-area .tit-box .sub-tit {color: #1440ff;}
 
 /* 단체이벤트 */
+.sec-tit {font-size: 17px; font-weight: bold; text-align: center; letter-spacing: -1px; color: #a840b8;}
+.sec-sub-tit {margin-top: 4px; font-size: 15px; font-weight: 500; letter-spacing: -1px; line-height: 20px; text-align: center; color: #cc4e87;}
 .contents .facil-sec {margin-bottom: 10px;}
-.facil-sec .sec-tit {font-size: 16px; font-weight: 700; text-align: center; margin-bottom: 5px;}
+.facil-sec .container {padding: 0 20px 0;}
 .facil-sec .ul-list-2 .li-item {position: relative; display: inline-block; margin-top: 8px; width: 100%; background: #000; background: rgba(0,0,0, .7);}
 .facil-sec .ul-list-2 .li-item figure {position: relative;}
 .facil-sec .ul-list-2 .li-item figure img {width: 100%;}
@@ -172,6 +174,22 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 .facil-sec .ul-list-2 .li-item figure figcaption {display: block; position: absolute; bottom: 0; left: 0; background: #000; background: rgba(0,0,0, .7);}
 .facil-sec .ul-list-2 .li-item .li-txt {display: table; /*min-height: 70px;*/ word-break: keep-all;}
 .facil-sec .ul-list-2 .li-item .li-txt span {display: table-cell; vertical-align: middle; color: #fff;}
+
+/* 190307 고객사 */
+.cust-sec {}
+.cust-sec .container {padding: 22px 20px 28px;}
+.cust-sec .container figure {}
+.cust-sec .container figure img {width: auto; height: 60%; max-width: 100%; border: 0;}
+.cust-sec .cust-list {margin-top: 12px; border-top: 1px solid #c2c2c2;}
+.cust-sec .cust-list li {position: relative; box-sizing: border-box; float: left; width: 25%; border-bottom: 1px solid #c2c2c2; border-left: 1px solid #c2c2c2;}
+.cust-sec .cust-list li:first-child, .cust-sec .cust-list li:nth-child(4n+1) {border-left: 0;}
+.cust-sec .cust-list .list-area {position: relative; box-sizing: border-box; display: table; width: 100%; height: 100%; height: 80px; padding: 10px 0 0; text-align: center;}
+.cust-sec .cust-list .list-area .list-box {position: relative; box-sizing: border-box; display: table-cell; text-align: center; vertical-align: bottom;}
+.cust-sec .cust-list .list-area .list-img {position: relative; box-sizing: border-box; display: table; width: 100%; min-height: 30px;}
+.cust-sec .cust-list .list-area .list-img figure {position: relative; display: table-cell; text-align: center; vertical-align: middle;}
+.cust-sec .cust-list .list-area .list-txt {position: relative; box-sizing: border-box; display: table; width: 100%; height: 45%; /*height: 30px;*/ font-size: 11px; text-align: center; line-height: 14px; letter-spacing: -1.2px;}
+.cust-sec .cust-list .list-area .list-txt span {display: table-cell; vertical-align: middle;}
+
 
 /* 단체예약 */
 .etc {padding: 28px 12px 23px; color: #545454; background: #fcfbea;}
@@ -219,6 +237,22 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 .etc .row-btn > a { position: relative; display: block; background: #e773a8; color: #fff; font-size: 13px; text-align: center; padding: 0px 15px; line-height: 3; }
 .etc .row-btn > a .ic-rArrow:after { border-color: #fff; width: 5px; height: 5px; top: -1px; margin-right: -3px; margin-left: 3px; }
 
+/* 190307 파트너 */
+.pt-sec {background: #f6ecff; text-align: center;}
+.pt-sec .container {padding: 26px 0 22px;}
+.pt-sec .cust-txt {position: relative; display: inline-block; box-sizing: border-box; height: 35px; margin: 0 auto; margin-top: 10px; padding: 0 23px; border-radius: 20px; background: #fff;}
+.pt-sec .cust-txt span {display: inline-block; font-size: 16px; font-weight: 700; line-height: 35px; letter-spacing: -0.7px; vertical-align: middle;}
+
+
+/*
+;}
+.visual .cust-txt {position: relative; display: block; box-sizing: border-box; max-width: 295px; height: 35px; margin: 0 auto; padding: 0 20px; border-radius: 20px; background: #fff;}
+.visual .cust-txt span {display: inline-block; font-size: 16px; font-weight: 700; line-height: 35px; letter-spacing: -0.7px; vertical-align: middle;}
+.pt-sec .cust-txt {position: relative; display: inline-block; box-sizing: border-box; height: 60px; margin-top: 22px; padding: 0 27px 0 28px; border-radius: 40px; background: #fff;}
+.pt-sec .cust-txt span {display: inline-block; font-size: 23px; font-weight: 700; line-height: 60px; letter-spacing: -0.7px; vertical-align: middle;}
+.pt-sec .cust-txt .tell-txt:before {margin-top: -2px; padding: 0 2px 0 5px;}
+*/
+
 
 /* footer */
 .footer {position: relative; box-sizing: border-box; width: 100%; padding: 25px 20px 30px; background: #e7e7e7;}
@@ -251,4 +285,12 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
     .group .group-list .txt-area .txt-list-box .txt-list li {font-size: 16px; line-height: 24px;}
 
     .group .group-list .btn-detail span {font-size: 16px;}
+    
+    
+    .sec-sub-tit {font-size: 14px;}
+    /* 190307 고객사 */
+    .cust-sec .cust-list .list-area .list-txt {font-size: 10px; line-height: 12px; letter-spacing: -1.5px;}
+    
+    /* footer */
+    .footer .cust-box .cust-txt span {font-size: 16px;}
 }
