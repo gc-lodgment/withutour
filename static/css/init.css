@@ -108,7 +108,7 @@ body, html, * {font-family: 'Nanum Square', 'Nanum Gothic', 'Malgun Gothic', san
 .group .group-list .btn-detail.yet span { line-height: 46px; color: #aab0ba;}
 .group .group-list .btn-detail.yet span:before {content: none; /*border-color: #aab0ba;*/}
 
-.ie8 .group .group-list.chiak {margin-left: 0;}
+/*.ie8 .group .group-list.chiak {margin-left: 0;}*/
 .ie8 .group .group-list .tit-area .tit-box .tit {font-size: 33px; line-height: 33px;}
 .ie8 .group .group-list .btn-detail span:before {content: '>'; width: auto; height: 100%; top: 0; right: -12px; margin-top: 0; vertical-align: middle; border: 0;}
 

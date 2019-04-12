@@ -18,6 +18,19 @@ $(function(){
     $('.move-group').on('click', function(){
         groupMove();
     });
+    
+    //ie8에서 group list 정렬을 위해 js 추가
+    if( $('html').hasClass('ie8') ){
+        var groupLen = $('.group-list').length; 
+        for( var i = 0 ; i < groupLen ; i++ ){
+            if (i % 3 == 0) {
+                //console.log(i)
+                $('.group-list:eq('+i+')').css({'margin-left': 0+'px'});
+            }
+        }
+    }else{
+        //console.log('nope')
+    }
 });
 
 

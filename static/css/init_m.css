@@ -101,7 +101,7 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 .visual .btn-ft.type-2 {width: 140px}
 .visual .btn-ft.type-2 .ic-rArrow:after {top: 0; right: -2px; border-color: #fff;}
 /* group */
-.group {margin-top: 50px; padding: 22px 20px 28px; background: #fff;}
+.group {margin-top: 50px; padding: 22px 20px 20px; background: #fff;}
 .group .group-list {display: none; position: relative; box-sizing: border-box; width: 100%; margin: 0 auto;}
 .group .group-list .link-area {cursor: pointer;}
 /* 타이틀 영역 */
@@ -118,9 +118,10 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 .group .group-list .txt-area {}
 .group .group-list .txt-area .img-type {padding: 10px 0 18px;}
 .group .group-list .txt-area .img-type img {border-color: #bababa;}
+/*.group .group-list .txt-area .img-type + .p-1.c-red {padding-top: 0;}*/
 .group .group-list .txt-area .img-map {margin-bottom: 23px;} 
 .group .group-list .txt-area p {font-size: 18px; line-height: 24px; text-align: center; word-break: keep-all;}
-.group .group-list .txt-area .p-1 {padding: 23px 0 14px;}
+.group .group-list .txt-area .p-1 {/*padding: 23px 0 14px;*/}
 .group .group-list .txt-area .p-2 {padding: 11px 0 10px;}
 .group .group-list .txt-area .img-list {position: relative;}
 .group .group-list .txt-area .img-list li {position: relative; box-sizing: border-box; margin-top: 8px;}
@@ -165,8 +166,8 @@ figure img, .img-list img {position: relative; box-sizing: border-box; width: 10
 /* 단체이벤트 */
 .sec-tit {font-size: 17px; font-weight: bold; text-align: center; letter-spacing: -1px; color: #a840b8;}
 .sec-sub-tit {margin-top: 4px; font-size: 15px; font-weight: 500; letter-spacing: -1px; line-height: 20px; text-align: center; color: #cc4e87;}
-.contents .facil-sec {margin-bottom: 10px;}
-.facil-sec .container {padding: 0 20px 0;}
+.contents .facil-sec {margin-bottom: 10px; padding: 0 20px 0; }
+.facil-sec .container {padding-top: 20px; border-top: 1px solid #dcdcdc;}
 .facil-sec .ul-list-2 .li-item {position: relative; display: inline-block; margin-top: 8px; width: 100%; background: #000; background: rgba(0,0,0, .7);}
 .facil-sec .ul-list-2 .li-item figure {position: relative;}
 .facil-sec .ul-list-2 .li-item figure img {width: 100%;}
