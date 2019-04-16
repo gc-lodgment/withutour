@@ -2,36 +2,89 @@ $(function(){
     //함수 실행
     tListFn();
     popFn();
-    
-    //rwing버튼 위치
-    $(window).scroll(function(){
-        var st = $(window).scrollTop();
-        var rWing = $('.r-wing'), bnTime = 300;
-        if( st < $('section.group').offset().top ){
-            rWing.stop().animate({'top' : 510+'px'}, bnTime);
-        }else {
-            rWing.stop().animate({'top' : 100+'px'}, bnTime);
-        }
-    });
+    menuFn();
     
     //버튼 클릭시 단체문의로 이동.
     $('.move-group').on('click', function(){
         groupMove();
     });
     
-    //ie8에서 group list 정렬을 위해 js 추가
-    if( $('html').hasClass('ie8') ){
-        var groupLen = $('.group-list').length; 
-        for( var i = 0 ; i < groupLen ; i++ ){
-            if (i % 3 == 0) {
-                //console.log(i)
-                $('.group-list:eq('+i+')').css({'margin-left': 0+'px'});
-            }
-        }
+    /* 디자인변경되면 제거 */
+    if( $('."group-list').parents().hasClass('cont-group') ){
+            
     }else{
-        //console.log('nope')
+        //ie8에서 group list 정렬을 위해 js 추가
+        if( $('html').hasClass('ie8') ){
+            //디자인 수정 전까지 정렬을 위해
+                var groupLen = $('.group-list').length; 
+                for( var i = 0 ; i < groupLen ; i++ ){
+                    if (i % 3 == 0) {
+                        //console.log(i)
+                        $('.group-list:eq('+i+')').css({'margin-left': 0+'px'});
+                    }
+                }
+        }else{
+            //console.log('nope')
+        }
     }
 });
+
+//메뉴 인터렉션
+function menuFn(){
+    var visualH = $('.visual').height();
+    var section = $('div.cont-group');
+    var nav = $('.nav');
+    var navH = nav.height();
+    var time = 500;
+    
+    //메뉴 클릭
+    nav.find('.nav-list li a').on('click', function(e){
+        e.preventDefault();
+        var target = $(this).attr('href');
+        var offsetTop = $(target).offset().top;
+        //$(this).parents('li').addClass('on').siblings().removeClass("on");
+        
+        $('html, body').stop().animate({
+            scrollTop : (offsetTop-(navH))
+        }, time);
+
+        return false;
+    });
+    
+    //scroll
+    $(window).scroll(function(){
+        var scltop = $(window).scrollTop();
+        var rWing = $('.r-wing'), bnTime = 300;
+        
+        //menu class
+        $.each(section, function(idx, item){
+            var target = section.eq(idx);
+            var secId = ( '#'+String(target.attr('id')) );
+            var targetTop = target.offset().top;
+            var plusH = navH;
+            
+            //console.log(targetId);
+
+            if( scltop <= (visualH+navH) ) {
+                nav.removeClass('on'); 
+            }else{
+                nav.addClass('on');
+            }
+            if ( (targetTop-plusH) <= scltop ) {
+                //nav.removeClass('on');
+                nav.find('a[href="'+secId+'"]').parents('li').addClass('on').siblings().removeClass("on");;
+            }
+
+        });
+        
+        //rwing버튼 위치
+        if( scltop < $('section.group').offset().top ){
+            rWing.stop().animate({'top' : 510+'px'}, bnTime);
+        }else {
+            rWing.stop().animate({'top' : 100+'px'}, bnTime);
+        }
+    });
+}
 
 
 function tListFn(){
@@ -62,26 +115,32 @@ function popFn(){
     var btnPt, groupArr, ths;
     var pop = $('.group-pop');
     
+    //pop btn hover
+    $('.img-type').hover(function(){
+        $('.btn-detail').stop().fadeOut();
+        $(this).siblings('.btn-detail').stop().fadeIn();
+    });
+    $('.txt-area').hover(function(){
+    }, function(){
+        $('.btn-detail').stop().fadeOut();
+    });
+    
     //open popup
     $('.btn-detail').on('click', function(){
-        if( $(this).hasClass('yet') ){
-           //console.log('yet')
-        }else{
-            btnPt = $(this).parents('.group-list').attr('class');
-            groupArr = btnPt.split(' ');
-            //console.log(groupArr[2]);
-            
-            pop.show();
-            pop.find('.pop-list.'+groupArr[2]).show();
-            
-            
-            $('html').css({'overflow': 'hidden', 'height': '100%'});
-            $(pop).on('scroll', function(event) { 
-                event.preventDefault();     
-                event.stopPropagation();     
-                return false; 
-            });
-        }
+        btnPt = $(this).parents('.group-list').attr('class');
+        groupArr = btnPt.split(' ');
+        //console.log(groupArr[2]);
+
+        pop.show();
+        pop.find('.pop-list.'+groupArr[2]).show();
+
+
+        $('html').css({'overflow': 'hidden', 'height': '100%'});
+        $(pop).on('scroll', function(event) { 
+            event.preventDefault();     
+            event.stopPropagation();     
+            return false; 
+        });
     });
     
     //close popup
