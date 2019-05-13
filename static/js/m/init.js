@@ -1,5 +1,6 @@
 $(function(){
     //함수 실행
+    regionProduct();
     tListFn();
     conFn();
 
@@ -8,8 +9,29 @@ $(function(){
         tListFn();
         conFn();
     }).resize();
-    
+
 });
+
+// 지역별 상품 슬라이드
+function regionProduct() {
+    var swiper = new Swiper('.group-swiper', {
+        autoplay: {
+            delay: 5000,
+        },
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        on: {
+            init: function() {
+
+            }
+        }
+    });
+}
 
 //개요, 프로그램 높이값 동일하게
 function tListFn(){
@@ -61,11 +83,14 @@ function conFn(){
         var navHref = $(this).attr('href');
         var sec = $(navHref);
         $(this).parents('li').addClass('on').siblings().removeClass('on');
+        sec.addClass('on').siblings('.group-container').removeClass('on');
         sec.stop().show().siblings('.group-list').stop().hide();
         $("html, body").stop().animate({
             scrollTop : (group.offset().top - navH)
         }, 500);
         tListFn();
+
+        return false;
     });
     
     // + click
@@ -138,4 +163,3 @@ function menuH(){
     
     menuWrap.css({'height' : winH+'px'}).find('.menu-txt-area .menu-list').css({'height' : menuListH+'px'});
 }
-

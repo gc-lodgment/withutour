@@ -1,677 +1,866 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>단체예약 통합홍보사이트</title>
-	<!-- load fonts first -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-	<link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-	
-	<!-- css -->
-	<link rel="stylesheet" href="http://static.ocean2you.co.kr/css/renew/reset_custom.css">
-	<link rel="stylesheet" href="http://static.hotelgangneung.kr/css/jquery-ui.css">
-	
-	<link rel="stylesheet" href="http://static.withutour.co.kr/css/init_m.css">
-	<!--<link rel="stylesheet" href="../static/css/init_m.css"> -->
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단체예약 통합홍보사이트</title>
+    <!-- load fonts first -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="http://static.ocean2you.co.kr/css/renew/reset_custom.css">
+    <link rel="stylesheet" href="http://static.ocean2you.co.kr/css/jquery-ui.css">
+
+    <!-- 190510 swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="http://static.withutour.co.kr/css/init_m_v1.0.1.css">
+    <!-- <link rel="stylesheet" href="../static/css/init_m_v1.0.1.css"> -->
+
+    <!-- js -->
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+    <!-- 190510 swiper     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="http://static.withutour.co.kr/js/m/init.js"></script>
+    <!-- <script src="../static/js/m/init.js"></script> -->
+
     <!-- <script type="text/javascript" src="http://localhost:35729/livereload.js"></script> -->
-	<!-- js -->
-	<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="http://static.go.co.kr/js/lazyload.min.js"></script>
-	
-	
-	<script src="http://static.withutour.co.kr/js/m/init.js"></script>
-	<!--<script src="../static/js/m/init.js"></script>-->
 </head>
+
 <body>
 
-	<h1 class="hidden">단체예약 통합홍보사이트</h1>
-	
-    <!-- 190307 전체 이미지 경로 수정 -->
-	<div class="wrapper">
-		
-		<!-- header -->
-		<header class="header">
-                <!-- 181219 header 수정 -->
-                <h1 class="logo"><img src="http://img.withutour.co.kr/logo.png" alt="위드유투어 로고">></h1> 
-                <!-- 190109 입점문의 추가 -->
-                <a href="tel:010-9094-0396" class="cust-txt"><img src="http://img.withutour.co.kr/m/btn_contact.png" alt="입점문의 010-9094-0396"></a>
+    <h1 class="hidden">단체예약 통합홍보사이트</h1>
 
-                <!-- menu -->
-                <nav class="nav">
-                    <div class="container">
-                        <div class="nav-list-box clr">
-                            <ul class="nav-list">
-                                <li class="nth-1 on"><a href="#ramada">라마다앙코르호텔</a></li>
-                                <li class="nth-2"><a href="#ocean">오션투유</a></li>
-                                <!--<li class="nth-3"><a href="#bscondo">도고BS</a></li>-->
-                                <li class="nth-3"><a href="#namwon">지리산하이츠</a></li>
-                                <li class="nth-4"><a href="#chiak">코레스코치악</a></li>
-                                <li class="nth-5"><a href="#eonho">연호리조트</a></li>
-                                <!-- 190412 메뉴 추가 -->
-                                <li class="nth-6"><a href="#yeongjong">영종스카이리조트</a></li>
-                                <li class="nth-7"><a href="#cheongpung">청풍리조트</a></li>
-                                <li class="nth-8"><a href="#deokguSpa">덕구온천리조트</a></li>
-                                <li class="nth-9"><a href="#mauna">경주마우나오션리조트</a></li>
-                                <li class="nth-10"><a href="#oceanHill">여수오션힐 호텔</a></li>
-                                <li class="nth-11"><a href="#glory">부산 글로리콘도</a></li>
-                                <li class="nth-12"><a href="#muchangpo">무창포 비체펠리스</a></li>
-                                <li class="nth-13"><a href="#muju">무주덕유산리조트</a></li>
-                                <li class="nth-14"><a href="#pavel">빠레브호텔</a></li>
-                                <!-- 임시 -->
-                                <!--<li class="nth-4"><a href="#coresco">코레스코</a></li>-->
-                            </ul>
-                        </div>
-                        <a href="javascript:;" class="btn-menu" title="메뉴 열기"><span class="a-i-x"></span></a>
+    <!-- 190307 전체 이미지 경로 수정 -->
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+            <!-- 181219 header 수정 -->
+            <h1 class="logo"><img src="http://img.withutour.co.kr/logo.png" alt="위드유투어 로고"></h1>
+            <!-- 190109 입점문의 추가 -->
+            <a href="tel:010-9094-0396" class="cust-txt"><img src="http://img.withutour.co.kr/m/btn_contact.png"
+                    alt="입점문의 010-9094-0396"></a>
+
+            <!-- menu -->
+            <!-- 190510 -->
+            <nav class="nav" id="g-nav">
+                <div class="nav-container">
+                    <div class="nav-list-box clr">
+                        <ul class="nav-list">
+                            <li class="item on"><a href="#home">홈</a></li>
+                            <li class="item"><a href="#seoulgg">서울</a></li>
+                            <li class="item"><a href="#gangwon">강원</a></li>
+                            <li class="item"><a href="#gyeongsang">경상</a></li>
+                            <li class="item"><a href="#chungcheong">충청</a></li>
+                            <li class="item"><a href="#jeolla">전라</a></li>
+                            <li class="item"><a href="#jeju">제주</a></li>
+                        </ul>
                     </div>
-                </nav>
-		
-                <!-- menu popup -->
-                <div class="menu">
-                    <div class="container">
-                        <div class="menu-wrap">
-                            <div class="menu-tit-area">
-                                <p class="menu-tit">보유시설 목록</p>
+                    <a href="javascript:;" class="btn-menu" title="메뉴 열기"><span class="cell">시설<br/>전체</span></a>
+                </div>
+            </nav>
+
+            <!-- menu popup -->
+            <div class="menu">
+                <div class="container">
+                    <div class="menu-wrap">
+                        <div class="menu-tit-area">
+                            <p class="menu-tit">보유시설 목록</p>
+                        </div>
+                        <div class="menu-txt-area">
+                            <div class="menu-txt-box">
+                                <p class="p-0">단체예약 추천시설</p>
+                                <p class="p-1">
+                                    워크샵, 세미나, 연수/교육, 야유회, 체육대회,<br>
+                                    MT/OT, 수학여행/졸업여행, 수련회, 체험/현장학습 등<br>
+                                    단체행사를 위한 최적의 숙박과 행사 프로그램을 제공해 드립니다.
+                                </p>
                             </div>
-                            <div class="menu-txt-area">
-                                <div class="menu-txt-box">
-                                    <p class="p-0">단체예약 추천시설</p>
-                                    <p class="p-1">
-                                        워크샵, 세미나, 연수/교육, 야유회, 체육대회,<br> 
-                                        MT/OT, 수학여행/졸업여행, 수련회, 체험/현장학습 등<br> 
-                                        단체행사를 위한 최적의 숙박과 행사 프로그램을 제공해 드립니다.
-                                    </p>
-                                </div>
-                                <!-- 190307 메뉴 추가 및 이미지 경로 변경 -->
-                                <ul class="menu-list clr">
-                                    <li class="nth-1">
-                                        <a href="http://m.ramadapt.co.kr/group/" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list01.jpg" alt="라마다앙코르평택호텔 이미지"></figure>
-                                            <span class="menu-sub-txt">경기도 / 평택</span>
-                                            <p class="menu-txt">라마다앙코르호텔</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-2">
-                                        <a href="http://ocean2you.co.kr/group/" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list02.jpg" alt="오션투유리조트 이미지"></figure>
-                                            <span class="menu-sub-txt">강원도 / 고성</span>
-                                            <p class="menu-txt">오션투유리조트</p>
-                                        </a>
-                                    </li>
-                                    <!--<li class="nth-3">
+                            <!-- 190307 메뉴 추가 및 이미지 경로 변경 -->
+                            <ul class="menu-list clr">
+                                <li class="nth-1">
+                                    <a href="http://m.ramadapt.co.kr/group/" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list01.jpg"
+                                                alt="라마다앙코르평택호텔 이미지"></figure>
+                                        <span class="menu-sub-txt">경기도 / 평택</span>
+                                        <p class="menu-txt">라마다앙코르호텔</p>
+                                    </a>
+                                </li>
+                                <li class="nth-2">
+                                    <a href="http://ocean2you.co.kr/group/" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list02.jpg"
+                                                alt="오션투유리조트 이미지"></figure>
+                                        <span class="menu-sub-txt">강원도 / 고성</span>
+                                        <p class="menu-txt">오션투유리조트</p>
+                                    </a>
+                                </li>
+                                <!--<li class="nth-3">
                                         <a href="http://www.bscondo.co.kr/group/" target="_blank">
                                             <figure><img src="http://img.withutour.co.kr/m/menu/img_list03.jpg" alt="도고BS콘도 이미지"></figure>
                                             <span class="menu-sub-txt">충남 / 아산</span>
                                             <p class="menu-txt">도고BS콘도</p>
                                         </a>
                                     </li>-->
-                                    <li class="nth-3">
-                                        <a href="#none" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list04.jpg" alt="지리산중앙하이츠 이미지"></figure>
-                                            <span class="menu-sub-txt">전북 / 남원</span>
-                                            <p class="menu-txt">지리산중앙하이츠</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-4">
-                                        <a href="#none" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list05.jpg" alt="코레스코치악 이미지"></figure>
-                                            <span class="menu-sub-txt">강원도 / 횡성</span>
-                                            <p class="menu-txt">코레스코치악</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-5">
-                                        <a href="#none" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list06.jpg" alt="연호리조트 이미지"></figure>
-                                            <span class="menu-sub-txt">강원도 / 속초</span>
-                                            <p class="menu-txt">연호리조트</p>
-                                        </a>
-                                    </li>
-                                    <!-- 190412 메뉴 추가 -->
-                                    <li class="nth-6">
-                                        <a href="http://m.go.co.kr/home/view/?p_no=Gk94G2sS" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list07.jpg" alt="영종스카이리조트 이미지"></figure>
-                                            <span class="menu-sub-txt">인천 / 중구</span>
-                                            <p class="menu-txt">영종스카이리조트</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-7">
-                                        <a href="http://m.go.co.kr/home/view/?p_no=HU1y" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list08.jpg" alt="청풍리조트 이미지"></figure>
-                                            <span class="menu-sub-txt">충북 / 제천</span>
-                                            <p class="menu-txt">청풍리조트</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-8">
-                                        <a href="http://m.go.co.kr/home/view/?p_no=G0dz" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list09.jpg" alt="덕구온천리조트 이미지"></figure>
-                                            <span class="menu-sub-txt">경북 / 울진</span>
-                                            <p class="menu-txt">덕구온천리조트</p>
-                                        </a>
-                                    </li>
-                                    <!-- 링크 없는 업체는 #none으로 표기 -->
-                                    <li class="nth-9">
-                                        <a href="#none">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list10.jpg" alt="경주마우나오션리조트 이미지"></figure>
-                                            <span class="menu-sub-txt">경북 / 경주</span>
-                                            <p class="menu-txt">경주마우나오션리조트</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-10">
-                                        <a href="http://www.go.co.kr/home/view/?p_no=Gk1yFG0e" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list11.jpg" alt="여수오션힐 호텔 이미지"></figure>
-                                            <span class="menu-sub-txt">전남 / 여수</span>
-                                            <p class="menu-txt">여수오션힐 호텔</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-11">
-                                        <a href="#none">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list12.jpg" alt="부산 글로리콘도 이미지"></figure>
-                                            <span class="menu-sub-txt">부산 / 해운대구</span>
-                                            <p class="menu-txt">부산 글로리콘도</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-12">
-                                        <a href="#none">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list13.jpg" alt="무창포 비체펠리스 이미지"></figure>
-                                            <span class="menu-sub-txt">충남 / 보령</span>
-                                            <p class="menu-txt">무창포 비체펠리스</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-13">
-                                        <a href="#none">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list14.jpg" alt="무주덕유산리조트 이미지"></figure>
-                                            <span class="menu-sub-txt">전북 / 무주</span>
-                                            <p class="menu-txt">무주덕유산리조트</p>
-                                        </a>
-                                    </li>
-                                    <li class="nth-14">
-                                        <a href="http://www.go.co.kr/home/view/?p_no=GEh4Eg==" target="_blank">
-                                            <figure><img src="http://img.withutour.co.kr/m/menu/img_list15.jpg" alt="빠레브호텔 이미지"></figure>
-                                            <span class="menu-sub-txt">제주 / 서귀포</span>
-                                            <p class="menu-txt">빠레브호텔</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <a href="javascript:;" class="btn-close" title="메뉴 닫기"><span class="a-i-x"></span></a>
+                                <li class="nth-3">
+                                    <a href="#none" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list04.jpg"
+                                                alt="지리산중앙하이츠 이미지"></figure>
+                                        <span class="menu-sub-txt">전북 / 남원</span>
+                                        <p class="menu-txt">지리산중앙하이츠</p>
+                                    </a>
+                                </li>
+                                <li class="nth-4">
+                                    <a href="#none" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list05.jpg"
+                                                alt="코레스코치악 이미지"></figure>
+                                        <span class="menu-sub-txt">강원도 / 횡성</span>
+                                        <p class="menu-txt">코레스코치악</p>
+                                    </a>
+                                </li>
+                                <li class="nth-5">
+                                    <a href="#none" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list06.jpg"
+                                                alt="연호리조트 이미지"></figure>
+                                        <span class="menu-sub-txt">강원도 / 속초</span>
+                                        <p class="menu-txt">연호리조트</p>
+                                    </a>
+                                </li>
+                                <!-- 190412 메뉴 추가 -->
+                                <li class="nth-6">
+                                    <a href="http://m.go.co.kr/home/view/?p_no=Gk94G2sS" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list07.jpg"
+                                                alt="영종스카이리조트 이미지"></figure>
+                                        <span class="menu-sub-txt">인천 / 중구</span>
+                                        <p class="menu-txt">영종스카이리조트</p>
+                                    </a>
+                                </li>
+                                <li class="nth-7">
+                                    <a href="http://m.go.co.kr/home/view/?p_no=HU1y" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list08.jpg"
+                                                alt="청풍리조트 이미지"></figure>
+                                        <span class="menu-sub-txt">충북 / 제천</span>
+                                        <p class="menu-txt">청풍리조트</p>
+                                    </a>
+                                </li>
+                                <li class="nth-8">
+                                    <a href="http://m.go.co.kr/home/view/?p_no=G0dz" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list09.jpg"
+                                                alt="덕구온천리조트 이미지"></figure>
+                                        <span class="menu-sub-txt">경북 / 울진</span>
+                                        <p class="menu-txt">덕구온천리조트</p>
+                                    </a>
+                                </li>
+                                <!-- 링크 없는 업체는 #none으로 표기 -->
+                                <li class="nth-9">
+                                    <a href="#none">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list10.jpg"
+                                                alt="경주마우나오션리조트 이미지"></figure>
+                                        <span class="menu-sub-txt">경북 / 경주</span>
+                                        <p class="menu-txt">경주마우나오션리조트</p>
+                                    </a>
+                                </li>
+                                <li class="nth-10">
+                                    <a href="http://www.go.co.kr/home/view/?p_no=Gk1yFG0e" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list11.jpg"
+                                                alt="여수오션힐 호텔 이미지"></figure>
+                                        <span class="menu-sub-txt">전남 / 여수</span>
+                                        <p class="menu-txt">여수오션힐 호텔</p>
+                                    </a>
+                                </li>
+                                <li class="nth-11">
+                                    <a href="#none">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list12.jpg"
+                                                alt="부산 글로리콘도 이미지"></figure>
+                                        <span class="menu-sub-txt">부산 / 해운대구</span>
+                                        <p class="menu-txt">부산 글로리콘도</p>
+                                    </a>
+                                </li>
+                                <li class="nth-12">
+                                    <a href="#none">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list13.jpg"
+                                                alt="무창포 비체펠리스 이미지"></figure>
+                                        <span class="menu-sub-txt">충남 / 보령</span>
+                                        <p class="menu-txt">무창포 비체펠리스</p>
+                                    </a>
+                                </li>
+                                <li class="nth-13">
+                                    <a href="#none">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list14.jpg"
+                                                alt="무주덕유산리조트 이미지"></figure>
+                                        <span class="menu-sub-txt">전북 / 무주</span>
+                                        <p class="menu-txt">무주덕유산리조트</p>
+                                    </a>
+                                </li>
+                                <li class="nth-14">
+                                    <a href="http://www.go.co.kr/home/view/?p_no=GEh4Eg==" target="_blank">
+                                        <figure><img src="http://img.withutour.co.kr/m/menu/img_list15.jpg"
+                                                alt="빠레브호텔 이미지"></figure>
+                                        <span class="menu-sub-txt">제주 / 서귀포</span>
+                                        <p class="menu-txt">빠레브호텔</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                        <a href="javascript:;" class="btn-close" title="메뉴 닫기"><span class="a-i-x"></span></a>
                     </div>
                 </div>
-		</header>
-		
-		<!-- contents -->
-		<div class="contents">
-			<section class="visual">
-			    <div class="container">
-			        <h2 class="tit"><img src="http://img.withutour.co.kr/m/tit_visual.png" alt="단체행사를 계획하세요? 기업, 학생, 모임 등 단체행사 고민 끝!"></h2> 
-			        <p class="p-0">20년 이상 단체행사 경험으로<br>원하시는 비용, 장소, 프로그램 등 모든 것을 완벽하게 맞춰드립니다.</p>
-			        <a href="tel:010-9094-0396" class="cust-txt">
-			            <span>지금 전화주세요 !</span>
-			            <span class="tell-txt">010-9094-0396</span>
-			        </a>
-			        <!-- 181224 버튼 수정 -->
-			        <a href="#etc" class="btn-ft type-2">단체행사 상담접수</a>
-		        </div>
-			</section>
-			
-            <!-- 190412 기존 리스트 내용 제거 -->
+            </div>
+        </header>
+
+        <!-- contents -->
+        <div class="contents">
+            <section class="visual">
+                <div class="container">
+                    <h2 class="tit"><img src="http://img.withutour.co.kr/m/tit_visual.png"
+                            alt="단체행사를 계획하세요? 기업, 학생, 모임 등 단체행사 고민 끝!"></h2>
+                    <p class="p-0">20년 이상 단체행사 경험으로<br>원하시는 비용, 장소, 프로그램 등 모든 것을 완벽하게 맞춰드립니다.</p>
+                    <a href="tel:010-9094-0396" class="cust-txt">
+                        <span>지금 전화주세요 !</span>
+                        <span class="tell-txt">010-9094-0396</span>
+                    </a>
+                    <!-- 181224 버튼 수정 -->
+                    <a href="#etc" class="btn-ft type-2">단체행사 상담접수</a>
+                </div>
+            </section>
+
+            <!-- 190510 -->
             <section class="group">
                 <div class="container clr">
-                    <div id="ramada" class="group-list hotel ramada" style="display: block">
-                        <div class="link-area" onclick="window.open('http://m.ramadapt.co.kr/group/')" title="라마다앙코르평택호텔 단체문의 페이지 이동">
-                            <div class="tit-area"><!--h3--->
-                                <div class="type-box clr">
-                                    <span class="type-adr">경기도 평택</span>
-                                    <span class="type-stay">호텔 HOTEL</span>
+
+                    <div class="group-container swiper-container group-swiper on" id="home">
+                        <div class="swiper-wrapper">
+                            <div id="ramada" class="swiper-slide group-list hotel ramada">
+                                <div class="link-area" onclick="window.open('http://m.ramadapt.co.kr/group/')" 
+                                    title="라마다앙코르평택호텔 단체문의 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">경기도 평택</span>
+                                            <span class="type-stay">호텔 HOTEL</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">라마다앙코르평택호텔</dt>
+                                            <dd class="sub-tit">평택, 천안, 당진, 서해, 아산, 도고, 인천</dd>
+                                        </dl>
+                                    </div>
+
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/ramada/img_type.jpg"
+                                                alt="라마다앙코르평택호텔"></figure>
+                                        <p class="p-1 c-red">※ 총 302객실 호텔 / 1,500명 동시 이용</p>
+                                    </div>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">라마다앙코르평택호텔</dt>
-                                    <dd class="sub-tit">평택, 천안, 당진, 서해, 아산, 도고, 인천</dd>
-                                </dl>
                             </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/ramada/img_type.jpg" alt="라마다앙코르평택호텔"></figure>
-                                <!--<p class="p-0">
-                                    라마다앙코르평택에서는 평택항의 노을, 서해대교 전망은 가장 편안한 마음의 휴식처가 되어 드립니다.<br>
-                                    편안하고 다양한 부대시설은 물론, 평택호 관광단지, 아산스파비스, 리솜스파캐슬과 인접하여 단체행사의 큰 즐거움을 드립니다.
-                                </p>-->
-                                <p class="p-1 c-red">※ 총 302객실 호텔 / 1,500명 동시 이용</p>
+                            <!--//.ramada-->
+                            <div id="yeongjong" class="swiper-slide group-list resort yeongjong">
+                                <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=Gk94G2sS')"
+                                    title="영종스카이리조트 예약 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">인천 중구</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">영종스카이리조트</dt>
+                                            <dd class="sub-tit">중구</dd>
+                                        </dl>
+                                    </div>
+
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/yeongjong/img_type.jpg"
+                                                alt="영종스카이리조트"></figure>
+                                        <p class="p-1 c-red">※ 총 201개 객실</p>
+                                    </div>
+                                </div>
                             </div>
+                            <!--//.yeongjong-->
+                            <div id="ocean" class="swiper-slide group-list resort ocean">
+                                <div class="link-area" onclick="window.open('http://ocean2you.co.kr/group/')"
+                                    title="오션투유리조트 단체문의 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">강원도 고성</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">오션투유리조트</dt>
+                                            <dd class="sub-tit">속초, 고성, 설악, 동해, 강릉</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/ocean/img_type.jpg"
+                                                alt="오션투유리조트"></figure>
+                                        <p class="p-1 c-red">※ 총 250객실 호텔 / 1,800명 동시 이용</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.ocean-->
+                            <div id="chiak" class="swiper-slide group-list resort chiak">
+                                <div class="link-area" onclick="window.open('http://m.koresco-chiak.co.kr/group/')"
+                                    title="코레스코 치악 콘도 단체문의 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">강원도 횡성</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">코레스코 치악 콘도</dt>
+                                            <dd class="sub-tit">횡성, 원주, 평창, 제천, 홍천</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/chiak/img_type.jpg"
+                                                alt="라마다앙코르평택호텔"></figure>
+                                        <p class="p-1 c-red">※ 총 162객실 호텔 / 1,000명 동시 이용</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.chiak-->
+                            <div id="eonho" class="swiper-slide group-list resort eonho">
+                                <div class="link-area" onclick="window.open('http://m.eonhoresort.co.kr/group/')"
+                                    title="연호리조트 단체문의 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">강원도 속초</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">연호리조트</dt>
+                                            <dd class="sub-tit">속초, 고성, 설악, 동해, 강릉</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/eonho/img_type.jpg"
+                                                alt="라마다앙코르평택호텔"></figure>
+                                        <p class="p-1 c-red">※ 총 119객실 호텔 / 1,000명 동시 이용</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.eonho-->
+                            <div id="deokguSpa" class="swiper-slide group-list resort deokguSpa">
+                                <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=G0dz')"
+                                    title="덕구온천리조트 예약 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">경북 울진</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">덕구온천리조트</dt>
+                                            <dd class="sub-tit">울진</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/deokguSpa/img_type.jpg"
+                                                alt="덕구온천리조트"></figure>
+                                        <p class="p-1 c-red">※ 총 172개 객실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.deokguSpa-->
+                            <div id="mauna" class="swiper-slide group-list resort mauna">
+                                <div class="link-area">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">경북 경주</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">경주마우나오션리조트</dt>
+                                            <dd class="sub-tit">경주</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/mauna/img_type.jpg"
+                                                alt="경주마우나오션리조트"></figure>
+                                        <p class="p-1 c-red">※ 총 109개 객실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.mauna-->
+                            <div id="glory" class="swiper-slide group-list resort glory">
+                                <div class="link-area">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">부산 해운대구</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">부산 글로리콘도</dt>
+                                            <dd class="sub-tit">해운대구</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/glory/img_type.jpg"
+                                                alt="부산 글로리콘도"></figure>
+                                        <p class="p-1 c-red">※ 총 224개 객실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.glory-->
+                            <div id="cheongpung" class="swiper-slide group-list resort cheongpung">
+                                <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=HU1y')"
+                                    title="청풍리조트 예약 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">충북 제천</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">청풍리조트</dt>
+                                            <dd class="sub-tit">제천</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/cheongpung/img_type.jpg"
+                                                alt="청풍리조트"></figure>
+                                        <p class="p-1 c-red">※ 총 230개 객실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.cheongpung-->
+                            <div id="muchangpo" class="swiper-slide group-list resort muchangpo">
+                                <div class="link-area">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">충남 보령</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">무창포 비체펠리스</dt>
+                                            <dd class="sub-tit">보령</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/muchangpo/img_type.jpg"
+                                                alt="무창포 비체펠리스"></figure>
+                                        <p class="p-1 c-red">※ 총 234개 객실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.muchangpo-->
+                            <div id="namwon" class="swiper-slide group-list resort namwon">
+                                <div class="link-area" onclick="window.open('http://m.namwoncondo.kr/group/')"
+                                    title="지리산 중앙하이츠 콘도 단체문의 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">전북 남원</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">지리산 중앙하이츠 콘도</dt>
+                                            <dd class="sub-tit">남원, 전주, 광주, 순창, 담양</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/namwon/img_type.jpg"
+                                                alt="지리산 중앙하이츠 콘도"></figure>
+                                        <p class="p-1 c-red">※ 총 153객실 호텔 / 1,000명 동시 이용</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.namwon-->
+                            <div id="oceanHill" class="swiper-slide group-list hotel oceanHill">
+                                <div class="link-area" onclick="window.open('http://www.go.co.kr/home/view/?p_no=Gk1yFG0e')"
+                                    title="여수오션힐 호텔 예약 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">전남 여수</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">여수오션힐 호텔호텔</dt>
+                                            <dd class="sub-tit">여수</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/oceanHill/img_type.jpg"
+                                                alt="여수오션힐 호텔"></figure>
+                                        <p class="p-1 c-red">※ 총 210개 객실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.oceanHill-->
+                            <div id="muju" class="swiper-slide group-list resort muju">
+                                <div class="link-area">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">전북 무주</span>
+                                            <span class="type-stay">리조트 RESORT</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">무주덕유산리조트</dt>
+                                            <dd class="sub-tit">무주</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/muju/img_type.jpg"
+                                                alt="무주덕유산리조트"></figure>
+                                        <p class="p-1 c-red">※ 총 1,610개 객실 (7,300명 동시 이용)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.muju-->
+                            <div id="pavel" class="swiper-slide group-list hotel pavel">
+                                <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=GEh4Eg==')"
+                                    title="빠레브호텔 예약 페이지 이동">
+                                    <div class="tit-area">
+                                        <div class="type-box clr">
+                                            <span class="type-adr">제주 서귀포</span>
+                                            <span class="type-stay">호텔 HOTEL</span>
+                                        </div>
+                                        <dl class="tit-box">
+                                            <dt class="tit">빠레브호텔</dt>
+                                            <dd class="sub-tit">서귀포</dd>
+                                        </dl>
+                                    </div>
+        
+                                    <div class="txt-area">
+                                        <figure class="img-type"><img src="http://img.withutour.co.kr/pavel/img_type.jpg"
+                                                alt="빠레브호텔"></figure>
+                                        <p class="p-1 c-red">※ 총 204개 객실</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//.pavel-->
                         </div>
                         
-                        <!--<div class="txt-area">
-                            <ul class="img-list">
-                                <li><img src="http://img.withutour.co.kr/ramada/img_list01.jpg" alt="라마다앙코르평택호텔 01"></li>
-                                <li><img src="http://img.withutour.co.kr/ramada/img_list02.jpg" alt="라마다앙코르평택호텔 02"></li>
-                                <li><img src="http://img.withutour.co.kr/ramada/img_list03.jpg" alt="라마다앙코르평택호텔 03"></li>
-                                <li><img src="http://img.withutour.co.kr/ramada/img_list04.jpg" alt="라마다앙코르평택호텔 04"></li>
-                            </ul>
-                            <p class="p-2">단체이용을 위한 <span class="c-red">모든 시설과 환경이<br>구비된 고급호텔 서비스</span>입니다.</p>
-
-                            <figure class="img-map"><img src="http://img.withutour.co.kr/ramada/img_map.jpg" alt="라마다앙코르평택호텔 지도"></figure>
-                            
-                            
-                            <a href="javascript: window.open('http://m.ramadapt.co.kr/group/')" class="btn-detail"><span>자세한 시설안내 보기</span></a> 
-                        </div>-->
+                        <div class="page-container"><div class="swiper-pagination"></div></div>
                     </div>
-                    <!--//.ramada-->
-                    
-                    <div id="ocean" class="group-list resort ocean">
-                        <div class="link-area" onclick="window.open('http://ocean2you.co.kr/group/')" title="오션투유리조트 단체문의 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                   <!-- 190307 타이틀 주소 수정 -->
-                                    <span class="type-adr">강원도 고성</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                    <div class="group-container region" id="seoulgg">
+                        <div id="ramada" class="group-list hotel ramada">
+                            <div class="link-area" onclick="window.open('http://m.ramadapt.co.kr/group/')" 
+                                title="라마다앙코르평택호텔 단체문의 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">경기도 평택</span>
+                                        <span class="type-stay">호텔 HOTEL</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">라마다앙코르평택호텔</dt>
+                                        <dd class="sub-tit">평택, 천안, 당진, 서해, 아산, 도고, 인천</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">오션투유리조트</dt>
-                                    <dd class="sub-tit">속초, 고성, 설악, 동해, 강릉</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/ocean/img_type.jpg" alt="오션투유리조트"></figure>
-                                <!--<p class="p-0">
-                                    천혜의 절경, 삼포해변 배경의 오션투유는<br>
-                                    학교 및 기업의 단체에 최적의 장소입니다.<br>
-                                    워크숍, 세미나, 교육연수 등 단체 활동을<br>
-                                    위한 다양한 부대시설이 준비되어 있습니다.<br> 
-                                    인근에 설악산, 해수욕장들과 인접하여<br> 
-                                    더욱 즐거운 시간을 드립니다.
-                                </p>-->
-                                <p class="p-1 c-red">※ 총 250객실 호텔 / 1,800명 동시 이용</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/ramada/img_type.jpg"
+                                            alt="라마다앙코르평택호텔"></figure>
+                                    <p class="p-1 c-red">※ 총 302객실 호텔 / 1,500명 동시 이용</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <!--<div class="txt-area">
-                            <ul class="img-list">
-                                <li><img src="http://img.withutour.co.kr/ocean/img_list01.jpg" alt="오션투유리조트 01"></li>
-                                <li><img src="http://img.withutour.co.kr/ocean/img_list02.jpg" alt="오션투유리조트 02"></li>
-                                <li><img src="http://img.withutour.co.kr/ocean/img_list03.jpg" alt="오션투유리조트 03"></li>
-                                <li><img src="http://img.withutour.co.kr/ocean/img_list04.jpg" alt="오션투유리조트 04"></li>
-                            </ul>
-                            <p class="p-2">단체이용을 위한 <span class="c-red">모든 시설과 환경이<br>구비된 중대형 콘도 리조트</span>입니다.</p>
-
-                            <figure class="img-map"><img src="http://img.withutour.co.kr/ocean/img_map.jpg" alt="오션투유리조트 지도"></figure>
-                            
-                            
-							<a href="javascript: window.open('http://ocean2you.co.kr/group/')" class="btn-detail"><span>자세한 시설안내 보기</span></a>
-                        </div>-->
+                        <!--//.ramada-->
+                        <div id="yeongjong" class="group-list resort yeongjong">
+                            <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=Gk94G2sS')"
+                                title="영종스카이리조트 예약 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">인천 중구</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">영종스카이리조트</dt>
+                                        <dd class="sub-tit">중구</dd>
+                                    </dl>
+                                </div>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/yeongjong/img_type.jpg"
+                                            alt="영종스카이리조트"></figure>
+                                    <p class="p-1 c-red">※ 총 201개 객실</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//.yeongjong-->
                     </div>
-                    <!--//.ocean-->
-                    
-                    <!--<div id="bscondo" class="group-list resort bscondo">
-                        <div class="link-area" onclick="window.open('http://www.bscondo.co.kr/group/')" title="도고BS콘도 리조트 단체문의 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">충남 아산</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                    <div class="group-container region" id="gangwon">
+                        <div id="ocean" class="group-list resort ocean">
+                            <div class="link-area" onclick="window.open('http://ocean2you.co.kr/group/')"
+                                title="오션투유리조트 단체문의 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">강원도 고성</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">오션투유리조트</dt>
+                                        <dd class="sub-tit">속초, 고성, 설악, 동해, 강릉</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">도고BS콘도 리조트</dt>
-                                    <dd class="sub-tit">아산, 도고, 당진, 천안, 평택</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/bscondo/img_type.jpg" alt="도고BS콘도 리조트"></figure>
-                                <p class="p-0">
-                                    도고BS콘도 리조트는 국내 최대 온천지인<br>
-                                    충남아산에 위치하여 많은 분들께<br>
-                                    사랑받고 있는 종합리조트입니다.<br>
-                                    온천, 스파, 워터파크는 물론 주변의<br>
-                                    볼거리, 놀거리가 가득하여 단체행사 등을<br>
-                                    진행하시기에 최적의 장소입니다.
-                                </p>
-                                <p class="p-1 c-red">※ 총 200객실 호텔 / 1,500명 동시 이용</p>
-                            </div>
-                        </div>
-                        
-                        <div class="txt-area">
-                            <ul class="img-list">
-                                <li><img src="http://img.withutour.co.kr/bscondo/img_list01.jpg" alt="도고BS콘도 리조트 01"></li>
-                                <li><img src="http://img.withutour.co.kr/bscondo/img_list02.jpg" alt="도고BS콘도 리조트 02"></li>
-                                <li><img src="http://img.withutour.co.kr/bscondo/img_list03.jpg" alt="도고BS콘도 리조트 03"></li>
-                                <li><img src="http://img.withutour.co.kr/bscondo/img_list04.jpg" alt="도고BS콘도 리조트 04"></li>
-                            </ul>
-                            <p class="p-2">단체이용을 위한 <span class="c-red">모든 시설과 환경이<br>구비된 중대형 콘도 리조트</span>입니다.</p>
-
-                            <figure class="img-map"><img src="http://img.withutour.co.kr/bscondo/img_map.jpg" alt="도고BS콘도 리조트 지도"></figure>
-							
-							<a href="javascript: window.open('http://www.bscondo.co.kr/group/')" class="btn-detail"><span>자세한 시설안내 보기</span></a>
-                        </div>
-                    </div>-->
-                    <!--//.bscondo-->
-                    
-					<div id="namwon" class="group-list resort namwon">
-                        <div class="link-area" onclick="window.open('http://m.namwoncondo.kr/group/')" title="지리산 중앙하이츠 콘도 단체문의 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                   <!-- 190307 타이틀 주소 수정 -->
-                                    <span class="type-adr">전북 남원</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/ocean/img_type.jpg"
+                                            alt="오션투유리조트"></figure>
+                                    <p class="p-1 c-red">※ 총 250객실 호텔 / 1,800명 동시 이용</p>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">지리산 중앙하이츠 콘도</dt>
-                                    <dd class="sub-tit">남원, 전주, 광주, 순창, 담양</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/namwon/img_type.jpg" alt="지리산 중앙하이츠 콘도"></figure>
-                                <!--<p class="p-0">
-									지리산 중앙하이츠 콘도는 지리산<br>
-									국립공원 근처에 위치하여<br>
-									천혜의 대자연을 감상할 수 있습니다.<br>
-									지리산, 남원, 광한루, 구룡폭포, 청계동 계곡<br>
-									등의 관광지가 인접하여 단체행사에 더 큰<br>
-                            		재미를 선사해드립니다.
-                                </p>-->
-                                <p class="p-1 c-red">※ 총 153객실 호텔 / 1,000명 동시 이용</p>
                             </div>
                         </div>
-                        
-                        <!--<div class="txt-area">
-                            <ul class="img-list">
-                                <li><img src="http://img.withutour.co.kr/namwon/img_list01.jpg" alt="지리산 중앙하이츠 콘도 01"></li>
-                                <li><img src="http://img.withutour.co.kr/namwon/img_list02.jpg" alt="지리산 중앙하이츠 콘도 02"></li>
-                                <li><img src="http://img.withutour.co.kr/namwon/img_list03.jpg" alt="지리산 중앙하이츠 콘도 03"></li>
-                                <li><img src="http://img.withutour.co.kr/namwon/img_list04.jpg" alt="지리산 중앙하이츠 콘도 04"></li>
-                            </ul>
-                            <p class="p-2">단체이용을 위한 <span class="c-red">모든 시설과 환경이<br>구비된 중대형 콘도 리조트</span>입니다.</p>
-
-                            <figure class="img-map"><img src="http://img.withutour.co.kr/namwon/img_map.jpg" alt="지리산 중앙하이츠 콘도 지도"></figure>
-							
-                            
-							<a href="javascript: window.open('http://www.bscondo.co.kr/group/')" class="btn-detail"><span>자세한 시설안내 보기</span></a>
-                        </div>-->
+                        <!--//.ocean-->
+                        <div id="chiak" class="group-list resort chiak">
+                            <div class="link-area" onclick="window.open('http://m.koresco-chiak.co.kr/group/')"
+                                title="코레스코 치악 콘도 단체문의 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">강원도 횡성</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">코레스코 치악 콘도</dt>
+                                        <dd class="sub-tit">횡성, 원주, 평창, 제천, 홍천</dd>
+                                    </dl>
+                                </div>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/chiak/img_type.jpg"
+                                            alt="라마다앙코르평택호텔"></figure>
+                                    <p class="p-1 c-red">※ 총 162객실 호텔 / 1,000명 동시 이용</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//.chiak-->
+                        <div id="eonho" class="group-list resort eonho">
+                            <div class="link-area" onclick="window.open('http://m.eonhoresort.co.kr/group/')"
+                                title="연호리조트 단체문의 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">강원도 속초</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">연호리조트</dt>
+                                        <dd class="sub-tit">속초, 고성, 설악, 동해, 강릉</dd>
+                                    </dl>
+                                </div>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/eonho/img_type.jpg"
+                                            alt="라마다앙코르평택호텔"></figure>
+                                    <p class="p-1 c-red">※ 총 119객실 호텔 / 1,000명 동시 이용</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//.eonho-->
                     </div>
-                    <!--//.namwon-->
-                    
-					<div id="chiak" class="group-list resort chiak">
-                        <div class="link-area" onclick="window.open('http://m.koresco-chiak.co.kr/group/')" title="코레스코 치악 콘도 단체문의 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">강원도 횡성</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                    <div class="group-container region" id="gyeongsang">
+                        <div id="deokguSpa" class="group-list resort deokguSpa">
+                            <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=G0dz')"
+                                title="덕구온천리조트 예약 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">경북 울진</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">덕구온천리조트</dt>
+                                        <dd class="sub-tit">울진</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">코레스코 치악 콘도</dt>
-                                    <dd class="sub-tit">횡성, 원주, 평창, 제천, 홍천</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/chiak/img_type.jpg" alt="라마다앙코르평택호텔"></figure>
-                                <!--<p class="p-0">
-                                    코레스코치악콘도는 치악산국립공원에<br>
-									인접하여 휴양과 편안한 부대시설은 물론<br>
-									매화산, 구룡산, 다양한 스키장 등과<br>
-									근거리에 있는 등 산악회, 등산, 트래킹을<br>
-									비롯한 다양한 단체행사에<br>
-									최적의 접근성을 자랑합니다.
-                                </p>-->
-                                <p class="p-1 c-red">※ 총 162객실 호텔 / 1,000명 동시 이용</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/deokguSpa/img_type.jpg"
+                                            alt="덕구온천리조트"></figure>
+                                    <p class="p-1 c-red">※ 총 172개 객실</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <!--<div class="txt-area">
-                            <ul class="img-list">
-                                <li><img src="http://img.withutour.co.kr/chiak/img_list01.jpg" alt="코레스코 치악 콘도 01"></li>
-                                <li><img src="http://img.withutour.co.kr/chiak/img_list02.jpg" alt="코레스코 치악 콘도 02"></li>
-                                <li><img src="http://img.withutour.co.kr/chiak/img_list03.jpg" alt="코레스코 치악 콘도 03"></li>
-                                <li><img src="http://img.withutour.co.kr/chiak/img_list04.jpg" alt="코레스코 치악 콘도 04"></li>
-                            </ul>
-                            <p class="p-2">단체이용을 위한 <span class="c-red">모든 시설과 환경이<br>구비된 중대형 콘도 리조트</span>입니다.</p>
-
-                            <figure class="img-map"><img src="http://img.withutour.co.kr/chiak/img_map.jpg" alt="코레스코 치악 콘도 지도"></figure>
-							
-                            
-							<a href="javascript: window.open('http://www.koresco-chiak.co.kr/group/')" class="btn-detail"><span>자세한 시설안내 보기</span></a>
-                        </div>-->
-                    </div>
-                    <!--//.chiak-->
-                    
-					<div id="eonho" class="group-list resort eonho">
-                        <div class="link-area" onclick="window.open('http://m.eonhoresort.co.kr/group/')" title="연호리조트 단체문의 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">강원도 속초</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                        <!--//.deokguSpa-->
+                        <div id="mauna" class="group-list resort mauna">
+                            <div class="link-area">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">경북 경주</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">경주마우나오션리조트</dt>
+                                        <dd class="sub-tit">경주</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">연호리조트</dt>
-                                    <dd class="sub-tit">속초, 고성, 설악, 동해, 강릉</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/eonho/img_type.jpg" alt="라마다앙코르평택호텔"></figure>
-                                <!--<p class="p-0">
-                                    설악산과 동해바다를 모두 품고 있는<br>
-									연호리조트는 모든 종류의 단체행사에<br>
-									최적의 장소입니다.<br>
-									속초시내와도 가깝고 주변의 수많은<br>
-									관광지가 인접해 있어 다양한 단체행사에<br>
-                            		최고의 즐거움을 약속드립니다.
-                                </p>-->
-                                <p class="p-1 c-red">※ 총 119객실 호텔 / 1,000명 동시 이용</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/mauna/img_type.jpg"
+                                            alt="경주마우나오션리조트"></figure>
+                                    <p class="p-1 c-red">※ 총 109개 객실</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <!--<div class="txt-area">
-                            <ul class="img-list">
-                                <li><img src="http://img.withutour.co.kr/eonho/img_list01.jpg" alt="연호리조트 01"></li>
-                                <li><img src="http://img.withutour.co.kr/eonho/img_list02.jpg" alt="연호리조트 02"></li>
-                                <li><img src="http://img.withutour.co.kr/eonho/img_list03.jpg" alt="연호리조트 03"></li>
-                                <li><img src="http://img.withutour.co.kr/eonho/img_list04.jpg" alt="연호리조트 04"></li>
-                            </ul>
-                            <p class="p-2">단체이용을 위한 <span class="c-red">모든 시설과 환경이<br>구비된 중대형 콘도 리조트</span>입니다.</p>
-
-                            <figure class="img-map"><img src="http://img.withutour.co.kr/eonho/img_map.jpg" alt="연호리조트 지도"></figure>
-							
-                            
-							<a href="javascript: window.open('http://m.eonhoresort.co.kr/group/')" class="btn-detail"><span>자세한 시설안내 보기</span></a>
-                        </div>-->
-                    </div>
-                    <!--//.eonho-->
-                    
-                    <!-- 190412 리스트 추가 -->
-					<div id="yeongjong" class="group-list resort yeongjong">
-                        <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=Gk94G2sS')" title="영종스카이리조트 예약 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">인천 중구</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                        <!--//.mauna-->
+                        <div id="glory" class="group-list resort glory">
+                            <div class="link-area">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">부산 해운대구</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">부산 글로리콘도</dt>
+                                        <dd class="sub-tit">해운대구</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">영종스카이리조트</dt>
-                                    <dd class="sub-tit">중구</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/yeongjong/img_type.jpg" alt="영종스카이리조트"></figure>
-                                <p class="p-1 c-red">※ 총 201개 객실</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/glory/img_type.jpg"
+                                            alt="부산 글로리콘도"></figure>
+                                    <p class="p-1 c-red">※ 총 224개 객실</p>
+                                </div>
                             </div>
                         </div>
+                        <!--//.glory-->
                     </div>
-                    <!--//.yeongjong-->
-                    
-					<div id="cheongpung" class="group-list resort cheongpung">
-                        <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=HU1y')" title="청풍리조트 예약 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">충북 제천</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                    <div class="group-container region" id="chungcheong">
+                        <div id="cheongpung" class="group-list resort cheongpung">
+                            <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=HU1y')"
+                                title="청풍리조트 예약 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">충북 제천</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">청풍리조트</dt>
+                                        <dd class="sub-tit">제천</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">청풍리조트</dt>
-                                    <dd class="sub-tit">제천</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/cheongpung/img_type.jpg" alt="청풍리조트"></figure>
-                                <p class="p-1 c-red">※ 총 230개 객실</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/cheongpung/img_type.jpg"
+                                            alt="청풍리조트"></figure>
+                                    <p class="p-1 c-red">※ 총 230개 객실</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--//.cheongpung-->
-                    
-					<div id="deokguSpa" class="group-list resort deokguSpa">
-                        <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=G0dz')" title="덕구온천리조트 예약 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">경북 울진</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                        <!--//.cheongpung-->
+                        <div id="muchangpo" class="group-list resort muchangpo">
+                            <div class="link-area">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">충남 보령</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">무창포 비체펠리스</dt>
+                                        <dd class="sub-tit">보령</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">덕구온천리조트</dt>
-                                    <dd class="sub-tit">울진</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/deokguSpa/img_type.jpg" alt="덕구온천리조트"></figure>
-                                <p class="p-1 c-red">※ 총 172개 객실</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/muchangpo/img_type.jpg"
+                                            alt="무창포 비체펠리스"></figure>
+                                    <p class="p-1 c-red">※ 총 234개 객실</p>
+                                </div>
                             </div>
                         </div>
+                        <!--//.muchangpo-->
                     </div>
-                    <!--//.deokguSpa-->
-                    
-					<div id="mauna" class="group-list resort mauna">
-                        <div class="link-area" >
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">경북 경주</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                    <div class="group-container region" id="jeolla">
+                        <div id="namwon" class="group-list resort namwon">
+                            <div class="link-area" onclick="window.open('http://m.namwoncondo.kr/group/')"
+                                title="지리산 중앙하이츠 콘도 단체문의 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">전북 남원</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">지리산 중앙하이츠 콘도</dt>
+                                        <dd class="sub-tit">남원, 전주, 광주, 순창, 담양</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">경주마우나오션리조트</dt>
-                                    <dd class="sub-tit">경주</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/mauna/img_type.jpg" alt="경주마우나오션리조트"></figure>
-                                <p class="p-1 c-red">※ 총 109개 객실</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/namwon/img_type.jpg"
+                                            alt="지리산 중앙하이츠 콘도"></figure>
+                                    <p class="p-1 c-red">※ 총 153객실 호텔 / 1,000명 동시 이용</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--//.mauna-->
-                    
-					<div id="oceanHill" class="group-list hotel oceanHill">
-                        <div class="link-area" onclick="window.open('http://www.go.co.kr/home/view/?p_no=Gk1yFG0e')" title="여수오션힐 호텔 예약 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">전남 여수</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                        <!--//.namwon-->
+                        <div id="oceanHill" class="group-list hotel oceanHill">
+                            <div class="link-area" onclick="window.open('http://www.go.co.kr/home/view/?p_no=Gk1yFG0e')"
+                                title="여수오션힐 호텔 예약 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">전남 여수</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">여수오션힐 호텔호텔</dt>
+                                        <dd class="sub-tit">여수</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">여수오션힐 호텔호텔</dt>
-                                    <dd class="sub-tit">여수</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/oceanHill/img_type.jpg" alt="여수오션힐 호텔"></figure>
-                                <p class="p-1 c-red">※ 총 210개 객실</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/oceanHill/img_type.jpg"
+                                            alt="여수오션힐 호텔"></figure>
+                                    <p class="p-1 c-red">※ 총 210개 객실</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--//.oceanHill-->
-                    
-					<div id="glory" class="group-list resort glory">
-                        <div class="link-area" >
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">부산 해운대구</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                        <!--//.oceanHill-->
+                        <div id="muju" class="group-list resort muju">
+                            <div class="link-area">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">전북 무주</span>
+                                        <span class="type-stay">리조트 RESORT</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">무주덕유산리조트</dt>
+                                        <dd class="sub-tit">무주</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">부산 글로리콘도</dt>
-                                    <dd class="sub-tit">해운대구</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/glory/img_type.jpg" alt="부산 글로리콘도"></figure>
-                                <p class="p-1 c-red">※ 총 224개 객실</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/muju/img_type.jpg"
+                                            alt="무주덕유산리조트"></figure>
+                                    <p class="p-1 c-red">※ 총 1,610개 객실 (7,300명 동시 이용)</p>
+                                </div>
                             </div>
                         </div>
+                        <!--//.muju-->
                     </div>
-                    <!--//.glory-->
-                    
-					<div id="muchangpo" class="group-list resort muchangpo">
-                        <div class="link-area" >
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">충남 보령</span>
-                                    <span class="type-stay">리조트 RESORT</span>
+                    <div class="group-container region" id="jeju">
+                        <div id="pavel" class="group-list hotel pavel">
+                            <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=GEh4Eg==')"
+                                title="빠레브호텔 예약 페이지 이동">
+                                <div class="tit-area">
+                                    <div class="type-box clr">
+                                        <span class="type-adr">제주 서귀포</span>
+                                        <span class="type-stay">호텔 HOTEL</span>
+                                    </div>
+                                    <dl class="tit-box">
+                                        <dt class="tit">빠레브호텔</dt>
+                                        <dd class="sub-tit">서귀포</dd>
+                                    </dl>
                                 </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">무창포 비체펠리스</dt>
-                                    <dd class="sub-tit">보령</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/muchangpo/img_type.jpg" alt="무창포 비체펠리스"></figure>
-                                <p class="p-1 c-red">※ 총 234개 객실</p>
+    
+                                <div class="txt-area">
+                                    <figure class="img-type"><img src="http://img.withutour.co.kr/pavel/img_type.jpg"
+                                            alt="빠레브호텔"></figure>
+                                    <p class="p-1 c-red">※ 총 204개 객실</p>
+                                </div>
                             </div>
                         </div>
+                        <!--//.pavel-->
                     </div>
-                    <!--//.muchangpo-->
-                    
-					<div id="muju" class="group-list resort muju">
-                        <div class="link-area" >
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">전북 무주</span>
-                                    <span class="type-stay">리조트 RESORT</span>
-                                </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">무주덕유산리조트</dt>
-                                    <dd class="sub-tit">무주</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/muju/img_type.jpg" alt="무주덕유산리조트"></figure>
-                                <p class="p-1 c-red">※ 총 1,610개 객실 (7,300명 동시 이용)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--//.muju-->
-                    
-					<div id="pavel" class="group-list hotel pavel">
-                        <div class="link-area" onclick="window.open('http://m.go.co.kr/home/view/?p_no=GEh4Eg==')" title="빠레브호텔 예약 페이지 이동">
-                            <div class="tit-area">
-                                <div class="type-box clr">
-                                    <span class="type-adr">제주 서귀포</span>
-                                    <span class="type-stay">호텔 HOTEL</span>
-                                </div>
-                                <dl class="tit-box">
-                                    <dt class="tit">빠레브호텔</dt>
-                                    <dd class="sub-tit">서귀포</dd>
-                                </dl>
-                            </div>
-                            
-                            <div class="txt-area">
-                                <figure class="img-type"><img src="http://img.withutour.co.kr/pavel/img_type.jpg" alt="빠레브호텔"></figure>
-                                <p class="p-1 c-red">※ 총 204개 객실</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--//.pavel-->
                     
                 </div>
             </section>
-            
+
             <!-- 190307 태그 및 html위치 수정(PC와 같은 위치로 변경), 이미지 클래스 제거, 피씨 이미지 제거 / 타이틀 수정 및 서브타이틀 추가 -->
             <section class="facil-sec">
                 <div class="container">
@@ -681,10 +870,12 @@
                         <li class="li-item">
                             <figure>
                                 <span class="s-bg"></span>
-                                <img src="http://img.bscondo.co.kr/m/group/music_01.jpg" alt="춤연습장, 보컬연습실이 필요한 단체숙소로 추천">
+                                <img src="http://img.bscondo.co.kr/m/group/music_01.jpg"
+                                    alt="춤연습장, 보컬연습실이 필요한 단체숙소로 추천">
                                 <figcaption>춤연습장, 보컬연습실이 필요한 단체숙소로 추천</figcaption>
                             </figure>
-                            <p class="li-txt ht-1"><span>걸그룹 댄스연습실, 아이돌 대형연습실, 보이그룹 춤연습실, 뮤지컬 연습실, 댄스연습장, 대형연습장, 춤연습장, 합숙연습실, 합숙연습장, 합숙연습, 보컬연습실</span></p>
+                            <p class="li-txt ht-1"><span>걸그룹 댄스연습실, 아이돌 대형연습실, 보이그룹 춤연습실, 뮤지컬 연습실, 댄스연습장, 대형연습장, 춤연습장,
+                                    합숙연습실, 합숙연습장, 합숙연습, 보컬연습실</span></p>
                         </li>
                         <li class="li-item">
                             <figure>
@@ -692,40 +883,46 @@
                                 <img src="http://img.bscondo.co.kr/m/group/music_02.jpg" alt="합주연습실이 필요한 단체숙소로 추천">
                                 <figcaption>합주연습실이 필요한 단체숙소로 추천</figcaption>
                             </figure>
-                            <p class="li-txt ht-1"><span>관현악단 합주실, 오케스트라 합주연습실, 국악관현악단 합주연습장, 악단 합숙연습, 뮤지컬악단 합주장소, 교향악단 합주연습장소, 현악단 연습장소, 교회현악단 합숙연습실, 교회관현악단 합숙연습장, 전자현악단 단체숙박, 국악현악단 단체숙소</span></p>
+                            <p class="li-txt ht-1"><span>관현악단 합주실, 오케스트라 합주연습실, 국악관현악단 합주연습장, 악단 합숙연습, 뮤지컬악단 합주장소, 교향악단
+                                    합주연습장소, 현악단 연습장소, 교회현악단 합숙연습실, 교회관현악단 합숙연습장, 전자현악단 단체숙박, 국악현악단 단체숙소</span></p>
                         </li>
                         <li class="li-item">
                             <figure>
                                 <span class="s-bg"></span>
-                                <img src="http://img.bscondo.co.kr/m/group/groupEvent_01.jpg" alt="초, 중, 고, 대학교, 학술답사 등의 단체숙소와 행사로 추천">
+                                <img src="http://img.bscondo.co.kr/m/group/groupEvent_01.jpg"
+                                    alt="초, 중, 고, 대학교, 학술답사 등의 단체숙소와 행사로 추천">
                                 <figcaption>초, 중, 고, 대학교, 학술답사 등의 단체숙소와 행사로 추천</figcaption>
                             </figure>
-                            <p class="li-txt"><span>수학여행, 체험학습, 수련회, 체육대회, MT, OT, 답사, 학회, 고적답사,<br>유적답사, 문화유적답사, 문화유산답사, 역사유산답사 등</span></p>
+                            <p class="li-txt"><span>수학여행, 체험학습, 수련회, 체육대회, MT, OT, 답사, 학회, 고적답사,<br>유적답사, 문화유적답사,
+                                    문화유산답사, 역사유산답사 등</span></p>
                         </li>
                         <li class="li-item">
                             <figure>
                                 <span class="s-bg"></span>
-                                <img src="http://img.bscondo.co.kr/m/group/groupEvent_02.jpg" alt="회사, 기업, 종교, 가족 등의 단체숙소와 행사로 추천">
+                                <img src="http://img.bscondo.co.kr/m/group/groupEvent_02.jpg"
+                                    alt="회사, 기업, 종교, 가족 등의 단체숙소와 행사로 추천">
                                 <figcaption>회사, 기업, 종교, 가족 등의 단체숙소와 행사로 추천</figcaption>
                             </figure>
-                            <p class="li-txt"><span>워크샵, 세미나, 연수원, 기업OT, 기업행사, 야유회, 신녀회, 송년회,<br>환갑, 회갑, 돌잔치, 결혼식, 상견례, 환갑잔치, 칠순잔치 등</span></p>
+                            <p class="li-txt"><span>워크샵, 세미나, 연수원, 기업OT, 기업행사, 야유회, 신녀회, 송년회,<br>환갑, 회갑, 돌잔치, 결혼식, 상견례,
+                                    환갑잔치, 칠순잔치 등</span></p>
                         </li>
                     </ul>
                 </div>
             </section>
-            
+
             <!-- 190307 고객사 추가 -->
             <section class="cust-sec">
                 <div class="container">
                     <h2 class="sec-tit">단체이용 고객사 안내</h2>
                     <p class="sec-sub-tit">350여개 유수의 기업체는<br>물론 관,공기업을 고객사로 더욱 정진하고 있습니다.</p>
-                    
+
                     <ul class="cust-list clr">
                         <li class="list-1">
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_01.png" alt="GE"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_01.png"
+                                                alt="GE"></figure>
                                     </div>
                                     <p class="list-txt"><span>GE</span></p>
                                 </div>
@@ -735,7 +932,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_02.png" alt="금호타이어"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_02.png"
+                                                alt="금호타이어"></figure>
                                     </div>
                                     <p class="list-txt"><span>금호타이어</span></p>
                                 </div>
@@ -745,7 +943,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_03.png" alt="대한전선"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_03.png"
+                                                alt="대한전선"></figure>
                                     </div>
                                     <p class="list-txt"><span>대한전선</span></p>
                                 </div>
@@ -755,7 +954,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_04.png" alt="삼일회계법인"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_04.png"
+                                                alt="삼일회계법인"></figure>
                                     </div>
                                     <p class="list-txt"><span>삼일회계법인</span></p>
                                 </div>
@@ -765,7 +965,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_05.png" alt="한국교직원공제회"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_05.png"
+                                                alt="한국교직원공제회"></figure>
                                     </div>
                                     <p class="list-txt"><span>한국교직원공제회</span></p>
                                 </div>
@@ -775,7 +976,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_06.png" alt="현대글로비스"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_06.png"
+                                                alt="현대글로비스"></figure>
                                     </div>
                                     <p class="list-txt"><span>현대글로비스</span></p>
                                 </div>
@@ -785,7 +987,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_07.png" alt="현대자동차"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_07.png"
+                                                alt="현대자동차"></figure>
                                     </div>
                                     <p class="list-txt"><span>현대자동차</span></p>
                                 </div>
@@ -795,7 +998,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_08.png" alt="맥킨지"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_08.png"
+                                                alt="맥킨지"></figure>
                                     </div>
                                     <p class="list-txt"><span>맥킨지</span></p>
                                 </div>
@@ -805,7 +1009,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_09.png" alt="기아자동차"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_09.png"
+                                                alt="기아자동차"></figure>
                                     </div>
                                     <p class="list-txt"><span>기아자동차</span></p>
                                 </div>
@@ -815,7 +1020,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_10.png" alt="동국제강"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_10.png"
+                                                alt="동국제강"></figure>
                                     </div>
                                     <p class="list-txt"><span>동국제강</span></p>
                                 </div>
@@ -825,7 +1031,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_11.png" alt="아우디코리아"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_11.png"
+                                                alt="아우디코리아"></figure>
                                     </div>
                                     <p class="list-txt"><span>아우디코리아</span></p>
                                 </div>
@@ -835,7 +1042,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_12.png" alt="한국시설안전공단"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_12.png"
+                                                alt="한국시설안전공단"></figure>
                                     </div>
                                     <p class="list-txt"><span>한국시설안전공단</span></p>
                                 </div>
@@ -845,7 +1053,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_13.png" alt="현대모비스"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_13.png"
+                                                alt="현대모비스"></figure>
                                     </div>
                                     <p class="list-txt"><span>현대모비스</span></p>
                                 </div>
@@ -855,7 +1064,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_14.png" alt="삼성디스플레이"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_14.png"
+                                                alt="삼성디스플레이"></figure>
                                     </div>
                                     <p class="list-txt"><span>삼성디스플레이</span></p>
                                 </div>
@@ -865,7 +1075,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_15.png" alt="건강보험심사평가원"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_15.png"
+                                                alt="건강보험심사평가원"></figure>
                                     </div>
                                     <p class="list-txt"><span>건강보험심사평가원</span></p>
                                 </div>
@@ -875,7 +1086,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_16.png" alt="녹십자"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_16.png"
+                                                alt="녹십자"></figure>
                                     </div>
                                     <p class="list-txt"><span>녹십자</span></p>
                                 </div>
@@ -885,7 +1097,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_17.png" alt="롯데푸드"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_17.png"
+                                                alt="롯데푸드"></figure>
                                     </div>
                                     <p class="list-txt"><span>롯데푸드</span></p>
                                 </div>
@@ -895,7 +1108,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_18.png" alt="농심"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_18.png"
+                                                alt="농심"></figure>
                                     </div>
                                     <p class="list-txt"><span>농심</span></p>
                                 </div>
@@ -905,7 +1119,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_19.png" alt="한국전력"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_19.png"
+                                                alt="한국전력"></figure>
                                     </div>
                                     <p class="list-txt"><span>한국전력</span></p>
                                 </div>
@@ -915,7 +1130,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_20.png" alt="혼다코리아"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_20.png"
+                                                alt="혼다코리아"></figure>
                                     </div>
                                     <p class="list-txt"><span>혼다코리아</span></p>
                                 </div>
@@ -925,7 +1141,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_21.png" alt="지방해양수산청"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_21.png"
+                                                alt="지방해양수산청"></figure>
                                     </div>
                                     <p class="list-txt"><span>지방해양수산청</span></p>
                                 </div>
@@ -935,7 +1152,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_22.png" alt="국군복지단"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_22.png"
+                                                alt="국군복지단"></figure>
                                     </div>
                                     <p class="list-txt"><span>국군복지단</span></p>
                                 </div>
@@ -945,7 +1163,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_23.png" alt="대성산업"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_23.png"
+                                                alt="대성산업"></figure>
                                     </div>
                                     <p class="list-txt"><span>대성산업</span></p>
                                 </div>
@@ -955,7 +1174,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_24.png" alt="삼성물산"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_24.png"
+                                                alt="삼성물산"></figure>
                                     </div>
                                     <p class="list-txt"><span>삼성물산</span></p>
                                 </div>
@@ -965,7 +1185,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_25.png" alt="폭스바겐"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_25.png"
+                                                alt="폭스바겐"></figure>
                                     </div>
                                     <p class="list-txt"><span>폭스바겐</span></p>
                                 </div>
@@ -975,7 +1196,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_26.png" alt="한화시스템"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_26.png"
+                                                alt="한화시스템"></figure>
                                     </div>
                                     <p class="list-txt"><span>한화시스템</span></p>
                                 </div>
@@ -985,7 +1207,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_27.png" alt="히타치조센"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_27.png"
+                                                alt="히타치조센"></figure>
                                     </div>
                                     <p class="list-txt"><span>히타치조센</span></p>
                                 </div>
@@ -995,7 +1218,8 @@
                             <div class="list-area">
                                 <div class="list-box">
                                     <div class="list-img">
-                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_28.png" alt="신세계인터내셔날"></figure>
+                                        <figure><img src="http://img.withutour.co.kr/cust/img_cust_logo_28.png"
+                                                alt="신세계인터내셔날"></figure>
                                     </div>
                                     <p class="list-txt"><span>신세계인터내셔날</span></p>
                                 </div>
@@ -1004,10 +1228,10 @@
                     </ul>
                 </div>
             </section>
-            
+
             <!-- 181224 단체예약 문의 추가 -->
             <section id="etc" class="etc">
-			    <div class="container">
+                <div class="container">
                     <div class="d-cm">
                         <p class="p-0">20년 경력의 특급플래너가 제시하는 최적의 플랜!</p>
                         <p class="p-1">모든 것이 완벽한 리조트, 호텔에서 아름다운 추억을 만들어보세요!</p>
@@ -1060,7 +1284,8 @@
                                 </li>
                                 <li class="li-tr">
                                     <span class="s-lbl">이용일</span>
-                                    <input type="text" class="wd-4 sdate hasDatepicker" name="date" placeholder="체크인" readonly="" id="">
+                                    <input type="text" class="wd-4 sdate hasDatepicker" name="date" placeholder="체크인"
+                                        readonly="" id="">
                                     <select name="day" id="day" class="wd-1 wd-1-2">
                                         <option value="당일">당일</option>
                                         <option value="1박2일" selected="">1박 2일</option>
@@ -1078,11 +1303,13 @@
                                     <input type="text" class="wd-5" name="person_her"><span>명</span>
                                     <span class="mg-l"></span>
                                     <span class="s-txt">총 인원</span>
-                                    <input type="text" class="wd-6" name="person_all" value="0" disabled=""><span>명</span>
+                                    <input type="text" class="wd-6" name="person_all" value="0"
+                                        disabled=""><span>명</span>
                                 </li>
                                 <li class="li-tr">
                                     <span class="s-lbl">예산</span>
-                                    <input type="text" class="wd-7" name="ex_price" style="text-align:right;"><span>원</span>
+                                    <input type="text" class="wd-7" name="ex_price"
+                                        style="text-align:right;"><span>원</span>
                                     <p class="p-1">※ 제시하신 예산범위에서 최적의 플랜을 제시해 드리겠습니다.</p>
                                 </li>
                                 <li class="li-tr">
@@ -1092,12 +1319,13 @@
                             </ul>
                         </div>
 
-                        <p class="row-btn"><a class="a-btn" href="javascript:;">단체 문의하기 <span class="ic-rArrow"></span></a></p>
+                        <p class="row-btn"><a class="a-btn" href="javascript:;">단체 문의하기 <span
+                                    class="ic-rArrow"></span></a></p>
                     </div>
                 </div>
             </section>
             <!--//END : 181224 단체예약 문의 추가 -->
-            
+
             <!-- 190307 파트너 추가 -->
             <section class="pt-sec">
                 <div class="container">
@@ -1107,53 +1335,55 @@
                         파트너 업체의 시설과 영업망을 공유하여 <br>가장 효율 높은 시너지를 만들겠습니다.
                     </p>
                     <a href="tel:010-9094-0396" class="cust-txt">
-						<span>문의전화</span>
-						<span class="tell-txt">010-9094-0396</span>
-					</a>
+                        <span>문의전화</span>
+                        <span class="tell-txt">010-9094-0396</span>
+                    </a>
                 </div>
             </section>
-		</div>
-		
-		<!-- footer -->
-		<footer id="footer" class="footer">
-			<div class="container">
-			    <div class="cust-box">
-			        <a href="tel:010-4263-6010" class="cust-txt">
-			            <span>단체관련 상담</span>
-			            <span class="tell-txt">010-9094-0396</span>
-			        </a>
-			        <p class="cust-txt type-2">
-			            <span>메일문의</span>
-			            <span class="mail-txt">help@varotour.net</span>
-			        </p>
-			    </div>
-			    
-			    <div class="adr-box">
-			        <address>
+        </div>
+
+        <!-- footer -->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="cust-box">
+                    <a href="tel:010-4263-6010" class="cust-txt">
+                        <span>단체관련 상담</span>
+                        <span class="tell-txt">010-9094-0396</span>
+                    </a>
+                    <p class="cust-txt type-2">
+                        <span>메일문의</span>
+                        <span class="mail-txt">help@varotour.net</span>
+                    </p>
+                </div>
+
+                <div class="adr-box">
+                    <address>
                         (주)바로고고<span class="mgl"></span>대표자 : 김병종<br>
                         서울 강남구 테헤란로113길 13 152호<br>
                         사업자등록번호 144-86-00643
-                        <a href="javascript:;" onclick="window.open('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1448600643&apv_perm_no=');" class="btn-bi">사업자정보확인</a>
-			        </address>
-			    </div>
-			    
-			    <p class="logo"><img src="http://img.withutour.co.kr/logo_footer.png" alt="바로네트웍스"></p>
-			    <div class="adr-box">
-			        <address>
-			            서울특별시 강남구 테헤란로82길 15, 3층(대치동, 디아이타워) <br>(주)바로네트웍스<br>
+                        <a href="javascript:;"
+                            onclick="window.open('http://www.ftc.go.kr/bizCommPop.do?wrkr_no=1448600643&apv_perm_no=');"
+                            class="btn-bi">사업자정보확인</a>
+                    </address>
+                </div>
+
+                <p class="logo"><img src="http://img.withutour.co.kr/logo_footer.png" alt="바로네트웍스"></p>
+                <div class="adr-box">
+                    <address>
+                        서울특별시 강남구 테헤란로82길 15, 3층(대치동, 디아이타워) <br>(주)바로네트웍스<br>
                         대표이사 : 전병권<span class="mgl"></span>사업자번호 : 215-87-85373<br>
                         통신판매업 : 제2017-서울강남-00561호<br>
                         여행업등록번호 : 제2017-07호<br>
                         여행영업보증서 : 국내여행 제100-000-2015 0144 5816호
-			        </address>
-			    </div>
-		    </div>
-		</footer>
-            
+                    </address>
+                </div>
+            </div>
+        </footer>
+
         <!-- top button -->
         <a href="#top" class="btn-top"><span>TOP</span></a>
-		
-	</div>
+
+    </div>
 
 </body>
 
