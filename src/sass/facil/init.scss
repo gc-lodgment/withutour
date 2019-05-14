@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 콘텐츠 영역 */
+.contents {
+    padding-bottom: 85px;
+    
+    //서브 비주얼 영역
+    .sub-visual {
+        .area-slide {
+            .box-slide {
+                &:before {
+                    background: url(http://img.withutour.co.kr/renew/facil/bg_visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    
+    
+    //섹션
+    .sect-facil {
+        padding-top: 50px;
+    
+        //타이틀 
+        .box-tit {
+            .sub-tit {
+                padding-bottom: 0;
+            }
+        }
+        
+        @include list-facil;
+        .box-facil {
+            
+        }
+    }
+        
+    
+}

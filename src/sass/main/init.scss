@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 콘텐츠 영역 */
+.contents {
+    padding-bottom: 95px;
+    
+	/* 타이틀 */
+    .box-tit {
+        .tit-sub {
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 28px;
+            line-height: 32px;
+            vertical-align: middle;
+            color: $fg-green-1;
+        }
+        .btn-more { 
+            @include btn-com($ht:32px, $pd: 0 10px);
+        }
+        .btn-green {
+            @include btn-com($ht:32px, $pd: 0 15px, $fg:#fff, $bor:0, $bg:$bg-btn-green);
+        }
+    }
+    
+    /* 비주얼 */
+    .visual {
+        .area-slide {
+            .box-slide {
+                height: 500px;
+                .box-slide-txt {
+                    .sub-tit {
+                        font-size: 28px;
+                        letter-spacing: -1px;
+                        font-weight: 600;
+                    }
+                    .tit {
+                        padding: 5px 0 5px;
+                        font-size: 55px;
+                        letter-spacing: -1.5px;
+                        font-weight: bold;
+                    }
+                    .txt {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                }
+            }
+            
+            &.slide-1 {
+                .box-slide {
+                    &:before {
+                        background: #555 url(http://img.withutour.co.kr/renew/main/bg_visual_01.jpg) no-repeat center center;
+                        background-size: cover;
+                    }
+                }
+            }
+            
+            &.slide-2 {
+                .box-slide {
+                    &:before {
+                        background: #555 url(http://img.withutour.co.kr/renew/main/bg_visual_02.jpg) no-repeat center center;
+                        background-size: cover;
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    /* 견적문의 & 질문과 답변 */
+    .sect-service {
+        padding-top: 45px;
+        .row-service {
+            width: 48%;
+            @include table-col;
+            .tbl-col {            
+                margin-top: 11px;
+            }
+        }
+    }
+    
+    /* 단체행사 사례 및 추천 제휴시설 */
+    .sect-groups {
+        padding-top: 60px;
+        .box-group {
+            margin-top: 20px;
+            .list-group {
+                @include bx;
+                @include clearfix;
+                
+                li {
+                    float: left;
+                    width: 23.5%;
+                    margin-left: 2%;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    .tit-group {
+                        margin-bottom: 10px;
+                        font-size: 22px;
+                        color: #555;
+                    }
+                    .box-tit-group {
+                        height: 44px;
+                        font-size: 18px;
+                        line-height: 44px;
+                        letter-spacing: -1px;
+                        text-align: center;
+                        color: $fg-green-2;
+                        border-top: 2px solid $bor-green;
+                        border-bottom: 1px solid $bor-gray-2;
+                        background: $bg-table;
+                    }
+                    .txt-group {
+                        padding: 11px 0 18px;
+                        font-size: 15px;
+                        line-height: 22px;
+                        word-break: keep-all;
+                    }
+                    .img-group {
+                        @include bx;
+                        img {
+                            width: 100%;
+                            border: 1px solid $bor-gray-3;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include list-facil;
+        .box-facil {
+            .list-facil {
+                .img-facil {
+                    cursor: auto;
+                }
+            }
+        }
+    }
+    
+    
+    /* 견적 절차 안내 & 자주 묻는 질문 */
+    .sect-faq {
+        padding-top: 55px;
+        .row-faq {
+            width: 48%;
+            @include table-col;
+            @include list-info(30px 15px 20px, 46px, 23px, 9px, 15px, 57px);
+            .tbl-col {            
+                margin-top: 11px;
+            }
+            .box-info {
+                margin-top: 10px;
+                text-align: center;
+                .btn-group {
+                    @include btn-com($ht:36px, $pd:0 25px, $fs:18px, $fg:#fff, $bor:0);
+                    margin-top: 17px;
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+
+
+
+/* 
+ * ie8 
+ */
+.ie8 .contents {
+    
+    /* 단체행사 사례 및 추천 제휴시설 */
+    .sect-groups {
+        .box-group {
+            .list-group {
+                li {
+                    .txt-group {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    
+    /* 견적 절차 안내 & 자주 묻는 질문 */
+    .sect-faq {
+        .row-faq {
+            .box-info {
+                .list-info {
+                    li {
+                        padding-bottom: 15px;
+                    }
+                }
+                        
+                //단체문의
+                &.group {
+                    .list-info {
+                        li {
+                            &.nth-1 {
+                                .img-info {
+                                    background: none;
+                                    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_01.png', sizingMethod='scale')";
+                                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_01.png', sizingMethod='scale');
+
+                                } 
+                            }
+                            &.nth-2 {
+                                .img-info {
+                                    background: none;
+                                    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_02.png', sizingMethod='scale')";
+                                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_02.png', sizingMethod='scale');
+
+                                }
+                            }
+                            &.nth-3 {
+                                .img-info {
+                                    background: none;
+                                    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_03.png', sizingMethod='scale')";
+                                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_03.png', sizingMethod='scale');
+                                }
+                            }
+                            &.nth-4 {
+                                .img-info {
+                                    background: none;
+                                    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_04.png', sizingMethod='scale')";
+                                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader( src='http://img.withutour.co.kr/renew/common/img_group_list_04.png', sizingMethod='scale');
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

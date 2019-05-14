@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 콘텐츠 영역 */
+.contents {
+    padding-bottom: 115px;
+    
+    //서브 비주얼 영역
+    .sub-visual {
+        .area-slide {
+            .box-slide {
+                &:before {
+                    background: url(http://img.withutour.co.kr/renew/about/bg_visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    
+    //섹션
+    div[class*='sect-'] {
+        padding-top: 45px;
+        
+        /* 위드유투어 소개 */
+        &.sect-tour {
+            .area-tour {
+                @include list-info;
+                .box-info {
+                    margin-top: 28px;
+                }
+                text-align: center;
+                .sub-txt {
+                    @include bx;
+                    padding-top: 17px;
+                    font-size: 20px;
+                    line-height: 32px;
+                    
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: 385px;
+                        height: 1px;
+                        left: 50%;
+                        top: 0;
+                        margin-left: -(385px/2);
+                        background: $bor-gray-3;
+                    }
+                }
+
+                .list-tour {
+                    @include bx;
+                    @include clearfix;
+                    margin-top: 25px;
+                    li {
+                        float: left;
+                        width: 23.5%;
+                        margin-left: 2%;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        figure {
+                            @include bx;
+                            img {
+                                width: 100%;
+                                border: 1px solid $bor-gray-3;
+                            }
+                        }
+                    }
+                }
+                
+                & + .area-tour {
+                    margin-top: 85px;
+                }
+            }
+        }
+        
+        /* 시설입점/제휴문의 */
+        &.sect-store {
+            @include list-info($bg-ht:65px);
+            .box-info {
+                margin-top: 28px;
+                padding: 0 80px;
+                .list-info {
+                    li {
+                        padding-left: 12px;
+                        padding-right: 12px;
+                    }
+                }
+            }
+            @include table-row;
+            .tbl-row {
+                margin-top: 35px;
+            }
+            .box-btn {
+                @include bx;
+                text-align: center;
+                margin: 25px auto 0;
+                .btn-robo {
+                    display: inline-block;
+                }
+                .txt-pt {
+                    padding: 15px 0 20px;
+                    font-size: 18px;
+                    color: $fg-orange-2;
+                }
+                .btn-com {
+                    @include btn-com($ht:40px, $pd:0 25px, $fs:20px, $bor-r:25px, $bg:#fff);
+                }
+            }
+        }
+    }
+    
+}

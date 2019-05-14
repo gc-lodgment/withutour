@@ -1,0 +1,37 @@
+@charset "utf-8";
+// --------------
+// Scss변수
+// --------------
+// 주요 폰트 및 벌러
+$font-stack: "NanumSquareRound", "Nanum Square", "NanumSquare", "Nanum Gothic", sans-serif;
+$primary-color: #5c5c5c;
+// 폰트
+$font-nnGothic: "Nanum Gothic", Sans-serif;
+// $font-nnSquare: "Nanum Square", "NanumSquare", Sans-serif;
+// $font-nnrSquare: "NanumSquareRound", Sans-serif;
+// 색상
+$fg-menu-color: #48433f;
+$fg-green-1: #538622;
+$fg-green-2: #3a821f;
+$fg-red-1: #de0101;
+$fg-orange-1: #ff6c00;
+$fg-orange-2: #ff5500;
+$fg-blud-1: #0081b1;
+$fg-black-1: #555;
+
+// 배경
+$bg-table: #fdfbed;
+$bg-green: #92b800;
+$bg-btn-green: #7d9e5d;
+$bg-gray: #a3a3a3;
+$bg-yellow: #fffce4;
+
+
+//보더
+$bor-sub-menu: #d8d8d8;
+$bor-tab-menu: #d5d5d5;
+$bor-ip: #dad9d9;
+$bor-green: #92b800;
+$bor-gray-1: #bcbcbc;
+$bor-gray-2: #cbcbcb;
+$bor-gray-3: #c6c6c6;
