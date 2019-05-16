@@ -1,20 +1,44 @@
 $(function(){
+    //변수
+    var ths;
+    
     //함수 실행
     menuFn();
     visuFn();
     tabFn();
+    bnMdFn();
     
     //테이블이 있을 경우
     if( $('.tbl-col').css('display') == 'block' ) {
         tableFn();
     }
     
-    //제휴시설이 있을 경우
-    if( $('.box-facil').css('display') == 'block' ){
-        //console.log('facil');
-        facilFn();
-    }
+    //open popup
+    $('.popOpen').on('click', function(){
+        var pop = $('.pop-wrap');
+        pop.show();
+        pop.find('.sect-pop').show();
+
+        $('html').css({'overflow': 'hidden', 'height': '100%'});
+        $(pop).on('scroll', function(event) { 
+            event.preventDefault();     
+            event.stopPropagation();     
+            return false; 
+        });
+    });
     
+    //close popup
+    $('.btn-close').on('click', function(){
+        ths = $(this);
+        closePopFn(ths);
+    });
+    
+    //ss banner right hover
+    $('.bnServFn').hover(function(){
+        $(this).siblings('div[class*="box-"]').addClass('on');
+    }, function(){
+        $(this).siblings('div[class*="box-"]').removeClass('on');
+    });
     
 });
 
@@ -54,11 +78,24 @@ function tabFn(){
         e.preventDefault();
         //console.log('on');
         
-		$(this).addClass("on").siblings().removeClass("on"); //탭
+		$(this).addClass('on').siblings().removeClass('on'); //탭
             
         if( $('.box-tab').hasClass('anchor') ){
             //console.log('anchor');
+            var ht = $('.gnb').height();
+            var target = $(this).find('a').attr('href');
+            var offsetTop = $(target).offset().top;
 
+            $('html, body').stop().animate({
+                scrollTop : (offsetTop-ht)
+            }, 800);
+            
+            //학교단체로 on 고정
+            $(this).removeClass('on');
+            $(".list-tab > li:first-child").addClass('on');
+            
+            return false;
+            
         }else if( $('.box-tab').hasClass('tab') ){
             //console.log('제휴시설');
             var aCls = $(this).find('a').attr('class');
@@ -66,13 +103,10 @@ function tabFn(){
             //console.log(aCls);
             
             if( aCls == 'all' ){
-               listFc.find('.list-facil').fadeIn();
-               facilFn();
+                listFc.find('.list-facil').fadeIn();
             }else {
                 listFc.find('.list-facil').not('.best').fadeOut();
-                listFc.find('.list-facil.'+aCls).fadeIn().css({'margin-left': '2%'});
-                //listFc.find('.list-facil.'+aCls+':eq('++')').css({'margin-left': '0'});
-                facilType2Fn();
+                listFc.find('.list-facil.'+aCls).fadeIn();
             }
             
         }else {
@@ -114,6 +148,8 @@ function visuFn(){
 /* table function */
 function tableFn(){
     var tblLen = $('.tbl-col').length;
+    var tblTdPl = ($('.tbl-col td').css('padding-left').slice(0, -2))*2;
+    //console.log(tblTdPl)
     
     for( var i = 0 ; i < tblLen ; i++ ){
         var tbl = $('.tbl-col:eq('+i+')');
@@ -129,33 +165,45 @@ function tableFn(){
             total = tdWd;
         }
         
-        $('.tbl-col:eq('+i+')').find('tbody tr td .desc').css({'max-width' : (total-11)+'px'});
-        $('.ie .tbl-col:eq('+i+')').find('tbody tr td .desc').css({'max-width' : (total-15)+'px'});
-        $('.safari .tbl-col:eq('+i+'), .ie8 .tbl-col:eq('+i+')').find('tbody tr td .desc').css({'max-width' : (total-19)+'px'});
+        $('.tbl-col:eq('+i+')').find('tbody tr td .desc').css({'max-width' : (total-tblTdPl)+'px'});
     };
     
 }
 
-/* facil function */
-function facilFn(){
-    var groupLen = $('.box-facil .list-facil').length; 
-    for( var i = 0 ; i < groupLen ; i++ ){
-        if (i % 4 == 0) { 
-            //console.log(i)
-            $('.list-facil:eq('+i+')').css({'margin-left': 0});
-        }
+/* pop close function */
+function closePopFn(ths){
+    if( $('.pop-wrap.pop-facil').css('display') == 'block' ){
+        //제휴시설일때
+        ths.parents('.list-facil').hide();
+    }else{
+        //비밀번호일경우 / 기본 노말 타입
+        ths.parents('.sect-pop').hide();
     }
-}
-function facilType2Fn(){
-    var groupLen = $('.box-facil .list-facil'+aCls).length; 
-    for( var i = 0 ; i < groupLen ; i++ ){
-        if (i % 4 == 0) { 
-            //console.log(i)
-            listFc.find('.list-facil.'+aCls+':eq('+i+')').css({'margin-left': '0'});
-        }
-    }
+    ths.parents('.pop-wrap').hide();
+
+    $('html').css({'overflow': 'auto', 'height': '100%'});
+    ths.parents('.pop-wrap').off('scroll');
 }
 
+/* banner right align middle function */
+function bnMdFn(){
+    var bnRight = $('.bn-wrap.bn-right');
+    var hdt = $('.box-gnb').height(), visualHt = $('div[class*="visual"] .box-slide').height(), bnRightHt = bnRight.find('.container .inner').height();
+    var bnRightTop = bnRight.css('top');
+    var scltop;
+    //console.log(hdt, visualHt, bnRightHt, bnRightTop);
+    
+    //scroll
+    $(window).scroll(function(){
+        scltop = $(window).scrollTop();
+        if ( scltop < (hdt+visualHt) ) {
+            //console.log('absolute');
+            bnRight.stop().animate({'top': bnRightTop, 'margin-top': 0});
+        }else {
+            bnRight.stop().animate({'top': 50+'%', 'margin-top': -(bnRightHt/2)+'px'}); 
+        }
+    });
+}
 
 
 

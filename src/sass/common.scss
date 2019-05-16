@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 @import "./parts/common";
+//include
+@import "./include/pop";
+@import "./include/bn";
 
 @import url(http://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css);
 @import url(http://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
@@ -12,11 +15,16 @@ body {
 	line-height: 1.3; 
 }
 
+/* 초기화 */
 input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
+input[type='password'] { //패스워드일 경우 스퀘어폰트가 먹지 않아서
+    font-family: $font-nnGothic !important; 
+}
+
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -25,11 +33,9 @@ select {
 select::-ms-expand { 
     display: none; 
 }
-
 a {
     color: inherit;
 }
-
 img {
 	max-width: 100%;
 }
@@ -96,7 +102,7 @@ img {
         .box-gnb {
             @include bx;
             @include clearfix;
-            width: 1020px;
+            width: $all-wd;
             margin: 0 auto;
             text-align: center;
             
@@ -208,30 +214,31 @@ img {
                 }
             }
         }
-    }
-    
-    .box-until {
-        z-index: 12;
-        @include position(absolute, 23px, auto, auto, 35px);
-        display: block;
-        .box-cust {
-            position: relative;
-            color: #525252;
-            > span {
-                display: inline-block;
-                padding: 4px 3px 0 0;
-                font-size: 17px;
-                vertical-align: top;
-            }
-            .ico-call {
-                @include icoCall;
+        
+        .box-until {
+            @include position(absolute, 30px, auto, auto, 35px);
+            line-height: 1.3;
+            display: block;
+            .box-cust {
+                position: relative;
+                color: #525252;
+                > span {
+                    display: inline-block;
+                    padding: 4px 3px 0 0;
+                    font-size: 17px;
+                    vertical-align: top;
+                }
+                .ico-call {
+                    @include icoCall;
+                }
             }
         }
     }
+    
 }
 /* 최소값 정렬을 위해 */
 @media (max-width: 1649px) {
-    $wd : 1650px;
+    $wd : $aling-wd;
     .header {
         width: $wd;
         .gnb {
@@ -243,8 +250,8 @@ img {
             right: auto;
             .box-cust {
                 position: absolute;
-                top: -75px;
-                right: 35px;
+                top: 0;
+                right: 8px;
             }
         }
     }
@@ -267,7 +274,7 @@ img {
     div[class*='sect-'] {
         @include bx;
         @include clearfix;
-        width: 1020px;
+        width: $all-wd;
         margin: 0 auto;
     }
     
@@ -281,6 +288,7 @@ img {
         .area-slide {
             @include bx;
             @include clearfix;
+            width: 100% !important;
             .box-slide {
                 @include bx;
                 z-index: 2;
@@ -385,12 +393,12 @@ img {
         }
     }
     
-    //타이틀 영역
-    .box-tit {
+    //서브페이지 타이틀 영역
+    .box-sub-tit {
         @include bx;
         text-align: center;
         
-        > .tit {
+        .tit {
             font-size: 34px;
             font-weight: 600;
             color: $fg-black-1;
@@ -398,7 +406,7 @@ img {
                 color: $fg-orange-1;
             }
         }
-        > .sub-tit {
+        .sub-tit {
             padding: 10px 0 15px;
             font-size: 22px;
             &.fg-green {
@@ -410,6 +418,8 @@ img {
             }
         }
     }
+    
+    
 }
 
 

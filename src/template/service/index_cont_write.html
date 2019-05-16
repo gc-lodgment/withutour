@@ -1,0 +1,236 @@
+@@include('../include/_head.html', {
+	"page": "service"
+})
+
+<body class="page-service">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="contents">
+        <!-- 서브비주얼 -->
+	    <div class="sub-visual">
+	        <div class="area-slide">
+		        <div class="box-slide">
+		            <div class="box-slide-txt">
+                        <h2 class="tit">고객센터</h2>
+                        <p class="sub-tit">단체행사를 디자인하는 위드유투어 서비스는 모든 만족을 위해 최상의 서비스를 제공합니다.</p>
+		            </div>
+		        </div>
+	        </div>
+	    </div>
+	    
+        <!-- 탭 -->
+	    <div class="box-tab">
+	        <ul class="list-tab">
+	            <li><a href="./index.html#sectFaq">자주 묻는 질문</a></li>
+	            <li><a href="./index.html#sectQna">질문과 답변</a></li>
+	            <li class="on"><a href="#sectCont">견적문의</a></li>
+	        </ul>
+	    </div>
+	    
+		<!-- tab03 견적문의 : 글쓰기 -->
+		<div id="sectCont" class="sect-board sect-cont" style="display: block;">
+            <div class="box-sub-tit">
+                <h3 class="tit">단체행사 견적문의</h3>
+                <p class="sub-tit">경력 20년의 특급플래너가 최적의 플랜을 제안드립니다.<br>모든 것이 완벽한 시설에서 좋은 추억을 만들어보세요!</p>
+            </div>
+            
+            <div class="area-board">
+                <div class="box-board write">
+                    <div class="box-info group type-2">
+                        <ul class="list-info">
+                            <li class="nth-1">
+                                <div class="box-num">
+                                    <p class="txt-num">
+                                        <em>01</em>
+                                        <span>STEP</span>
+                                    </p>
+                                </div>
+                                <div class="box-txt">
+                                    <div class="img-info"></div>
+                                    <p class="txt">단체행사<br>문의접수</p>
+                                </div>
+                            </li>
+                            <li class="nth-2">
+                                <div class="box-num">
+                                    <p class="txt-num">
+                                        <em>02</em>
+                                        <span>STEP</span>
+                                    </p>
+                                </div>
+                                <div class="box-txt">
+                                    <div class="img-info"></div>
+                                    <p class="txt">행사성격, 예산,<br>장소 및 일정 등 분석</p>
+                                </div>
+                            </li>
+                            <li class="nth-3">
+                                <div class="box-num">
+                                    <p class="txt-num">
+                                        <em>03</em>
+                                        <span>STEP</span>
+                                    </p>
+                                </div>
+                                <div class="box-txt">
+                                    <div class="img-info"></div>
+                                    <p class="txt">행사 플랜 및 장소 섭외<br>견적서 전달</p>
+                                </div>
+                            </li>
+                            <li class="nth-4">
+                                <div class="box-num">
+                                    <p class="txt-num">
+                                        <em>04</em>
+                                        <span>STEP</span>
+                                    </p>
+                                </div>
+                                <div class="box-txt">
+                                    <div class="img-info"></div>
+                                    <p class="txt">사전답사 및<br>계약금 / 행사 진행</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tbl-row">
+                        <div class="box-tbl-top">
+                            <p class="txt-top"><em>* 항목</em>은 필수 입력 사항입니다.</p>
+                        </div>
+                        <table class="tbl">
+                            <colgroup>
+                                <col style="width: 13%;">
+                                <col style="width: 37%;">
+                                <col style="width: 13%;">
+                                <col style="width: 37%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <label for="name" class="lbl impt">담당자명</label>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <input type="text" id="name" class="form-ip">
+                                        </div>
+                                    </td>
+                                    <th>
+                                        <label for="telNum" class="lbl impt">연락처</label>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <input type="tel" id="telNum" class="form-ip wd-tel">
+                                            <span>-</span>
+                                            <input type="tel" id="telNum02" class="form-ip wd-tel">
+                                            <span>-</span>
+                                            <input type="tel" id="telNum03" class="form-ip wd-tel">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="email" class="lbl impt">이메일</label>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <input type="text" id="email" class="form-ip">
+                                        </div>
+                                    </td>
+                                    <th>
+                                        <span class="lbl">시설선택</span>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <select name="" id="" class="form-sel">
+                                                <option value="">선택하세요</option>
+                                                <option value="">[경기] 라마다평택앙코르호텔</option>
+                                                <option value="">[강원] 오션투유리조트</option>
+                                                <option value="">[전라] 지리산 중앙하이츠 콘도</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="groupName" class="lbl impt">단체명</label>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <input type="text" id="groupName" class="form-ip">
+                                        </div>
+                                    </td>
+                                    <th>
+                                        <span class="lbl impt">행사유형</span>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <select name="" id="" class="form-sel">
+                                                <option value="">선택하세요</option>
+                                                <option value="">엠티/오티</option>
+                                                <option value="">워크샵/세미나</option>
+                                                <option value="">야유회/단합대회</option>
+                                                <option value="">학생수련회/캠프</option>
+                                                <option value="">일반단체</option>
+                                                <option value="">기타</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="lbl">희망지역</span>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <select name="" id="" class="form-sel">
+                                                <option value="">선택하세요</option>
+                                                <option value="">서울경기</option>
+                                                <option value="">강원지역</option>
+                                                <option value="">경상지역</option>
+                                                <option value="">충청지역</option>
+                                                <option value="">전라지역</option>
+                                                <option value="">제주지역</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>
+                                        <label for="pw" class="lbl impt">패스워드</label>
+                                    </th>
+                                    <td>
+                                        <div class="box-tf">
+                                            <input type="password" id="pw" class="form-ip" placeholder="답변 확인 시 꼭 필요합니다.">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="txtAra" class="lbl">문의사항</label>
+                                    </th>
+                                    <td colspan="3">
+                                        <div class="box-tf">
+                                            <textarea name="" id="txtAra" cols="30" rows="10" class="form-txtara" placeholder="이용일 : &#13;&#10;인원수 :  남성 (         )  /  여성 (         ) &#13;&#10;예산 : &#13;&#10;&#13;&#10;위 사항을 중심으로 비교적 자세하게 작성해 주시면 빠른 응대에 도움이 됩니다."></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                    <div class="box-robo">
+                        <!-- 로봇이 아닙니다 캡차를 넣어주세요 -->
+                        <div class="btn-robo">
+                            <script src="https://www.google.com/recaptcha/api.js"></script>
+                            <div class="g-recaptcha" data-sitekey="6Lc0s4sUAAAAAA6NfIZ8-QuKkQaLxs83zZjrrL8Q"></div>
+                        </div>
+                        <p class="txt-pt">※ 제시하신 예산범위에서 최적의 플랜을 제시해 드리겠습니다.</p>
+                        <a href="#none" class="btn-com">단체행사 견적문의</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	    
+	</div>
+	
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>

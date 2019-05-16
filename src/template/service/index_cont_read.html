@@ -1,0 +1,123 @@
+@@include('../include/_head.html', {
+	"page": "service"
+})
+
+<body class="page-service">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="contents">
+        <!-- 서브비주얼 -->
+	    <div class="sub-visual">
+	        <div class="area-slide">
+		        <div class="box-slide">
+		            <div class="box-slide-txt">
+                        <h2 class="tit">고객센터</h2>
+                        <p class="sub-tit">단체행사를 디자인하는 위드유투어 서비스는 모든 만족을 위해 최상의 서비스를 제공합니다.</p>
+		            </div>
+		        </div>
+	        </div>
+	    </div>
+	    
+        <!-- 탭 -->
+	    <div class="box-tab">
+	        <ul class="list-tab">
+	            <li><a href="./index.html#sectFaq">자주 묻는 질문</a></li>
+	            <li><a href="./index.html#sectQna">질문과 답변</a></li>
+	            <li class="on"><a href="#sectCont">견적문의</a></li>
+	        </ul>
+	    </div>
+	    
+		<!-- tab03 견적문의 : 읽기 -->
+		<div id="sectCont" class="sect-board sect-cont" style="display: block;">
+            <div class="box-sub-tit">
+                <h3 class="tit">단체행사 견적문의</h3>
+                <p class="sub-tit">경력 20년의 특급플래너가 최적의 플랜을 제안드립니다.<br>모든 것이 완벽한 시설에서 좋은 추억을 만들어보세요!</p>
+            </div>
+            
+            <div class="area-board">
+                <div class="box-board read">
+                    <div class="tbl-row">
+                        <table class="tbl">
+                            <colgroup>
+                                <col style="width: 13%;">
+                                <col style="width: 37%;">
+                                <col style="width: 13%;">
+                                <col style="width: 37%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>작성자</th>
+                                    <td><p class="txt-p">홍길동</p></td>
+                                    <th>연락처</th>
+                                    <td><p class="txt-p">010-1234-5678</p></td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td><p class="txt-p">hong@naver.com</p></td>
+                                    <th>시설선택</th>
+                                    <td><p class="txt-p">[강원] 오션투유리조트</p></td>
+                                </tr>
+                                <tr>
+                                    <th>단체명</th>
+                                    <td><p class="txt-p">서울경동중학교</p></td>
+                                    <th>행사유형</th>
+                                    <td><p class="txt-p">2학년 체험학습 행사</p></td>
+                                </tr>
+                                <tr>
+                                    <th>희망지역</th>
+                                    <td><p class="txt-p">강원도</p></td>
+                                    <th>패스워드</th>
+                                    <td><p class="txt-p">****</p></td>
+                                </tr>
+                                <tr>
+                                    <th>문의사항</th>
+                                    <td colspan="3">
+                                        <p class="txt-p">
+                                            2019년 9월 13일부터 2박으로 진행원합니다.<br>
+                                            남학생 50명, 여학생 38명, 남교사 5명, 역교사 5명 정도됩니다.<br>
+                                            예산은 3천만원 정도 예상하고 큰 강당이 일정 내내 필요해요.<br>
+                                            희망지역은 강원도 인데 다른 추천지역도 있으시면 알려주시고 견적서좀 부탁드립니다.<br>
+                                            전화주셔도 좋아요.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="answer">
+                                    <th>문의답변</th>
+                                    <td colspan="3">
+                                        <p class="txt-p">
+                                            안녕하세요. 위드유투어입니다.<br>
+                                            전화로 알려드린대로 위의 이메일로 보내드린 견적서 확인하여 주십시오.<br>
+                                            숙소는 오션투유리조트를 추천드리며 행사간의 장소 등 내용도 견적내용 확인 부탁드립니다.<br>
+                                            사전답사와 계약금 관련해서는 다시 전화연락 드리겠습니다.<br>
+                                            감사합니다.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="box-btn">
+                        <div class="box-fl fl-left">
+                            <a href="./index.html#sectCont" class="btn-com">목록으로</a>
+                        </div>
+                        <div class="box-fl fl-right">
+                            <a href="#none" class="btn-com popOpen">수정하기</a>
+                            <a href="#none" class="btn-com popOpen">삭제하기</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	    
+	</div>
+	
+	@@include('../include/pop/pop_pw.html') 
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>

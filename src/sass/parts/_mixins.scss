@@ -150,42 +150,47 @@
                         padding: $td-pd;
                         font-size: $td-fs;
                         vertical-align: middle;
-                        
-                        .desc {
-                            display: inline-block;
-                            overflow:hidden;
-                            vertical-align: middle;
-                            text-overflow:ellipsis;
-                            letter-spacing: -0.7px;
-                            white-space:nowrap;
-                            word-wrap:normal;
-                        }
-                        
-                        span {
-                            display: inline-block;
-                            vertical-align: middle;
-                            
-                            &.ico-lock {
-                                position: relative;
-                                width: $ico-wd;
-                                height: $ico-ht;
-                                margin: $ico-mg;
-                                background: url(http://img.withutour.co.kr/renew/common/icon_lock.png) no-repeat center;
-                                background-size: cover;
+                        a {
+                            @include bx;
+                            display: block;
+                            font-size: initial;
+
+                            .desc {
+                                display: inline-block;
+                                overflow:hidden;
+                                vertical-align: middle;
+                                text-overflow:ellipsis;
+                                letter-spacing: -0.7px;
+                                white-space:nowrap;
+                                word-wrap:normal;
                             }
-                            &[class*='txt-']{
-                                height: $txt-ht;
-                                padding: $txt-pd;
-                                font-size: $txt-fs;
-                                line-height: $txt-ht;
-                                letter-spacing: -1px;
-                                color: #fff;
-                            }
-                            &.txt-ing {
-                                background: $bg-gray;
-                            }
-                            &.txt-end {
-                                background: $bg-green;
+
+                            span {
+                                display: inline-block;
+                                vertical-align: middle;
+
+                                &.ico-lock {
+                                    position: relative;
+                                    width: $ico-wd;
+                                    height: $ico-ht;
+                                    margin: $ico-mg;
+                                    background: url(http://img.withutour.co.kr/renew/common/icon_lock.png) no-repeat center;
+                                    background-size: cover;
+                                }
+                                &[class*='txt-']{
+                                    height: $txt-ht;
+                                    padding: $txt-pd;
+                                    font-size: $txt-fs;
+                                    line-height: $txt-ht;
+                                    letter-spacing: -1px;
+                                    color: #fff;
+                                }
+                                &.txt-ing {
+                                    background: $bg-gray;
+                                }
+                                &.txt-end {
+                                    background: $bg-green;
+                                }
                             }
                         }
                     }
@@ -196,7 +201,7 @@
 }
 
 // table row
-@mixin table-row($top-pb:7px, $bor-tp:2px solid $bor-green, $bor:1px solid $bor-gray-2, $th-bg:$bg-table, $ht:34px){
+@mixin table-row($top-pb:7px, $pd:10px 12px, $fs:16px, $bor-tp:2px solid $bor-green, $bor:1px solid $bor-gray-2, $th-bg:$bg-table, $ht:34px){
     .tbl-row {
         .box-tbl-top {
             padding-bottom: $top-pb;
@@ -214,7 +219,8 @@
             border-collapse: collapse;
             tr {
                 th, td {
-                    padding: 10px 12px;
+                    padding: $pd;
+                    font-size: $fs;
                     vertical-align: top;
                     line-height: $ht;
                     border: $bor;
@@ -239,16 +245,28 @@
                         width: 100%;
                         padding: 0 10px;
                         font-family: $font-stack;
+                        font-size: initial;
                         color: inherit;
                         border-radius: 1px;
                         border: 1px solid $bor-ip;
                     }
-                    .box-form {
+                    .box-tf {
                         .form-ip {
                             height: $ht;
                             line-height: $ht;
+                            
                             &.wd-tel {
                                 width: 108px;
+                                
+                                .safari & {
+                                    width: 107px;
+                                }
+                            }
+                            
+                            .safari & {
+                                $sf-pd:7px;
+                                padding-top: $sf-pd;
+                                padding-bottom: $sf-pd;
                             }
                         }
                         .form-sel {
@@ -261,18 +279,29 @@
                                 background: none;
                             }
                             .ie8 & { 
-                                padding-top: 10px;
-                                padding-bottom: 10px;
+                                padding-top: 7px;
+                                padding-bottom: 7px;
                                 line-height: 0;
                             }
                         }
                         .form-txtara {
                             resize: none;
                             height: 365px;
-                            padding: 10px;
+                            line-height: 1.5;
+                            padding: 15px;
+                            .safari & {
+                                &::placeholder {
+                                    font-size: 14px;
+                                }
+                            }
                         }
                         span {
                         }
+                    }
+                    
+                    //read
+                    .txt-p {
+                        
                     }
                 }
             }
@@ -280,8 +309,66 @@
     }
 }
 
+//robo
+@mixin robo($mg:25px auto 0, $txt-pd:15px 0 20px, $txt-fs:18px, $txt-c:$fg-orange-2, $ht:40px, $fs:20px){
+    .box-robo {
+        @include bx;
+        text-align: center;
+        margin: $mg;
+        .btn-robo {
+            display: inline-block;
+        }
+        .txt-pt {
+            padding: $txt-pd;
+            font-size: $txt-fs;
+            color: $txt-c;
+        }
+        .btn-com {
+            @include btn-com($ht:$ht, $pd:0 28px, $fs:$fs, $bor-r:25px, $bg:#fff);
+            min-width: 180px;
+        }
+    }
+}
+
+// table pagenation
+@mixin pagenation($mt:30px, $a-mg:10px, $wt:33px, $fs:14px, $fg:inherit, $bw:1px, $bor-c:#cecece, $on-bg:#cecece){
+    .box-page {
+        margin-top: $mt;
+        text-align: center;
+        font-size: 0;
+        a {
+            display: inline-block;
+            width: $wt;
+            height: $wt;
+            font-size: $fs;
+            line-height: $wt;
+            vertical-align: middle;
+            color: $fg;
+            border: $bw solid $bor-c;
+            border-left: 0;
+
+            &.prev + a, &.prev, &.next {
+                border-left: $bw solid $bor-c;
+            }
+
+            &.prev {
+                margin-right: $a-mg;
+            }
+
+            &.next {
+                margin-left: $a-mg;
+            }
+
+            &:hover, &.on {
+                color: #fff;
+                background: $on-bg;
+            }
+        }
+    }
+}
+
 // list info - 단체견적요청, 입점/제휴문의
-@mixin list-info($li-pd: 47px 20px 35px, $num-wt:60px, $num-em-fs:29px, $num-sp-fs:11px, $txt-fs:20px, $bg-ht:85px){
+@mixin list-info($li-pd: 47px 20px 35px, $num-wt:60px, $num-em-fs:29px, $num-sp-fs:11px, $txt-fs:20px, $bg-ht:85px, $type2-pd:0 80px){
     .box-info {
         .list-info {
             @include bx;
@@ -336,6 +423,7 @@
                         left: 0;
                         width: 100%;
                         height: $bg-ht;
+                           
                     }
                     .txt {
                         padding-top: ($bg-ht+10); 
@@ -354,6 +442,28 @@
                     left: 50%;
                     bottom: -20px;
                     margin-left: -41%;
+                }
+            }
+        }
+        
+        &.type-2 {
+            padding: $type2-pd;
+            .list-info {
+                li {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    .box-txt {
+                        .img-info {
+                            .ie8 & {
+                                height: ($bg-ht+17); 
+                            } 
+                        }
+                        .txt {
+                            .ie8 & {
+                                padding-top: ($bg-ht+22); 
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -454,142 +564,156 @@
 }
 
 // list facil - 제휴시설 리스트
-@mixin list-facil($wd:23.5%, $mt:40px, $ml:2%, $type-ht:30px, $type-pd:0 10px, $type-fs:15px, $tit-pd:10px 0, $tit-fs:24px, $sub-tit-pd:0, $sub-tit-fs:16px){
+@mixin list-facil($wd:25%, $mt:40px, $pd: 0 10px, $type-ht:30px, $type-pd:0 10px, $type-fs:15px, $tit-pd:10px 0, $tit-fs:24px, $sub-tit-pd:0, $sub-tit-fs:16px){
     .box-facil {
         @include bx;
         @include clearfix;
-        .list-facil {
-            float: left;
-            width: $wd;
-            margin-top: $mt;
-            margin-left: $ml;
-            &:first-child {
-                margin-left: 0;
-            }
-            .box-facil-tit {
+        .inner {
+            $left: 10px;
+            width: ($all-wd+($left*2));
+            margin-left: -($left);
+            .list-facil {
                 @include bx;
+                float: left;
+                width: $wd;
+                margin-top: $mt;
+                padding: $pd;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    .list-facil {
+        .box-facil-tit {
+            @include bx;
+            .box-type {
+                position: relative;
+                background: $bg-facil;
+                span {
+                    height: $type-ht;
+                    padding: $type-pd;
+                    font-size: $type-fs;
+                    line-height: $type-ht;
+                }
+                .txt-adr {
+                    display: block;
+                    color: #fff;
+                }
+                .txt-stay {
+                    position: absolute;
+                    display: inline-block;
+                    top: 0;
+                    right: 0;
+                    color: #ffda76;
+                    background: #000;
+                }
+            }
+            .box-tit {
+                padding: $tit-pd;
+                text-align: center;
+                p {
+                    font-weight: 600;
+                    letter-spacing: -1px;
+                }
+                .tit {
+                    font-size: $tit-fs;
+                    color: #434343;
+                }
+                .sub-tit {
+                    padding: $sub-tit-pd;
+                    font-size: $sub-tit-fs;
+                    color: #b03200;
+                }
+            }
+        }
+        .img-facil {
+            @include bx;
+            cursor: pointer;
+            overflow: hidden;
+            img {
+                @include bx;
+                border: 1px solid $bor-gray-3;
+            }
+
+            .btn-detail {
+                z-index: 3;
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.3);
+
+                span {
+                    display: inline-block;
+                    margin-top: 70px;
+                    height: $type-ht;
+                    padding: 0 18px;
+                    font-size: $sub-tit-fs;
+                    line-height: $type-ht;
+                    color: #fff;
+                    background: #000;
+                }
+
+                .ie8 & {
+                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+                }
+            }
+            
+            &:hover {
+                .btn-detail {
+                    display: block;
+                }
+            }
+        }
+
+        //입점/제휴문의
+        .box-etc {
+            @include bx;
+            display: table;
+            width: 100%;
+            height: 260px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #c3b7ab;
+            background: $bg-yellow;
+            .box-etc-txt {
+                display: table-cell;
+                vertical-align: middle;
+                .txt-1 {
+                    font-size: 22px;
+                    color: #434343;
+                }
+                .txt-2 {
+                    padding: 7px 0 9px;
+                    font-size: 14px;
+                    color: $fg-orange-1;
+                }
+                .img-etc {
+                    @include bx;
+                }
+                .btn-com {
+                    @include btn-com($ht:34px, $pd:0 18px, $fs:16px, $bor-r:18px, $bg:#fff);
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &.best {
+
+            .box-facil-tit {
                 .box-type {
-                    position: relative;
-                    background: #aa9683;
-                    span {
-                        height: $type-ht;
-                        padding: $type-pd;
-                        font-size: $type-fs;
-                        line-height: $type-ht;
-                    }
-                    .txt-adr {
-                        display: block;
-                        color: #fff;
-                    }
+                    background: $bg-facil-best;
                     .txt-stay {
-                        position: absolute;
-                        display: inline-block;
-                        top: 0;
-                        right: 0;
-                        color: #ffda76;
-                        background: #000;
+                        color: #ffb400;
                     }
                 }
                 .box-tit {
-                    padding: $tit-pd;
-                    text-align: center;
-                    p {
-                        font-weight: 600;
-                        letter-spacing: -1px;
-                    }
-                    .tit {
-                        font-size: $tit-fs;
-                        color: #434343;
-                    }
                     .sub-tit {
-                        padding: $sub-tit-pd;
-                        font-size: $sub-tit-fs;
-                        color: #b03200;
-                    }
-                }
-            }
-            .img-facil {
-                @include bx;
-                cursor: pointer;
-                overflow: hidden;
-                img {
-                    @include bx;
-                    border: 1px solid $bor-gray-3;
-                }
-
-                .btn-detail {
-                    z-index: 3;
-                    position: absolute;
-                    display: none;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    text-align: center;
-                    background: rgba(0, 0, 0, 0.3);
-
-                    span {
-                        display: inline-block;
-                        margin-top: 70px;
-                        height: $type-ht;
-                        padding: 0 18px;
-                        font-size: $sub-tit-fs;
-                        line-height: $type-ht;
-                        color: #fff;
-                        background: #000;
-                    }
-
-                    .ie8 & {
-                        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
-                    }
-                }
-            }
-            
-            //입점/제휴문의
-            .box-etc {
-                @include bx;
-                display: table;
-                width: 100%;
-                min-height: 260px;
-                text-align: center;
-                border-radius: 8px;
-                border: 1px solid #c3b7ab;
-                background: $bg-yellow;
-                .box-etc-txt {
-                    display: table-cell;
-                    vertical-align: middle;
-                    .txt-1 {
-                        font-size: 22px;
-                        color: #434343;
-                    }
-                    .txt-2 {
-                        padding: 7px 0 9px;
-                        font-size: 14px;
-                        color: $fg-orange-1;
-                    }
-                    .img-etc {
-                        @include bx;
-                    }
-                    .btn-com {
-                        @include btn-com($ht:34px, $pd:0 18px, $fs:16px, $bor-r:18px, $bg:#fff);
-                        margin-top: 10px;
-                    }
-                }
-            }
-            
-            &.best {
-                
-                .box-facil-tit {
-                    .box-type {
-                        background: #ff9000;
-                        .txt-stay {
-                            color: #ffb400;
-                        }
-                    }
-                    .box-tit {
-                        .sub-tit {
-                            color: #ff5400;
-                        }
+                        color: #ff5400;
                     }
                 }
             }
@@ -597,7 +721,18 @@
     }
 }
 
-
+//단체행사 텍스트 그룹 박스 부분
+@mixin box-group($pd:4px 5px, $fs:18px, $fg:$fg-green-2, $bor-t:2px solid $bor-green, $bor-b:1px solid $bor-gray-2, $bg:$bg-table){
+    padding: $pd;
+    font-size: $fs;
+    line-height: 1.7;
+    letter-spacing: -1px;
+    text-align: center;
+    color: $fg;
+    border-top: $bor-t;
+    border-bottom: $bor-b;
+    background: $bg;
+}
 
 
 

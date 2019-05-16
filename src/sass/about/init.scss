@@ -76,39 +76,106 @@
             }
         }
         
+        /* 단체고객 소개 */
+        &.sect-groups {
+            .box-sub-tit {
+                .sub-tit {
+                    padding-bottom: 0;
+                }
+            }
+            .area-groups {
+                text-align: center;
+                .tit-groups {
+                    padding: 40px 0 8px;
+                    font-size: 26px;
+                    color: $fg-green-2;
+                }
+                .box-groups {
+                    border-top: 2px solid $bor-green;
+                    .list-groups {
+                        @include bx;
+                        @include clearfix;
+                        li {
+                            @include bx;
+                            float: left; 
+                            width: 14.28%;
+                            border-bottom: 1px solid $bor-gray-3; 
+                            border-left: 1px solid $bor-gray-3;
+                            &:first-child {
+                                border-left: 0;
+                            }
+                            .area-list {
+                                @include bx;
+                                display: table; 
+                                width: 100%; 
+                                height: 140px; 
+                                padding: 18px 0 0 0;
+                                text-align: center;
+                                .box-list {
+                                    @include bx;
+                                    display: table-cell; 
+                                    text-align: center; 
+                                    vertical-align: middle;
+                                    .list-img {
+                                        @include bx;
+                                        display: table; 
+                                        width: 100%; 
+                                        min-height: 55px;
+                                        figure {
+                                            display: table-cell; 
+                                            text-align: center; 
+                                            vertical-align: middle;
+                                            img {
+                                                width: auto; 
+                                                max-width: 100%;
+                                            }
+                                        }
+                                    }
+                                    .txt-list {
+                                        @include bx;
+                                        display: table;
+                                        width: 100%; 
+                                        height: 55px; 
+                                        text-align: center; 
+                                        span {
+                                            display: table-cell; 
+                                            font-size: 15px; 
+                                            line-height: 1;
+                                            vertical-align: middle;
+                                            color: #000;
+                                        }
+                                    }
+                                }
+                                
+                                &.type-2 {
+                                    height: 55px;
+                                    padding-top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                & + .area-groups {
+                    .tit-groups {
+                        padding-top: 50px;
+                    }
+                }
+            }
+        }
+        
+        
         /* 시설입점/제휴문의 */
         &.sect-store {
             @include list-info($bg-ht:65px);
             .box-info {
                 margin-top: 28px;
-                padding: 0 80px;
-                .list-info {
-                    li {
-                        padding-left: 12px;
-                        padding-right: 12px;
-                    }
-                }
             }
             @include table-row;
             .tbl-row {
                 margin-top: 35px;
             }
-            .box-btn {
-                @include bx;
-                text-align: center;
-                margin: 25px auto 0;
-                .btn-robo {
-                    display: inline-block;
-                }
-                .txt-pt {
-                    padding: 15px 0 20px;
-                    font-size: 18px;
-                    color: $fg-orange-2;
-                }
-                .btn-com {
-                    @include btn-com($ht:40px, $pd:0 25px, $fs:20px, $bor-r:25px, $bg:#fff);
-                }
-            }
+            @include robo;
         }
     }
     

@@ -23,16 +23,16 @@
         <!-- 탭 -->
 	    <div class="box-tab">
 	        <ul class="list-tab">
-	            <li><a href="#tourAbout">위드유투어 소개</a></li>
-	            <li class="on"><a href="#custAbout">단체고객 소개</a></li>
+	            <li class="on"><a href="#tourAbout">위드유투어 소개</a></li>
+	            <li><a href="#groupsAbout">단체고객 소개</a></li>
 	            <li><a href="#storeAbout">시설입점/제휴문의</a></li>
 	        </ul>
 	    </div>
 		
 		<!-- tab01 위드유투어 소개 -->
-		<div id="tourAbout" class="sect-tour" style="display: none;">
+		<div id="tourAbout" class="sect-tour" style="display: block;">
 		    <div class="area-tour">
-		        <div class="box-tit">
+		        <div class="box-sub-tit">
 		            <h3 class="tit">단체행사가 필요할 때는 <em>위드유투어!</em></h3>
 		            <p class="sub-tit fg-green">이 정도의 예산으로 어디에서 뭘하는게 좋을까?<br>골치아픈 행사준비, 위드유투어에서 간편하게 !</p>
 		        </div>
@@ -58,7 +58,7 @@
 		    </div>
 		    
 		    <div class="area-tour">
-		        <div class="box-tit">
+		        <div class="box-sub-tit">
 		            <h3 class="tit">왜 단체행사는 <em>위드유투어</em>가 좋을까요?</h3>
 		            <p class="sub-tit fg-green">원하시는 행사의 지역, 규모, 성격, 예산에 맞게<br>맞춤형 단체행사 컨설팅을 제안해드립니다.</p>
 		        </div>
@@ -79,7 +79,7 @@
                                 <div class="img-info"></div>
                                 <p class="txt">단체행사<br>문의접수</p>
                             </div>
-                            <a href="#none" class="btn-com">단체견적요청</a>
+                            <a href="../service/index_cont_write.html" class="btn-com">단체견적요청</a>
                         </li>
                         <li class="nth-2">
                             <div class="box-num">
@@ -122,7 +122,7 @@
 		    </div>
 		    
 		    <div class="area-tour">
-		        <div class="box-tit">
+		        <div class="box-sub-tit">
 		            <h3 class="tit"><em>위드유투어</em>의 비즈니스 파트너가 되십시오!</h3>
 		            <p class="sub-tit fg-blue">전국 네트워크로 운영되는 시설 영업망으로 운영되는 위드유투어 서비스.<br>파트너 업체의 판매촉진을 위해 훌륭한 시너지를 만들겠습니다.</p>
 		        </div>
@@ -142,7 +142,8 @@
                                 <div class="img-info"></div>
                                 <p class="txt">입점/제휴 문의<br>(온라인 ,유선요청)</p>
                             </div>
-                            <a href="#none" class="btn-com">입점/제휴 문의</a>
+                            <!-- ** 소개 > 입점/제휴 문의로 이동 ** -->
+                            <a href="./index.html#storeAbout" class="btn-com">입점/제휴 문의</a>
                         </li>
                         <li class="nth-2">
                             <div class="box-num">
@@ -186,20 +187,44 @@
 		</div>
 		
 		<!-- tab02 단체고객 소개 -->
-		<div id="custAbout" class="sect-cust" style="display: block;">
-            <div class="box-tit">
+		<div id="groupsAbout" class="sect-groups" style="display: none;">
+            <div class="box-sub-tit">
                 <h3 class="tit">단체 고객 소개</h3>
                 <p class="sub-tit">저희는 약 450여개 유수의 기업체와 관,공사는 물론<br>초, 중, 고, 대학교 / 종교 /가족 및 일반 단체 등 고객으로 더욱 정진하고 있습니다.</p>
+            </div>
+            
+            <div class="area-groups cust">
+                <p class="tit-groups">회사 / 기업 단체</p>
+                <div class="box-groups">
+                    <ul class="list-groups">
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="area-groups public">
+                <p class="tit-groups">공공기관 / 협회 단체</p>
+                <div class="box-groups">
+                    <ul class="list-groups">
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="area-groups school">
+                <p class="tit-groups">대학교 / 초, 중, 고등학교 단체</p>
+                <div class="box-groups">
+                    <ul class="list-groups">
+                    </ul>
+                </div>
             </div>
 		</div>
 		
 		<!-- tab03 시설입점/제휴문의 -->
 		<div id="storeAbout" class="sect-store" style="display: none;">
-            <div class="box-tit">
+            <div class="box-sub-tit">
                 <h3 class="tit">위드유투어의 파트너가 되십시오!</h3>
                 <p class="sub-tit">귀사의 시설 홍보와 판매촉진을 위해 위드유투어가 함께하겠습니다.<br>파트너 업체의 시설과 영업망을 공유하여 가장 효율 높은 시너지를 만들겠습니다.</p>
                 
-                <div class="box-info business">
+                <div class="box-info business type-2">
                     <ul class="list-info">
                         <li class="nth-1">
                             <div class="box-num">
@@ -269,7 +294,7 @@
                                     <label for="typeName" class="lbl impt">시설명</label>
                                 </th>
                                 <td>
-                                    <div class="box-form">
+                                    <div class="box-tf">
                                         <input type="text" id="typeName" class="form-ip">
                                     </div>
                                 </td>
@@ -277,7 +302,7 @@
                                     <label for="telNum" class="lbl impt">연락처</label>
                                 </th>
                                 <td>
-                                    <div class="box-form">
+                                    <div class="box-tf">
                                         <input type="tel" id="telNum" class="form-ip wd-tel">
                                         <span>-</span>
                                         <input type="tel" id="telNum02" class="form-ip wd-tel">
@@ -291,7 +316,7 @@
                                     <label for="name" class="lbl impt">담당자명</label>
                                 </th>
                                 <td>
-                                    <div class="box-form">
+                                    <div class="box-tf">
                                         <input type="text" id="name" class="form-ip">
                                     </div>
                                 </td>
@@ -299,11 +324,14 @@
                                     <span class="lbl impt">시설유형</span>
                                 </th>
                                 <td>
-                                    <div class="box-form">
+                                    <div class="box-tf">
                                         <select name="" id="" class="form-sel">
                                             <option value="">선택하세요</option>
                                             <option value="">호텔</option>
-                                            <option value="">리조트</option>
+                                            <option value="">리조트/콘도</option>
+                                            <option value="">펜션</option>
+                                            <option value="">연수원,수련원</option>
+                                            <option value="">기타</option>
                                         </select>
                                     </div>
                                 </td>
@@ -313,7 +341,7 @@
                                     <label for="page" class="lbl">홈페이지</label>
                                 </th>
                                 <td>
-                                    <div class="box-form">
+                                    <div class="box-tf">
                                         <input type="text" id="page" class="form-ip">
                                     </div>
                                 </td>
@@ -321,10 +349,15 @@
                                     <span class="lbl impt">시설지역</span>
                                 </th>
                                 <td>
-                                    <div class="box-form">
+                                    <div class="box-tf">
                                         <select name="" id="" class="form-sel">
                                             <option value="">선택하세요</option>
-                                            <option value="">서울</option>
+                                            <option value="">서울경기</option>
+                                            <option value="">강원지역</option>
+                                            <option value="">경상지역</option>
+                                            <option value="">충청지역</option>
+                                            <option value="">전라지역</option>
+                                            <option value="">제주지역</option>
                                         </select>
                                     </div>
                                 </td>
@@ -334,13 +367,8 @@
                                     <label for="txtAra" class="lbl">시설소개</label>
                                 </th>
                                 <td colspan="3">
-                                    <div class="box-form">
-                                        <textarea name="" id="txtAra" cols="30" rows="10" class="form-txtara" placeholder="
-최대수용 인원 : 
-객실수 :
-보유 부대시설 : 강당 / 세미나실 / 식당 / 운동장 / 바베큐장 등
-
-위 사항을 중심으로 자세하게 기술하여 주십시오."></textarea>
+                                    <div class="box-tf">
+                                        <textarea name="" id="txtAra" cols="30" rows="10" class="form-txtara" placeholder="최대수용 인원 : &#13;&#10;객실수 : &#13;&#10;보유 부대시설 : 강당 / 세미나실 / 식당 / 운동장 / 바베큐장 등 &#13;&#10;&#13;&#10;&#13;&#10;위 사항을 중심으로 자세하게 기술하여 주십시오."></textarea>
                                     </div>
                                 </td>
                             </tr>
@@ -348,7 +376,7 @@
                     </table>
                 </div>
                 
-                <div class="box-btn">
+                <div class="box-robo">
                     <!-- 로봇이 아닙니다 캡차를 넣어주세요 -->
                     <div class="btn-robo">
 				        <script src="https://www.google.com/recaptcha/api.js"></script>

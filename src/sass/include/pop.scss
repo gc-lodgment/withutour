@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+.pop-wrap {
+    z-index: 999;
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    text-align: center; 
+    color: #333;
+    background: rgba(0, 0, 0, 0.6); 
+    .ie8 & {
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000,endColorstr=#80000000);
+    }
+    
+    //기본 
+    .sect-pop {
+        @include bx;
+        top: 50%; 
+        left: 50%;
+        padding: 22px; 
+        background: #fff;
+        .box-pop {
+            @include bx;
+            @include table-row;
+            .txt-pt {
+                margin-top: 13px;
+                font-size: 16px;
+                color: $fg-orange-2;
+            }
+            .box-btn {
+                margin-top: 13px;
+                a { 
+                    @include btn-com($wd:80px, $ht:36px, $fs:17px, $bg:#fff);
+                    & + a {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+            
+        //비밀번호 
+        &.pop-pw {
+            width: 370px;
+            margin-top: -(186px/2); 
+            margin-left: -(370px/2); 
+        }
+    }
+    
+    //제휴시설
+    &.pop-facil {
+        @include list-facil($type-ht:45px, $type-fs:18px, $type-pd:0 15px);
+        .list-facil {
+            @include bx;
+            width: 1030px;
+            top: 50%; 
+            left: 50%;
+            margin-top: -240px; 
+            margin-left: -(1030px/2); 
+            padding: 20px; 
+            background: #fff;
+            .area-pop {
+                @include bx;
+                background: #eee;
+                .box-pop {
+                    @include bx;
+                    @include clearfix;
+
+                    .box-pop-img {
+                        @include bx;
+                        width: 42%;
+                        .box-facil-tit {
+                            .box-type {
+                                .txt-adr {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                        .img-facil {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                                border: 0;
+                            }
+                        }
+                    }
+                    .box-pop-info {
+                        @include bx;
+                        width: 58%;
+                        padding: 15px 15px 0 20px; 
+                        text-align: left;
+                        .tit-info {
+                            font-size: 26px; 
+                            font-weight: bold; 
+                            line-height: 26px;
+                        }
+                        .txt-call {
+                            position: absolute;
+                            top: 18px;
+                            right: 18px;
+                            font-size: 20px;
+                            line-height: 1;
+                            vertical-align: middle;
+                            color: #ff4b82;
+                        }
+                        .list-info {
+                            margin-top: 15px; 
+                            padding-left: 2px;
+                            li {
+                                @include bx;
+                                display: table; 
+                                width: 100%;
+                                p {
+                                    position: relative; 
+                                    display: table-cell; 
+                                    font-size: 16px; 
+                                    line-height: 1.8; 
+                                    letter-spacing: -1px;
+                                    &.p-1 {
+                                        width: 14%;
+                                        font-weight: bold;
+                                    }
+                                    &.p-2 {
+                                        width: 86%; 
+                                        padding-left: 15px; 
+                                        word-break: keep-all;
+                                        &:before {
+                                            content: ''; 
+                                            display: block; 
+                                            position: absolute; 
+                                            width: 1px; 
+                                            height: 100%; 
+                                            top: 0; 
+                                            left: -1px; 
+                                            background: $bor-gray-1;
+                                        }
+                                        .t-mark {
+                                            display: block; 
+                                            margin-top: -2px; 
+                                            font-size: 16px; 
+                                            line-height: 1.8;
+                                            letter-spacing: -1px;
+                                        }
+                                    }
+                                }
+
+                                &.lst {
+                                    margin-top: 9px;
+                                    p {
+                                        &.p-2 {
+                                            &:before {
+                                                height: 24px;
+                                                top: 2px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .box-pop-btn {
+                    @include bx;
+                    padding: 32px 0 27px;
+                    .box-btn {
+                        position: relative; 
+                        display: inline-block;
+                        a { //btn-com($dis:inline-block, $wd:auto, $ht:20px, $pd:0, $fs:16px, $fg:inherit, $bor:1px solid $bor-gray-1, $bor-r:18px, $bg:null){
+                            @include bx;
+                            float: left;
+                            @include btn-com($wd:177px, $ht:46px, $fs:18px, $bor-r:0, $bg:#fff);
+                            margin-left: 30px;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            &.btn-com {
+                                color: #fff;
+                                border: 0;
+                                background: $bg-facil;
+                            }
+                            &.btn-close {
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.best {
+                .area-pop {
+                    .box-pop-btn {
+                        .box-btn {
+                            a {
+                                &.btn-com {
+                                    background: $bg-facil-best;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

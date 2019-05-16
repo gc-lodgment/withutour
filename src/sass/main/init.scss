@@ -105,15 +105,7 @@
                         color: #555;
                     }
                     .box-tit-group {
-                        height: 44px;
-                        font-size: 18px;
-                        line-height: 44px;
-                        letter-spacing: -1px;
-                        text-align: center;
-                        color: $fg-green-2;
-                        border-top: 2px solid $bor-green;
-                        border-bottom: 1px solid $bor-gray-2;
-                        background: $bg-table;
+                        @include box-group;
                     }
                     .txt-group {
                         padding: 11px 0 18px;
@@ -203,6 +195,12 @@
                 &.group {
                     .list-info {
                         li {
+                            .img-info {
+                                padding-top: 0;
+                            }
+                            .txt {
+                                padding-top: 62px;
+                            }
                             &.nth-1 {
                                 .img-info {
                                     background: none;
