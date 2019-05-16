@@ -288,7 +288,7 @@ img {
         .area-slide {
             @include bx;
             @include clearfix;
-            width: 100% !important;
+            //width: 100% !important;
             .box-slide {
                 @include bx;
                 z-index: 2;
@@ -330,9 +330,13 @@ img {
             }
         }
         
+        &.visual {
+        }
+        
         //서브페이지 비주얼 영역
         &.sub-visual {
             .area-slide {
+                width: 100% !important;
                 .box-slide {
                     height: 278px;
                     .box-slide-txt {

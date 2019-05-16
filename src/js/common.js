@@ -125,24 +125,37 @@ function tabFn(){
 
 /* visual function */
 function visuFn(){
-    $('div[class*="visual"]').bxSlider({
-		mode: 'fade',
-		auto: true,
-		autoControls: true,
-        controls: false,
-        pager: false,
-        speed: 1000,
-		duration: 6000,
-		onSliderLoad: function(currentIndex){
-			$(".area-slide").eq(currentIndex).addClass("active");
-		},
-		onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-			$(".area-slide").eq(oldIndex).removeClass("active");
-		},
-		onSlideAfter: function ($slideElement, oldIndex, newIndex) {
-			$slideElement.addClass("active");
-		}
-	});
+    var spd = 1000;
+    
+    if( $('.visual').css('display') == 'block' ) {
+        $('.visual').bxSlider({
+            //mode: 'vertical',
+            auto: true,
+            autoControls: true,
+            controls: false,
+            pager: false,
+            speed: spd
+        });
+    }else {
+        $('.sub-visual').bxSlider({ //'div[class*="visual"]'
+            mode: 'fade',
+            auto: true,
+            autoControls: true,
+            controls: false,
+            pager: false,
+            speed: spd,
+            duration: 6000,
+            onSliderLoad: function(currentIndex){
+                $(".area-slide").eq(currentIndex).addClass("active");
+            },
+            onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+                $(".area-slide").eq(oldIndex).removeClass("active");
+            },
+            onSlideAfter: function ($slideElement, oldIndex, newIndex) {
+                $slideElement.addClass("active");
+            }
+        });
+    }
 }
 
 /* table function */
