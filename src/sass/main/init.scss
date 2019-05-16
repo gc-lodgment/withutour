@@ -70,6 +70,76 @@
         }
     }
     
+    /* 배너 슬라이드 버튼 */
+    .bx-wrapper {
+        @include bx;
+        .bx-controls {
+            a {
+                display: inline-block;
+                font-size: 0;
+            }
+            .bx-controls-direction {
+                @include bx;
+                z-index: 55;
+                position: absolute;
+                display: none;
+                width: 100%;
+                top: 50%;
+                margin-top: -(43px/2);
+                text-align: center;
+                a {
+                    position: absolute;
+                    width: 23px;
+                    height: 43px;
+                    img {
+                        width: 100%;
+                    }
+                    &.bx-prev {
+                        left: 30px;
+                    }
+                    
+                    &.bx-next {
+                        right: 30px;
+                    }
+                }
+            }
+            .bx-pager {
+                @include bx;
+                z-index: 56;
+                position: absolute;
+                display: inline-block;
+                left: 50%;
+                bottom: 51px;
+                text-align: center;
+                .bx-pager-item {
+                    display: inline-block;
+                    $wt:12px;
+                    a {
+                        width: $wt;
+                        height: $wt;
+                        text-indent: -9999px;
+                        border-radius: 50%;
+                        background: #fff;
+                        
+                        &.active {
+                            background: #f5ff81;
+                        }
+                    }
+
+                    & + .bx-pager-item {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+        
+        &:hover {
+            .bx-controls-direction {
+                display: block;
+            }
+        }
+    }
+    
     
     /* 견적문의 & 질문과 답변 */
     .sect-service {

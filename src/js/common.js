@@ -125,27 +125,46 @@ function tabFn(){
 
 /* visual function */
 function visuFn(){
-    var spd = 1000;
+    var spd = 1000, du = 6000;
     
     if( $('.visual').css('display') == 'block' ) {
         $('.visual').bxSlider({
-            //mode: 'vertical',
+            mode: 'fade',
             auto: true,
-            autoControls: true,
-            controls: false,
-            pager: false,
-            speed: spd
+            autoHover: true,
+            autoControls: false,
+            controls: true,
+            pager: true,
+            speed: spd,
+            duration: du,
+            prevText: '<img src="http://img.withutour.co.kr/renew/common/btn_bn_left.png" alt="이전">',
+            nextText: '<img src="http://img.withutour.co.kr/renew/common/btn_bn_right.png" alt="다음">',
+            onSliderLoad: function(){
+                $(".area-slide").addClass("active");
+            },
+            onSlideBefore: function () {
+                $(".area-slide").removeClass("active");
+            },
+            onSlideAfter: function () {
+                $(".area-slide").addClass("active");
+            }
         });
     }else {
         $('.sub-visual').bxSlider({ //'div[class*="visual"]'
             mode: 'fade',
             auto: true,
-            autoControls: true,
+            autoControls: false,
             controls: false,
             pager: false,
             speed: spd,
-            duration: 6000,
-            onSliderLoad: function(currentIndex){
+            duration: du,
+            onSliderLoad: function(){
+                $(".area-slide").addClass("active");
+            }
+        });
+        
+        
+            /*onSliderLoad: function(currentIndex){
                 $(".area-slide").eq(currentIndex).addClass("active");
             },
             onSlideBefore: function ($slideElement, oldIndex, newIndex) {
@@ -153,8 +172,7 @@ function visuFn(){
             },
             onSlideAfter: function ($slideElement, oldIndex, newIndex) {
                 $slideElement.addClass("active");
-            }
-        });
+            }*/
     }
 }
 
