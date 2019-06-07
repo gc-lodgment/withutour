@@ -197,15 +197,134 @@ img {
                 }
             }
             
-            //sitemap
-            .sitemap {
+            .btn-sitemap {
+                z-index: 91;
                 position: absolute;
                 top: 39px;
                 right: 0;
-                > a {
-                    line-height: 1;
-                    font-weight: 500;
-                    font-family: $font-nnGothic;
+                line-height: 1;
+                font-weight: 500;
+                font-family: $font-nnGothic;
+            }
+        }
+            
+        //sitemap
+        .area-sitemap {
+            display: none;
+            z-index: 93;
+            position: absolute;
+            box-sizing: border-box;
+            width: 100%;
+            height: 500px;
+            padding: 90px 0;
+            background: url(http://img.withutour.co.kr/renew/common/bg_sitemap.png) no-repeat center center;
+            background-size: cover;
+
+            .box-sitemap {
+                @include bx;
+                @include clearfix;
+                width: 780px;
+                margin: 0 auto;
+                text-align: center;
+                .tit-box {
+                    float: left;
+                    display: inline-block;
+                    text-align: left;
+                    .ico-menu, .ico-menu:before, .ico-menu:after {
+                        height: 1px;
+                        background: #f4ff02;
+                    }
+                    .ico-menu {
+                        margin-bottom: 8px;
+                    }
+                    .ico-menu:before {
+                        margin-top: -9px;
+                    }
+                    .ico-menu:after {
+                        margin-top: 7px;
+                    }
+                    .txt-map {
+                        font-size: 24px;
+                        font-weight: 300;
+                        line-height: 1;
+                        color: #f4ff02;
+                    }
+                }
+                
+                .map-list {
+                    float: left;
+                    display: inline-block;
+                    text-align: left;
+                    padding: 26px 0 0 14px;
+                    > li {
+                        @include bx;
+                        @include clearfix;
+                        margin-top: 6px;
+                        padding-left: 15px;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        &:before {
+                            @include position(absolute, 50%, 0);
+                            content: '';
+                            display: block;
+                            width: 4px;
+                            height: 4px;
+                            margin-top: -2px;
+                            background: #fff;
+                        }
+                        a {
+                            line-height: 44px;
+                            color: #fff;
+                            &:hover {
+                                color: #ffea00;
+                            }
+                        }
+                        .dep-01 {
+                            float: left;
+                            display: inline-block;
+                            width: 110px;
+                            font-size: 20px;
+                            &:before {
+                                @include position(absolute, $left:0, $bottom:0);
+                                content: '';
+                                display: block;
+                                width: 110px;
+                                height: 1px;
+                                background: #fff;
+                            }
+                        }
+                        .map-sub-list {
+                            @include bx;
+                            @include clearfix;
+                            float: left;
+                            margin-left: 10px;
+                            li {
+                                @include bx;
+                                float: left;
+                                padding: 0 12px;
+                                a {
+                                    display: block;
+                                    font-size: 18px;
+                                }
+                                @include line-01(2px, 14px, #fff);
+                            }
+                        }
+                    }
+                }
+                
+                .btn-close {
+                    @include position(absolute, 0, $right:0);
+                    box-sizing: border-box;
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    background: url(http://img.withutour.co.kr/renew/common/btn_close.png) no-repeat center;
+                    background-size: cover;
+                    span {
+                        font-size: 0;
+                        text-indent: -999px;
+                    }
                 }
             }
         }

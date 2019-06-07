@@ -8,6 +8,14 @@ $(function(){
     tabFn();
     bnMdFn();
     
+    //sitemap
+    $('.btn-sitemap').on('click', function(){
+        $('.area-sitemap').stop().fadeIn();
+    });
+    $('.area-sitemap .btn-close').on('click', function(){
+        $(this).parents('.area-sitemap').stop().fadeOut();
+    });
+    
     //테이블이 있을 경우
     if( $('.tbl-col').css('display') == 'block' ) {
         tableFn();
