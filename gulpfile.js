@@ -82,9 +82,10 @@ gulp.task('clean:js', function(){
 	del(config.js.dest);
 });
 
+//20190611 return 제거
 // HTML 템플릿
 gulp.task('template', function(){
-	return gulp.src(config.template.src)
+	gulp.src(config.template.src)
 		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
@@ -95,7 +96,7 @@ gulp.task('template', function(){
 		.pipe(browserSync.stream({ match: '**/*.html' }));
 });
 gulp.task('template_m', function(){
-	return gulp.src(config.template.src_m)
+	gulp.src(config.template.src_m)
 		.pipe( plumber() )
 		.pipe( fileinclude({
 			prefix: '@@',
@@ -107,7 +108,7 @@ gulp.task('template_m', function(){
 });
 // scss 컴파일러
 gulp.task('sass', function() {
-	return gulp.src( config.sass.src )
+	gulp.src( config.sass.src )
 		.pipe( plumber() )
 		.pipe(sourcemaps.init())
 		.pipe( sass({outputStyle: 'compact'}).on('error', sass.logError)) // {outputStyle: nested} expanded, compact, compressed
@@ -121,7 +122,7 @@ gulp.task('sass', function() {
 });
 // js reload
 gulp.task('js', function(){
-	return gulp.src(config.js.src)
+	gulp.src(config.js.src)
 		.pipe( plumber() )
 		.pipe( gulp.dest(config.js.dest) )
 		.pipe(browserSync.stream({ match: '**/*.js' }));
