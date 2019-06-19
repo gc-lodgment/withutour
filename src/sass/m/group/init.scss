@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 콘텐츠 영역 */
+.contents {
+    padding-bottom: 40px ;
+    
+    //서브 비주얼 영역
+    .sub-visual {
+        .area-slide {
+            .box-slide {
+                &:before {
+                    background: url(http://img.withutour.co.kr/renew/m/group/bg_visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    
+    .sect-group {
+        .area-group {
+            .box-sub-tit {
+                padding-bottom: 7px;
+                .sub-tit {
+                    padding-bottom: 0;
+                }
+            }
+            .txt-group {
+                @include box-group(6px 1px 7px, 12px,inherit);
+                word-break: keep-all;
+            }
+            .img-group {
+                @include bx;
+                @include clearfix;
+                margin-top: 10px;
+                figure {
+                    @include bx;
+                    width: 49%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

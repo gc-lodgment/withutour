@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 콘텐츠 영역 */
+.contents {
+    padding-bottom: 36px;
+    
+    //서브 비주얼 영역
+    .sub-visual {
+        .area-slide {
+            .box-slide {
+                &:before {
+                    background: url(http://img.withutour.co.kr/renew/m/facil/bg_visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    
+    .box-tab {
+        @include bx;
+        overflow: hidden;
+        overflow-x: scroll;
+        height: 40px;
+        padding: 0 9px;
+        text-align: center;
+        background: #000;
+        .list-tab {
+            @include bx;
+            display: inline-block;
+            width: (60px*8);
+            height: 40px;
+            li {
+                @include bx;
+                display: inline-block;
+                float: left;
+                text-align: center;
+                a {
+                    @include bx;
+                    display: block;
+                    min-width: 60px;
+                    height: 40px;
+                    padding: 0 8px;
+                    font-size: 12px;
+                    line-height: 40px;
+                    color: #fff;
+                }
+                
+                &.on {
+                    a {
+                        color: #000;
+                        border-bottom: 1px solid #d5d5d5;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+    //리스트
+    .sect-facil {
+        padding-top: 18px;
+    
+        @include list-facil;
+    }
+}

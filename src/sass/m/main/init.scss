@@ -4,5 +4,218 @@
 
 /* 콘텐츠 영역 */
 .contents {
-	
+    padding-bottom: 33px;
+    
+	/* 타이틀 */
+    .box-tit {
+        @include bx;
+        @include clearfix;
+        padding-top: 24px;
+        .tit-sub {
+            display: inline-block;
+            font-size: 17px;
+            line-height: 24px;
+            letter-spacing: -1px;
+            vertical-align: middle;
+            color: $fg-green-1;
+        }
+        .btn-more { 
+            float: right;
+            @include btn-com($pd: 0 10px);
+        }
+    }
+    
+    /* 비주얼 */
+    .visual {
+        .area-slide {
+            .box-slide {
+                min-height: 370px;
+                .box-slide-txt {
+                    .sub-tit {
+                        font-size: 15px;
+                        line-height: 1;
+                    }
+                    .tit {
+                        padding: 7px 0 8px;
+                        font-size: 30px;
+                        font-weight: bold;
+                        letter-spacing: -1px;
+                        line-height: 1;
+                    }
+                    .txt {
+                        font-size: 12px;
+                        line-height: 1.4;
+                        letter-spacing: -0.5px;
+                    }
+                }
+            }
+            
+            &.slide-1 {
+                .box-slide {
+                    &:before {
+                        background: #555 url(http://img.withutour.co.kr/renew/m/main/bg_visual_01.jpg) no-repeat center center;
+                        background-size: cover;
+                    }
+                }
+            }
+            
+            &.slide-2 {
+                .box-slide {
+                    &:before {
+                        background: #555 url(http://img.withutour.co.kr/renew/m/main/bg_visual_02.jpg) no-repeat center center;
+                        background-size: cover;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    /* 배너 슬라이드 버튼 */
+    .bx-wrapper {
+        @include bx;
+        .bx-controls {
+            a {
+                display: inline-block;
+                font-size: 0;
+            }
+            .bx-pager {
+                @include bx;
+                z-index: 56;
+                position: absolute;
+                display: inline-block;
+                left: 50%;
+                bottom: 30px;
+                text-align: center;
+                .bx-pager-item {
+                    display: inline-block;
+                    $wt:10px;
+                    a {
+                        width: $wt;
+                        height: $wt;
+                        text-indent: -9999px;
+                        border-radius: 50%;
+                        background: #fff;
+                        
+                        &.active {
+                            background: #f5ff81;
+                        }
+                    }
+
+                    & + .bx-pager-item {
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+    }
+    
+    /* 단체행사 사례 및 추천 제휴시설 */
+    .sect-groups {
+        .box-group {
+            .list-group {
+                @include bx;
+                @include clearfix;
+                margin: 0 -5px;
+                li {
+                    @include bx;
+                    float: left;
+                    width: 50%;
+                    padding: 0 5px;
+                    margin-top: 15px;
+                    .tit-group {
+                        margin-bottom: 5px;
+                        font-size: 13px;
+                        color: $fg-black-1;
+                    }
+                    .box-tit-group {
+                        @include box-group;
+                    }
+                    .txt-group {
+                        @include bx;
+                        padding: 4px 0 5px;
+                        font-size: 10px;
+                        letter-spacing: -1px;
+                        line-height: 1.5;
+                        //word-break: keep-all;
+                    }
+                    .img-group {
+                        @include bx;
+                        img {
+                            width: 100%;
+                            border: 1px solid $bor-gray-3;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include list-facil{
+            .box-facil {
+                margin-top: 14px;
+            }
+        };
+    }
+    
+    /* 견적 절차 안내 & 자주 묻는 질문 */
+    .sect-faq {
+        @include list-info;
+    }
+    
+}
+
+/* 모바일 디자인 영역보다 클 경우 */
+@media (min-width: 641px){
+    .contents {
+        /* 비주얼 */
+        .visual {
+            .area-slide {
+                &.slide-1 {
+                    .box-slide {
+                        &:before {
+                            background: #555 url(http://img.withutour.co.kr/renew/main/bg_visual_01.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                    }
+                }
+
+                &.slide-2 {
+                    .box-slide {
+                        &:before {
+                            background: #555 url(http://img.withutour.co.kr/renew/main/bg_visual_02.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+/* 320 */
+@media (max-width: 320px){
+    .contents {
+    
+        /* 타이틀 */
+        .box-tit {
+            .tit-sub {
+                font-size: 15px;
+            }
+        }
+
+        /* 단체행사 사례 및 추천 제휴시설 */
+        .sect-groups {
+            .box-group {
+                .list-group {
+                    li {
+                        .box-tit-group {
+                            padding: 4px 2px 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

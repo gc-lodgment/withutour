@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 콘텐츠 영역 */
+.contents {
+    padding-bottom: 40px ;
+    
+    //서브 비주얼 영역
+    .sub-visual {
+        .area-slide {
+            .box-slide {
+                &:before {
+                    background: url(http://img.withutour.co.kr/renew/m/about/bg_visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    
+    /* 위드유투어 소개 */
+    .sect-about {
+        .area-tour {
+            @include bx;
+            text-align: center;
+            .box-sub-tit {
+                padding-bottom: 0;
+                .sub-tit {
+                    padding-bottom: 10px;
+                }
+            }
+            .sub-txt {
+                @include bx;
+                padding-top: 12px;
+                font-size: 12px;
+                line-height: 1.5;
+                word-break: keep-all;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 220px;
+                    height: 1px;
+                    left: 50%;
+                    top: 0;
+                    margin-left: -(220px/2);
+                    background: $bor-gray-3;
+                }
+            }
+
+            .list-tour {
+                @include bx;
+                @include clearfix;
+                margin: 15px -5px 0;
+                li {
+                    @include bx;
+                    float: left;
+                    width: 50%;
+                    padding: 0 5px;
+                    figure {
+                        @include bx;
+                        img {
+                            width: 100%;
+                            border: 1px solid $bor-gray-3;
+                        }
+                    }
+                }
+            }
+
+            @include list-info;
+
+            & + .area-tour {
+                padding-top: 10px;
+            }
+        }
+    }
+        
+    /* 단체고객 소개 */
+    .sect-groups {
+        .box-sub-tit {
+            padding-bottom: 0 !important;
+        }
+        .area-groups {
+            text-align: center;
+            .tit-groups {
+                padding: 0 0 4px;
+                font-size: 17px;
+                color: $fg-green-2;
+            }
+            .box-groups {
+                border-top: 2px solid $bor-green;
+                .list-groups {
+                    @include bx;
+                    @include clearfix;
+                    li {
+                        @include bx;
+                        float: left; 
+                        width: 25%;
+                        border-bottom: 1px solid $bor-gray-3; 
+                        border-left: 1px solid $bor-gray-3;
+                        &:first-child {
+                            border-left: 0;
+                        }
+                        .area-list {
+                            @include bx;
+                            display: table; 
+                            table-layout: fixed;
+                            width: 100%; 
+                            height: 82px; 
+                            padding: 16px 0 0 0;
+                            text-align: center;
+                            .box-list {
+                                @include bx;
+                                display: table-cell; 
+                                text-align: center; 
+                                vertical-align: middle;
+                                .list-img {
+                                    @include bx;
+                                    overflow: hidden;
+                                    display: table; 
+                                    width: 100%; 
+                                    padding: 0 15px;
+                                    height: 35px;
+                                    figure {
+                                        @include bx;
+                                        display: table-cell; 
+                                        text-align: center; 
+                                        vertical-align: middle;
+                                        img {
+                                            @include bx;
+                                            width: auto;
+                                            height: auto;
+                                            max-height: 35px;
+                                            max-width: 50px;
+                                        }
+                                    }
+                                }
+                                .txt-list {
+                                    @include bx;
+                                    display: table;
+                                    width: 100%; 
+                                    height: 30px; 
+                                    text-align: center; 
+                                    span {
+                                        display: table-cell; 
+                                        font-size: 10px; 
+                                        line-height: 1;
+                                        vertical-align: middle;
+                                        color: #000;
+                                    }
+                                }
+                            }
+
+                            &.type-2 {
+                                height: 35px;
+                                padding-top: 0;
+                            }
+                        }
+                        
+                        &.bor-r {
+                            width: 25.2%;
+                            border-right: 1px solid $bor-gray-3;
+                        }
+                    }
+                }
+            }
+
+            & + .area-groups {
+                .tit-groups {
+                    padding-top: 23px;
+                }
+            }
+        }
+    }
+        
+    /* 입점/제휴 문의 */
+    .sect-store {
+        .box-sub-tit {
+            .sub-tit {
+                padding-bottom: 0 !important;
+            }
+        }
+        @include table-row;
+        @include robo;
+    }
+    
+}
+
+
+/* 320 */
+@media (max-width: 320px){
+    
+    /* 콘텐츠 영역 */
+    .contents {
+
+        /* 단체고객 소개 */
+        .sect-groups {
+            .area-groups {
+                .box-groups {
+                    .list-groups {
+                        li {
+                            .area-list {
+                                .box-list {
+                                    .txt-list {
+                                        span {
+                                            letter-spacing: -1px;
+                                            -webkit-transform: scale(0.9);
+                                            -ms-transform: scale(0.9);
+                                            transform: scale(0.9);
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

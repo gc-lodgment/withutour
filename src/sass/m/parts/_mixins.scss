@@ -44,3 +44,635 @@
 		zoom: 1;
 	}
 }
+
+/* custom */
+@mixin bx($p:relative) {
+	position: $p;
+	box-sizing: border-box;
+}
+
+//btn
+@mixin btn-com($dis:inline-block, $wd:auto, $ht:24px, $pd:0, $fs:12px, $fg:inherit, $bor:1px solid $bor-gray-1, $bor-r:14px, $bg:null){
+    display: $dis;
+    width: $wd;
+    height: $ht;
+    padding: $pd;
+    font-size: $fs;
+    line-height: $ht;
+    color: $fg;
+    border: $bor;
+    border-radius: $bor-r;
+    background: $bg;
+    
+}
+
+// list info - 단체견적요청, 입점/제휴문의
+@mixin list-info($li-pd: 22px 5px 15px, $num-wt:32px, $num-em-fs:15px, $num-sp-fs:10px, $txt-fs:11px, $btn-fs:15px, $bg-ht:35px){
+    .box-info {
+        text-align: center;
+        .list-info {
+            @include bx;
+            @include clearfix;
+            padding-top: 20px;
+             
+            li {
+                @include bx;
+                float: left;
+                width: 23.5%;
+                margin-left: 2%;
+                padding: $li-pd;
+                text-align: center;
+                border: 2px solid;
+                border-radius: 8px;
+                background: #fffff9;
+                &:first-child {
+                    margin-left: 0;
+                }
+                .box-num {
+                    position: absolute;
+                    display: table;
+                    width: $num-wt;
+                    height: $num-wt;
+                    top: -($num-wt/2);
+                    left: 50%;
+                    margin-left: -($num-wt/2);
+                    border-radius: 50%;
+                    .txt-num {
+                        display: table-cell;
+                        vertical-align: middle;
+                        color: #fff;
+                        em {
+                            display: block;
+                            font-size: $num-em-fs;
+                            line-height: ($num-em-fs)-(2);
+                        }
+                        span {
+                            display: block;
+                            font-size: $num-sp-fs; 
+                            line-height: ($num-sp-fs)-(4);
+                            -webkit-transform: scale(0.6);
+                            -ms-transform: scale(0.6);
+                            transform: scale(0.6);
+                        }
+                    }
+                }
+                
+                .box-txt {
+                    @include bx;
+                    .img-info {
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: $bg-ht;
+                           
+                    }
+                    .txt {
+                        padding-top: ($bg-ht+5); 
+                        font-size: $txt-fs;
+                        line-height: 1.3;
+                        word-break: keep-all;
+                        color: #656565;
+                    }
+                }
+            }
+        } 
+        .btn-com {
+            @include bx;
+            @include btn-com($ht:30px, $pd:0 20px, $fs:$btn-fs, $fg:#fff, $bor:0);
+            margin-top: 11px;
+        }
+        
+        //단체문의
+        &.group {
+            $bor-group: #a2c084;
+            $bg-group: #7d9e5d;
+            .list-info {
+                li {
+                    border-color: $bor-group;
+                    .box-num {
+                        background : $bg-group;
+                    }
+                    &.nth-1 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_group_list_01.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                            
+                        }
+                    }
+                    &.nth-2 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_group_list_02.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                            
+                        }
+                    }
+                    &.nth-3 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_group_list_03.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                        }
+                    }
+                    &.nth-4 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_group_list_04.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                        }
+                    }
+                }
+            }
+            .btn-com {
+                background: $bg-group;
+            }
+        }
+        
+        //입점/제휴문의
+        &.business {
+            $bor-business: #7fbdd4;
+            $bg-business: #69adc6;
+            .list-info {
+                li {
+                    border-color: $bor-business;
+                    .box-num {
+                        background : $bg-business;
+                    }
+                    &.nth-1 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_business_list_01.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                            
+                        }
+                    }
+                    &.nth-2 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_business_list_02.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                            
+                        }
+                    }
+                    &.nth-3 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_business_list_03.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                        }
+                    }
+                    &.nth-4 {
+                        .img-info {
+                            background: url("http://img.withutour.co.kr/renew/common/img_business_list_04.png") no-repeat center top;
+                            background-size: auto $bg-ht;
+                        }
+                    }
+                    
+                }
+            }
+            .btn-com {
+                background: $bg-business;
+            }
+        }
+    }
+    
+    @media (max-width: 320px){
+        .box-info {
+            .list-info {
+                li {
+                    padding-bottom: 12px;
+                    .box-txt {
+                        .txt {
+                            font-size: ($txt-fs)-(1);
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+// list facil - 제휴시설 리스트
+@mixin list-facil($wd:50%, $mt:18px, $pd:0 5px, $type-ht:20px, $type-pd:0 6px, $type-fs:10px, $tit-pd:5px 0 4px, $tit-fs:13px, $sub-tit-pd:0, $sub-tit-fs:10px){
+    .box-facil {
+        @include bx;
+        @include clearfix;
+        .inner {
+            $left: -10px;
+            margin: 0 $left;
+            .list-facil {
+                @include bx;
+                float: left;
+                width: $wd;
+                margin-top: $mt;
+                padding: $pd;
+            }
+        }
+    }
+    .list-facil {
+        .box-facil-tit {
+            @include bx;
+            .box-type {
+                position: relative;
+                background: $bg-facil;
+                span {
+                    height: $type-ht;
+                    padding: $type-pd;
+                    font-size: $type-fs;
+                    line-height: $type-ht;
+                }
+                .txt-adr {
+                    display: block;
+                    color: #fff;
+                }
+                .txt-stay {
+                    position: absolute;
+                    display: inline-block;
+                    top: 0;
+                    right: 0;
+                    color: #ffda76;
+                    background: #000;
+                }
+            }
+            .box-tit {
+                padding: $tit-pd;
+                text-align: center;
+                p {
+                    font-weight: 600;
+                    letter-spacing: -1px;
+                }
+                .tit {
+                    font-size: $tit-fs;
+                    color: #434343;
+                }
+                .sub-tit {
+                    padding: $sub-tit-pd;
+                    font-size: $sub-tit-fs;
+                    color: #b03200;
+                }
+            }
+        }
+        .img-facil {
+            @include bx;
+            cursor: pointer;
+            overflow: hidden;
+            img {
+                @include bx;
+                border: 1px solid $bor-gray-3;
+            }
+
+            .btn-detail {
+                z-index: 3;
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.3);
+
+                span {
+                    display: inline-block;
+                    margin-top: 70px;
+                    height: $type-ht;
+                    padding: 0 18px;
+                    font-size: $sub-tit-fs;
+                    line-height: $type-ht;
+                    color: #fff;
+                    background: #000;
+                }
+            }
+            
+            &:hover {
+                .btn-detail {
+                    display: block;
+                }
+            }
+        }
+
+        //입점/제휴문의
+        .box-etc {
+            @include bx;
+            display: table;
+            width: 100%;
+            height: 157px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #c3b7ab;
+            background: $bg-yellow;
+            .box-etc-txt {
+                display: table-cell;
+                vertical-align: middle;
+                .txt-1 {
+                    font-size: 13px;
+                    color: #434343;
+                }
+                .txt-2 {
+                    padding: 2px 0 6px;
+                    font-size: 10px;
+                    color: $fg-orange-1;
+                }
+                .img-etc {
+                    @include bx;
+                }
+                .btn-com {
+                    @include btn-com($ht:22px, $pd:0 10px, $fs:11px, $bor-r:18px, $bg:#fff);
+                    margin-top: 6px;
+                }
+            }
+        }
+
+        &.best {
+
+            .box-facil-tit {
+                .box-type {
+                    background: $bg-facil-best;
+                    .txt-stay {
+                        color: #ffb400;
+                    }
+                }
+                .box-tit {
+                    .sub-tit {
+                        color: #ff5400;
+                    }
+                }
+            }
+        }
+    }
+    
+    @content
+}
+
+//단체행사 텍스트 그룹 박스 부분
+@mixin box-group($pd:6px 5px 5px, $fs:11px, $fg:$fg-green-2, $bor-t:2px solid $bor-green, $bor-b:1px solid $bor-gray-2, $bg:$bg-table){
+    padding: $pd;
+    font-size: $fs;
+    line-height: 1.7;
+    letter-spacing: -1px;
+    text-align: center;
+    color: $fg;
+    border-top: $bor-t;
+    border-bottom: $bor-b;
+    background: $bg;
+}
+
+// table col
+@mixin table-col($bor-tp:2px solid $bor-green, $bor:1px solid $bor-gray-2, $th-pd:8px 0, $th-fs:11px, $th-bg:$bg-table, $td-pd:8px 7px, $td-fs:11px, $ico-wd:8px, $ico-ht:12px, $ico-mg:0 4px, $txt-ht:16px, $txt-pd:0 5px, $txt-fs:10px){
+    .tbl-col {
+        border-top: $bor-tp;
+        .tbl {
+            table-layout: fixed;
+            border-collapse: collapse;
+            th, td {
+                vertical-align: middle;
+                border: $bor;
+            }
+            thead {
+                tr {
+                    th {
+                        padding: $th-pd;
+                        font-size: $th-fs;
+                        background: $th-bg;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: $td-pd;
+                        font-size: $td-fs;
+                        vertical-align: middle;
+                        overflow:hidden;
+                        vertical-align: middle;
+                        text-overflow:ellipsis;
+                        letter-spacing: -0.7px;
+                        white-space:nowrap;
+                        word-wrap:normal;
+                        a {
+                            @include bx;
+                            display: block;
+                            font-size: inherit;
+
+                            .desc {
+                                display: inline-block;
+                                overflow:hidden;
+                                vertical-align: middle;
+                                text-overflow:ellipsis;
+                                letter-spacing: -0.7px;
+                                white-space:nowrap;
+                                word-wrap:normal;
+                            }
+
+                            span {
+                                display: inline-block;
+                                vertical-align: middle;
+
+                                &.ico-lock {
+                                    position: relative;
+                                    width: $ico-wd;
+                                    height: $ico-ht;
+                                    margin: $ico-mg;
+                                    background: url(http://img.withutour.co.kr/renew/common/icon_lock.png) no-repeat center;
+                                    background-size: cover;
+                                }
+                                &[class*='txt-']{
+                                    height: $txt-ht;
+                                    padding: $txt-pd;
+                                    font-size: $txt-fs;
+                                    line-height: $txt-ht;
+                                    letter-spacing: -1px;
+                                    color: #fff;
+                                }
+                                &.txt-ing {
+                                    background: $bg-gray-3;
+                                }
+                                &.txt-end {
+                                    background: $bg-green;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// table row
+@mixin table-row($top-pb:7px, $pd:5px 7px, $fs:11px, $bor-tp:2px solid $bor-green, $bor:1px solid $bor-gray-2, $th-bg:$bg-table, $ht:26px, $sel-bg-wd:18px){
+    .tbl-row {
+        .box-tbl-top {
+            padding-bottom: $top-pb;
+            font-size: $fs;
+            text-align: left;
+            .txt-top {
+                color: $fg-black-1;
+                em {
+                    color: $fg-red-1;
+                }
+            }
+        }
+        .tbl {
+            border-top: $bor-tp;
+            table-layout: fixed;
+            border-collapse: collapse;
+            tr {
+                th, td {
+                    padding: $pd;
+                    font-size: $fs;
+                    vertical-align: top;
+                    line-height: $ht;
+                    border: $bor;
+                }
+                th {
+                    .lbl {
+                        color: inherit;
+                        &.impt {
+                            &:before {
+                                content: '*';
+                                display: inline-block;
+                                padding-right: 2px;
+                                color: $fg-red-1;
+                            }
+                        }
+                    } 
+                    background: $th-bg;
+                }
+                td {
+                    vertical-align: middle;
+                    .form-ip, .form-sel, .form-txtara {
+                        @include bx;
+                        width: 100%;
+                        padding: 0 10px;
+                        font-family: $font-stack;
+                        font-size: inherit;
+                        color: inherit;
+                        border-radius: 1px;
+                        border: 1px solid $bor-ip;
+                    }
+                    .box-tf {
+                        .form-ip {
+                            height: $ht;
+                            line-height: $ht;
+                            
+                            &.wd-tel {
+                                width: 52px;
+                            }
+                            
+                            .safari & {
+                                $sf-pd:7px;
+                                padding-top: $sf-pd;
+                                padding-bottom: $sf-pd;
+                            }
+                        }
+                        .form-sel {
+                            height: $ht;
+                            line-height: $ht;
+                            background: url(http://img.withutour.co.kr/renew/common/bg_sel.png) no-repeat center right;
+                            background-size: $sel-bg-wd auto;
+                            
+                            .ie9 &, .ie8 & {
+                                padding-right: 0;
+                                background: none;
+                            }
+                            .ie8 & { 
+                                padding-top: 7px;
+                                padding-bottom: 7px;
+                                line-height: 0;
+                            }
+                        }
+                        .form-txtara {
+                            resize: none;
+                            height: 150px;
+                            line-height: 1.5;
+                            padding: 15px;
+                            &::placeholder {
+                                font-size: inherit;
+                            }
+                            .safari & {
+                                &::placeholder {
+                                    font-size: inherit;
+                                }
+                            }
+                        }
+                        span {
+                            display: inline-block;
+                            padding: 0 4px;
+                            color: $fg-black-1;
+                        }
+                    }
+                    
+                    //read
+                    .txt-p {    
+                        word-break: keep-all;
+                        line-height: 1.9;   
+                    }
+                }
+                
+                &.answer {
+                    th {
+                        color: $fg-orange-2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// table pagenation
+@mixin pagenation($mt:20px, $a-mg:9px, $wt:28px, $fs:13px, $fg:inherit, $bw:1px, $bor-c:#cecece, $on-bg:#cecece){
+    .box-page {
+        margin-top: $mt;
+        text-align: center;
+        font-size: 0;
+        a {
+            display: inline-block;
+            width: $wt;
+            height: $wt;
+            font-size: $fs;
+            line-height: $wt;
+            vertical-align: middle;
+            color: $fg;
+            border: $bw solid $bor-c;
+            border-left: 0;
+
+            &.prev + a, &.prev, &.next {
+                border-left: $bw solid $bor-c;
+            }
+
+            &.prev {
+                margin-right: $a-mg;
+            }
+
+            &.next {
+                margin-left: $a-mg;
+            }
+
+            &:hover, &.on {
+                color: #fff;
+                background: $on-bg;
+            }
+        }
+    }
+}
+
+//robo
+@mixin robo($mg:10px auto 0, $txt-pd:0 0 13px, $txt-fs:11px, $txt-c:$fg-orange-2, $ht:32px, $fs:15px){
+    .box-robo {
+        @include bx;
+        text-align: center;
+        margin: $mg;
+        .btn-robo {
+            display: inline-block;
+            -webkit-transform:scale(0.7);
+            -ms-transform:scale(0.7);
+            transform:scale(0.7);
+        }
+        .txt-pt {
+            padding: $txt-pd;
+            font-size: $txt-fs;
+            color: $txt-c;
+        }
+        .btn-com {
+            @include btn-com($ht: $ht, $pd: 0 28px, $fs: $fs, $bor-r: 25px, $bg: #fff);
+            min-width: 180px;
+        }
+    }
+}

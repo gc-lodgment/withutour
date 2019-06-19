@@ -1,0 +1,150 @@
+@@include('../include/_head.html', {
+	"page": "about"
+})
+
+<body class="page-about">
+
+<div class="wrapper">
+	@@include('../include/_header.html')
+
+	<div class="contents">
+        <!-- 서브비주얼 -->
+	    <div class="sub-visual">
+	        <div class="area-slide">
+		        <div class="box-slide">
+		            <div class="box-slide-txt">
+                        <h2 class="tit">입점/제휴 문의</h2>
+                        <p class="sub-tit">단체행사를 디자인하는 위드유투어 서비스는<br>모든 만족을 위해 최상의 서비스를 제공합니다.</p>
+		            </div>
+		        </div>
+	        </div>
+	    </div>
+	
+        <!-- 입점/제휴 문의 -->
+		<div class="sect-store">
+            <div class="box-sub-tit">
+                <h3 class="tit"><em>위드유투어</em>의 파트너가 되십시오!</h3>
+                <p class="sub-tit">귀사의 시설 홍보와 판매촉진을 함께하겠습니다.<br>시설과 영업망을 공유하여 효율 높은 시너지를 만들겠습니다.</p>
+            </div>
+            
+            
+            <div class="tbl-row">
+                <div class="box-tbl-top">
+                    <p class="txt-top"><em>* 항목</em>은 필수 입력 사항입니다.</p>
+                </div>
+                <table class="tbl">
+                    <colgroup>
+                        <col style="width: 22%;">
+                        <col style="width: 78%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <label for="typeName" class="lbl impt">시설명</label>
+                            </th>
+                            <td>
+                                <div class="box-tf">
+                                    <input type="text" id="typeName" class="form-ip">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="telNum" class="lbl impt">연락처</label>
+                            </th>
+                            <td>
+                                <div class="box-tf">
+                                    <input type="tel" id="telNum" class="form-ip wd-tel">
+                                    <span>-</span>
+                                    <input type="tel" id="telNum02" class="form-ip wd-tel">
+                                    <span>-</span>
+                                    <input type="tel" id="telNum03" class="form-ip wd-tel">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="name" class="lbl impt">담당자명</label>
+                            </th>
+                            <td>
+                                <div class="box-tf">
+                                    <input type="text" id="name" class="form-ip">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="lbl impt">시설유형</span>
+                            </th>
+                            <td>
+                                <div class="box-tf">
+                                    <select name="" id="" class="form-sel">
+                                        <option value="">선택하세요</option>
+                                        <option value="">호텔</option>
+                                        <option value="">리조트/콘도</option>
+                                        <option value="">펜션</option>
+                                        <option value="">연수원,수련원</option>
+                                        <option value="">기타</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="lbl impt">시설지역</span>
+                            </th>
+                            <td>
+                                <div class="box-tf">
+                                    <select name="" id="" class="form-sel">
+                                        <option value="">선택하세요</option>
+                                        <option value="">서울경기</option>
+                                        <option value="">강원지역</option>
+                                        <option value="">경상지역</option>
+                                        <option value="">충청지역</option>
+                                        <option value="">전라지역</option>
+                                        <option value="">제주지역</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="page" class="lbl impt">홈페이지</label>
+                            </th>
+                            <td>
+                                <div class="box-tf">
+                                    <input type="text" id="page" class="form-ip">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="txtAra" class="lbl">시설소개</label>
+                            </th>
+                            <td>
+                                <div class="box-tf">
+                                    <textarea name="" id="txtAra" cols="30" rows="10" class="form-txtara" placeholder="최대수용 인원 : &#13;&#10;객실수 : &#13;&#10;보유 부대시설 : 강당 / 세미나실 / 식당 / 바베큐장 등 &#13;&#10;&#13;&#10;위 사항을 중심으로 간략하게 작성해 주십시오."></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                
+            <div class="box-robo">
+                <!-- 로봇이 아닙니다 캡차를 넣어주세요 -->
+                <div class="btn-robo">
+                    <script src="https://www.google.com/recaptcha/api.js"></script>
+                    <div class="g-recaptcha" data-sitekey="6Lc0s4sUAAAAAA6NfIZ8-QuKkQaLxs83zZjrrL8Q"></div>
+                </div>
+                <p class="txt-pt">※ 접수하신 후 해당 담당자가 연락드리도록 하겠습니다.</p>
+                <a href="#none" class="btn-com">시설입점 / 제휴문의 하기</a>
+            </div>
+        </div>
+	</div>
+
+	@@include('../include/_footer.html') 
+</div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+@import "../parts/common";
+
+/* 콘텐츠 영역 */
+.contents {
+    padding-bottom: 35px;
+    
+    /* 서브 비주얼 영역 */
+    .sub-visual {
+        .area-slide {
+            .box-slide {
+                &:before {
+                    background: url(http://img.withutour.co.kr/renew/m/service/bg_visual.jpg) no-repeat center center;
+                    //background: url(http://img.withutour.co.kr/renew/service/bg_visual.jpg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    
+    .sect-service {
+        /*견적문의 */
+        .area-board {
+            .box-board {
+                .btn-com {
+                    @include btn-com($wd: 182px, $ht: 30px, $fs: 14px, $bor-r: 25px);
+                }
+                //목록
+                &.list {
+                    @include table-col;
+                    .box-tbl-btm {
+                        @include bx;
+                        @include pagenation;  
+                        text-align: center;
+                        .btn-com {
+                            margin-top: 18px;
+                        }
+                    }
+                }
+                
+                //읽기, 쓰기
+                &.read, &.write {
+                    @include table-row;
+                    @include robo;
+                }
+                
+                &.read {
+                    .box-btn {
+                        text-align: center;
+                        margin-top: 16px;
+                        .btn-com {
+                            width: 80px;
+                            font-size: 13px;
+                            & + .btn-com {
+                                margin-left: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        /* 자주 묻는 질문 */
+        .area-faq {
+            @include bx;
+            margin-top: -18px;
+            border-top: 2px solid $bor-green;
+            .box-faq {
+                @include bx;
+                border: 1px solid $bor-gray-4;
+                border-top: 0;
+                .box-qust {
+                    @include bx;
+                    cursor: pointer;
+                    padding: 12px 7px 8px 30px;
+                    .ico-q {
+                        position: absolute;
+                        left: 10px;
+                        font-size: 13px;
+                        color: #ae4c0a;
+                    }
+                    .txt-q {
+                        font-size: 11px;
+                        line-height: 1.5;
+                        word-break: keep-all;
+                    }
+                }
+                
+                .box-ansr {
+                    @include bx;
+                    display: none;
+                    padding: 11px 14px 16px;
+                    border-top: 1px solid $bor-gray-4;
+                    background: $bg-gray-2;
+                    .txt-a {
+                        font-size: 11px;
+                        line-height: 1.7;
+                        word-break: keep-all;
+                    }
+                }
+                
+                &.on {
+                    .box-qust {
+                        .txt-q {
+                            color: #258500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

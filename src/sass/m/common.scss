@@ -1,25 +1,515 @@
 @charset "utf-8";
 
 @import "./parts/common";
+//include
+@import "./include/pop";
 
-// @import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
-// @import url(http://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
-// @import url(https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css);
+@import url(http://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css);
+@import url(http://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
 
 body {
+    @include bx;
+    width: 100%;
+    margin: 0 auto;
 	font-family: $font-stack; 
 	color: $primary-color;
 	line-height: 1.3; 
+    letter-spacing: -0.5px;
 }
 img {
 	max-width: 100%;
 }
+a {
+    color: inherit;
+}
+
+/* 초기화 */
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type='password'] { //패스워드일 경우 스퀘어폰트가 먹지 않아서
+    font-family: $font-nnGothic !important; 
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select::-ms-expand { 
+    display: none; 
+}
+
+
+/* common */
+.fl-left {
+    float: left;
+}
+.fl-right {
+    float: right;
+}
+.t-center {
+    text-align: center;
+}
+
+/* btn */
+.btn-top {
+    z-index: 80;
+    @include position(fixed, $bottom:15px, $right:15px);
+    display: none;
+    box-sizing: border-box;
+    width: 42px;
+    height: 42px;
+    padding-top: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: -0.9px;
+    color: #363636;
+    border-radius: 50%;
+    border: 1px solid #b8b7b1;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 2px 2px rgba( 0, 0, 0, 0.1); 
+    box-shadow: 0px 2px 2px 2px rgba( 0, 0, 0, 0.1);
+    
+    .arr {
+        display: block;
+        font-size: 15px;
+        font-family: $font-nnGothic;
+        -webkit-transform: rotateX(45deg);
+        -ms-transform: rotateX(45deg);
+        transform: rotateX(45deg);
+    }
+}
+
+
+/* com wid */
+@mixin com-wd{
+    @include bx;
+    @include clearfix;
+    display: block;
+    max-width: $max-wd;
+    margin: 0 auto;
+}
 
 /* 해더 영역 */
 .header {
+    z-index: 90;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    .gnb {
+        @include com-wd;
+        .box-gnb {
+            .logo {
+                @include position(absolute, 10px, 14px);
+                a {
+                    display: block;
+                    width: 118px;
+                    img {
+                        
+                    }
+                }
+            }
+            
+            .btn-menu {
+                @include position(absolute, 14px, $right:14px);
+                cursor: pointer;
+                width: 28px; 
+                border: 0; 
+                background: none; 
+                span {
+                    display: block;
+                    height: 4px;
+                    margin: 5px auto;
+                    border-radius: 4px;
+                    background: #fff;
+                    &.bar {
+                        
+                    }
+                }
+            }
+            
+            .menu-area {
+                z-index: 99;
+                @include position(fixed, 0, 0);
+                @include transition(all 0.3s);
+                visibility: hidden;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background: rgba(0, 0, 0, 0.5);
+                .row {
+                    @include bx;
+                    max-width: $max-wd;
+                    overflow: hidden;
+                    height: 100%;
+                    margin: 0 auto;
+                    .menu-box {
+                        @include position(absolute, 0, $right: -200px);
+                        @include transition(right 0.3s);
+                        box-sizing: border-box;
+                        overflow-y: auto;
+                        width: 196px;
+                        height: 100%;
+                        background: $bg-menu;
+                        .menu-top {
+                            @include bx;
+                            padding: 10px 18px;
+                            background: #005961;
+                            .menu-logo {
+                                width: 80px;
+                            }
+                            .a-i-x {
+                                width: 20px;
+                                height: 100%;
+                                top: 0;
+                                right: 14px;
+                                
+                                &:before, &:after {
+                                    height: 3px;
+                                    top: 50%;
+                                    left: 50%;
+                                    margin-top: 0px;
+                                    margin-left: -10px;
+                                    border-radius: 12px;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                        .menu {
+                            li {
+                                @include bx;
+                                border-bottom: 1px solid $bor-menu;
+                                a {
+                                    @include bx;
+                                    display: block;
+                                    height: 40px;
+                                    padding: 0 18px;
+                                    font-size: 15px;
+                                    line-height: 40px;
+                                    color: #fff;
+                                    .ic-rArrow {
+                                        @include position(absolute, 0, $right: 14px);
+                                        display: inline-block;
+                                        &:after {
+                                            top: 0;
+                                            border-width: 3px;
+                                            border-color: #a4cedd;
+                                            border-radius: 3px;
+                                        }
+                                    }
+                                }
 
+                                &.c-pt {
+                                    a {
+                                        color: $fg-menu-pt;
+                                        .ic-rArrow {
+                                            &:after {
+                                                border-color: $fg-menu-pt;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.on {
+                                    border-bottom-color: $bor-menu-on;
+                                    a {
+                                        background: $bg-menu-on;
+                                        color: $fg-menu-pt;
+                                        .ic-rArrow {
+                                            &:after {
+                                                border-color: $fg-menu-pt;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }  
+                    }
+                }
+                
+                &.on {
+                    visibility: visible;
+                    opacity: 1;
+                    .menu-box {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
 }
+
+/* 콘텐츠 영역 */
+.contents {
+    @include bx;
+    @include clearfix;
+    
+    //전체 섹션
+    div[class*='sect-'] {
+        @include com-wd;
+        padding: 0 15px;
+    
+        //서브페이지 타이틀 영역
+        .box-sub-tit {
+            @include bx;
+            padding: 22px 0 20px;
+            text-align: center;
+            word-break: keep-all;
+
+            .tit {
+                font-size: 19px;
+                color: $fg-black-1;
+                em {
+                    color: $fg-orange-1;
+                }
+            }
+            .sub-tit {
+                padding: 4px 0 15px;
+                font-size: 12px;
+                line-height: 1.5;
+                &.fg-green {
+                    color: $fg-green-2;
+                }
+
+                &.fg-blue {
+                    color: $fg-blud-1;
+                }
+            }
+        }
+    }
+    
+    /* 비주얼 */
+    div[class*='visual'] {
+        @include com-wd;
+        max-width: 100%;
+        
+        .area-slide {
+            @include bx;
+            @include clearfix;
+            width: 100% !important;
+            .box-slide {
+                @include bx;
+                z-index: 2;
+                display: table;
+                overflow: hidden;
+                width: 100%;
+                text-align: center;
+                .box-slide-txt {
+                    display: table-cell;
+                    vertical-align: middle;
+                    letter-spacing: -0.75px;
+                    color: #fff;
+                }
+                &:before {
+                    content: ""; 
+                    z-index: -1;
+                    display: block; 
+                    position: absolute; 
+                    width: 100%; 
+                    height: 100%; 
+                    top: 0;
+                    left: 0; 
+                    -webkit-transition: all 5.5s;
+                    -ms-transition: all 5.5s;      
+                    -o-transition: all 5.5s;
+                    transition: all 5.5s;
+                }
+            }
+        }
+        
+        //메인 비주얼 영역
+        &.visual {
+            .area-slide {
+                .box-slide {
+                    .box-slide-txt {
+                        > * {
+                            opacity: 0; 
+                            visibility: hidden;
+                            -webkit-transition: all 0.4s 0.1s;
+                            -ms-transition: all 0.4s 0.1s;
+                            -o-transition: all 0.4s 0.1s;
+                            transition: all 0.4s 0.1s;
+                        }
+                        .sub-tit {
+                            margin-top: -40px;
+                        }
+                        .tit {
+                            margin-top: -30px;
+                        }
+                        .txt {
+                            margin-top: -20px;
+                            -webkit-transition: all 0.6s 0.3s;
+                            -ms-transition: all 0.6s 0.3s;
+                            -o-transition: all 0.6s 0.3s;
+                            transition: all 0.6s 0.3s;
+                        }
+                    }
+                    &:before {
+                        -webkit-transition: none;
+                        -ms-transition: none;      
+                        -o-transition: none;
+                        transition: none;
+                    }
+                }
+                &.active {
+                    .box-slide {
+                        .box-slide-txt {
+                            > * {
+                                margin-top: 0;
+                                opacity: 1; 
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        
+        //서브페이지 비주얼 영역
+        &.sub-visual {
+            .area-slide {
+                .box-slide {
+                    padding-top: 48px;
+                    height: 225px;
+                    .box-slide-txt {
+                        letter-spacing: -1px;
+                        .tit {
+                            font-size: 26px;
+                            font-weight: 600;
+                        }
+                        .sub-tit {
+                            margin-top: 3px;
+                            font-size: 12px;
+                            line-height: 1.5;
+                        }
+                    }
+                    &:before {
+                        -webkit-transform: scale(1.2);
+                        -ms-transform: scale(1.2);
+                        -o-transform: scale(1.2);
+                        transform: scale(1.2);
+                    }
+                }
+                &.active {
+                    .box-slide:before {
+                        -webkit-transform: scale(1);
+                        -ms-transform: scale(1);
+                        -o-transform: scale(1);
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
 /* 푸터 영역 */
 .footer {
-	
+    @include bx;
+    background: $bg-gray-1;
+    .inner {
+        @include com-wd;
+        padding: 24px 16px 28px;
+        .box-adr {
+            .row-ft {
+                .logo {
+                    width: 93px;
+                }
+                .address {
+                    margin-top: 8px;
+                    line-height: 0;
+                    span {
+                        font-size: 10px;
+                        color: $fg-gray-1;
+                        line-height: 1.3;
+                        &.mt {
+                            display: block;
+                            margin-top: 13px;
+                        }
+                    }
+                    small {
+                        display: block;
+                        font-size: 10px;
+                        line-height: 1.3;
+                        color: $fg-gray-1;
+                    }
+                }
+                
+                &.row-cust {
+                    @include position(absolute, 22px, $right: 16px);
+                    text-align: right;
+                    line-height: 0;
+                    .box-cust {
+                        p {
+                            color: #525252;
+                            &.txt-cust {
+                                font-size: 12px;
+                                font-weight: bold;
+                                line-height: 1;
+                            }
+                            &.ico-call {
+                                em {
+                                    @include bx;
+                                    display: inline-block;
+                                    padding: 4px 0 2px 19px;
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    line-height: 1;
+                                    letter-spacing: -1px;
+                                    vertical-align: middle;
+                                    color: #595959;
+                                    &:before {
+                                        content: '☎';
+                                        @include position(absolute, 50%, 0);
+                                        display: inline-block;
+                                        width: 16px;
+                                        height: 16px;
+                                        margin-top: -8px;
+                                        font-size: 10px;
+                                        font-family: $font-nnGothic;
+                                        line-height: 16px;
+                                        vertical-align: middle;
+                                        color: #fff;
+                                        text-align: center;
+                                        border-radius: 50%;
+                                        background: #606060;
+                                    }
+                                }
+                                span {
+                                    display: block;
+                                    font-size: 10px;
+                                    line-height: 1.2;
+                                    color: #626262;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* 320 */
+@media (max-width: 320px){
+    
+    /* 콘텐츠 영역 */
+    .contents {
+        //전체 섹션
+        div[class*='sect-'] {
+            padding: 0 10px;
+        }
+
+    }
 }
