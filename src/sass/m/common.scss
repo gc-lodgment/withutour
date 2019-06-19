@@ -105,7 +105,7 @@ select::-ms-expand {
         @include com-wd;
         .box-gnb {
             .logo {
-                @include position(absolute, 10px, 14px);
+                @include position(absolute, 16px, 14px);
                 a {
                     display: block;
                     width: 118px;
