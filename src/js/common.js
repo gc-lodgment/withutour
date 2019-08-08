@@ -73,10 +73,10 @@ function menuFn(){
     
     //서브메뉴 hover
     gnb.find('.snb li > a').hover(function(){
-        $(this).parent('li').siblings().removeClass('on');
-        $(this).parent('li').addClass('on');
+        $(this).parent('li').siblings().removeClass('active');
+        $(this).parent('li').addClass('active');
     }, function(){
-        $(this).parent('li').removeClass('on');
+        $(this).parent('li').removeClass('active');
     })
 }
 

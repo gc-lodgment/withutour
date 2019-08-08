@@ -176,7 +176,7 @@ img {
                                 letter-spacing: -1.3px;
                                 text-align: left;
                             }
-                            &.on {
+                            &.on, &.active {
                                 a {
                                     background: #ebebeb;
                                 }
