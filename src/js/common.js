@@ -60,15 +60,18 @@ function menuFn(){
         if( $(this).siblings('.snb').css('display') == 'block' ) {
             //해당서브메뉴가 block일 경우 가만히
         }else {
-            gnb.find('.snb').stop().slideUp('fast');
-            $(this).siblings('.snb').stop().slideDown('fast');
+            //gnb.find('.snb').stop().slideUp('fast');
+            //$(this).siblings('.snb').stop().slideDown('fast');
+            gnb.find('.snb').stop().fadeOut('fast');
+            $(this).siblings('.snb').stop().fadeIn('fast');
         }
     });
     
     //메뉴 leave
     gnb.on('mouseleave', function(){
-        $(this).find('.snb').stop().slideUp('fast');
+        //$(this).find('.snb').stop().slideUp('fast');
         $(this).find('.snb').css({'height' : 'auto'});
+        $(this).find('.snb').stop().fadeOut('fast');
     });
     
     //서브메뉴 hover
