@@ -1,14 +1,3 @@
-#etc
-gulpfile.js
-_bak/
-_document/
-_draft/
-_work/
-_media/
-_tmp/
-img/
-dist/
-
 # Logs
 logs
 *.log
@@ -70,3 +59,13 @@ typings/
 
 # next.js build output
 .next
+
+#etc
+_bak/
+_document/
+_draft/
+_work/
+_media/
+_tmp/
+img/
+dist/
